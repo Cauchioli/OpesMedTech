@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ops MedTech Design System
+   - Primary: Purple (#7C3AED, #6B46C1)
+   - Secondary: Blue (#3B82F6, #2563EB)  
+   - Accent: Cyan (#22D3EE, #06B6D4)
+   - Gradients: Purple to Blue
+*/
+
+@layer base {
+  :root {
+    /* Core Brand Colors - Purple (#a617ec) */
+    --primary: 280 82% 51%;
+    --primary-foreground: 0 0% 100%;
+    --primary-dark: 280 82% 45%;
+    
+    /* Secondary Brand Colors - Blue (#00a6ff) */
+    --secondary: 201 100% 50%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-dark: 201 100% 45%;
+    
+    /* Accent - Blue (from logo) */
+    --accent: 201 100% 50%;
+    --accent-foreground: 0 0% 100%;
+    
+    /* Backgrounds */
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+    
+    /* Surface Colors */
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    
+    /* Muted */
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+    
+    /* Borders */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 263 70% 58%;
+    
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Radius */
+    --radius: 0.75rem;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(280, 82%, 51%) 0%, hsl(201, 100%, 50%) 100%);
+    --gradient-primary-hover: linear-gradient(135deg, hsl(280, 82%, 45%) 0%, hsl(201, 100%, 45%) 100%);
+    --gradient-subtle: linear-gradient(135deg, hsl(280, 82%, 51%, 0.1) 0%, hsl(201, 100%, 50%, 0.1) 100%);
+    --gradient-radial: radial-gradient(ellipse at top, hsl(280, 82%, 95%) 0%, hsl(0, 0%, 100%) 60%);
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --shadow-primary: 0 4px 14px 0 hsl(280, 82%, 51%, 0.35);
+    --shadow-primary-lg: 0 8px 24px 0 hsl(280, 82%, 51%, 0.4);
+
+    /* Sidebar (keeping defaults) */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222 47% 6%;
+    --foreground: 210 40% 98%;
+    --card: 222 47% 8%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 47% 8%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 280 82% 58%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 201 100% 55%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 201 100% 55%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 280 82% 58%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  /* Gradient Text */
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-primary);
+  }
+  
+  /* Gradient Background */
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+  
+  .bg-gradient-primary-hover:hover {
+    background-image: var(--gradient-primary-hover);
+  }
+  
+  .bg-gradient-subtle {
+    background-image: var(--gradient-subtle);
+  }
+  
+  .bg-gradient-radial {
+    background-image: var(--gradient-radial);
+  }
+  
+  /* Card Styles */
+  .card-elevated {
+    @apply bg-card rounded-xl border shadow-md transition-all duration-300;
+  }
+  
+  .card-elevated:hover {
+    @apply shadow-xl -translate-y-1;
+  }
+  
+  /* Section Spacing */
+  .section-padding {
+    @apply py-10 md:py-14 lg:py-16;
+  }
+  
+  .container-custom {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+@layer utilities {
+  /* Animation Utilities */
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out forwards;
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+}
