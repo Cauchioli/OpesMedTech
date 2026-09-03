@@ -264,7 +264,7 @@ const ProductsShowcaseSection: React.FC = () => {
                 <li className="flex items-start gap-2">
                   <CheckCircle size={15} className="text-primary flex-shrink-0 mt-0.5" />
                   <span>
-                    <strong className="text-foreground">Agendamento Integrado e Atestados:</strong> Emissão de pareceres escolares, atestados e controle de agenda.
+                    <strong className="text-foreground">Agendamento Integrado e Atestados:</strong> Controle de sessões, presenças, faltas e emissão de atestados clínicos.
                   </span>
                 </li>
               </ul>

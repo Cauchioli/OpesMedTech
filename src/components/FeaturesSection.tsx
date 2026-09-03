@@ -72,7 +72,7 @@ const FeaturesSection = () => {
     {
       icon: Pill,
       title: "Atestados e Prescrição",
-      description: "Emissão ágil de receitas digitais (Memed), atestados e relatórios escolares",
+      description: "Emissão ágil de receitas digitais (Memed), atestados e declarações clínicas",
       highlight: false,
       tag: "Ambos",
       category: "both" as const,
