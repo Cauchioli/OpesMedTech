@@ -53,14 +53,14 @@ const HeroSection = () => {
               para a saúde infantil
             </h1>
 
-            {/* Subheadline Clean */}
+            {/* Subheadline Clean with IA Preditiva */}
             <p
               className="text-sm md:text-base text-muted-foreground mb-6 max-w-lg mx-auto lg:mx-0 leading-relaxed animate-slide-up"
               style={{ animationDelay: "0.1s" }}
             >
               Para <strong className="text-foreground">médicos pediatras</strong> e especialistas em{" "}
               <strong className="text-foreground">terapia ocupacional, psicologia e enfermagem</strong>. Economize até{" "}
-              <strong className="text-foreground">70%</strong> do tempo de digitação com IA não intrusiva.
+              <strong className="text-foreground">70%</strong> do tempo com transcrição de voz e IA preditiva.
             </p>
 
             {/* CTAs */}
@@ -148,8 +148,8 @@ const HeroSection = () => {
                   <Sparkles size={15} className="text-primary-foreground" />
                 </div>
                 <div>
-                  <p className="font-bold text-foreground text-xs">70% Menos Digitação</p>
-                  <p className="text-[10px] text-muted-foreground">com Transcrição Inteligente</p>
+                  <p className="font-bold text-foreground text-xs">IA Preditiva Exclusiva</p>
+                  <p className="text-[10px] text-muted-foreground">70% menos tempo digitando</p>
                 </div>
               </div>
             </div>

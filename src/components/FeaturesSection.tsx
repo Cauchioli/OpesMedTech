@@ -1,23 +1,19 @@
 import { useState } from "react";
 import { 
-  Mic, 
+  Sparkles, 
   Calendar, 
   Syringe, 
   LineChart, 
   Pill, 
-  Shield, 
   FileText, 
   Brain, 
   BarChart3,
   Stethoscope,
   Activity,
 } from "lucide-react";
-import platformAgenda from "@/assets/platform-agenda.jpg";
 import platformGraficos from "@/assets/platform-graficos.jpg";
-import platformVacinas from "@/assets/platform-vacinas.jpg";
 import platformDashboard from "@/assets/platform-dashboard.jpg";
 import platformSaudeMental from "@/assets/platform-saude-mental.png";
-import platformFinanceiro from "@/assets/platform-financeiro.png";
 
 type FilterType = "all" | "pediatria" | "especialidades";
 
@@ -26,11 +22,11 @@ const FeaturesSection = () => {
 
   const features = [
     {
-      icon: Mic,
-      title: "Transcrição de Voz com IA",
-      description: "Transcreve e resume consultas e atendimentos em tempo real, economizando tempo de digitação",
+      icon: Sparkles,
+      title: "IA Preditiva e Transcrição",
+      description: "Transcreve a consulta por voz e correlaciona padrões clínicos nos bastidores em tempo real",
       highlight: true,
-      tag: "Ambos",
+      tag: "Diferencial Opes",
       category: "both" as const,
     },
     {

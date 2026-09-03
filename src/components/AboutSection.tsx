@@ -1,4 +1,4 @@
-import { Bot, CheckCircle2, Sparkles, Stethoscope, Activity } from "lucide-react";
+import { Bot, CheckCircle2, Sparkles, Stethoscope, Activity, TrendingUp } from "lucide-react";
 import doctorImage from "@/assets/doctor-about.jpg";
 
 const AboutSection = () => {
@@ -75,22 +75,22 @@ const AboutSection = () => {
           </div>
         </div>
 
-        {/* AI Intrusiva Box Clean */}
+        {/* AI Preditiva Box Clean - Diferencial da Opes */}
         <div className="max-w-5xl mx-auto bg-gradient-to-r from-primary/10 via-primary/5 to-secondary/10 rounded-2xl p-5 sm:p-6 border border-primary/20 shadow-sm">
           <div className="flex flex-col sm:flex-row items-start gap-4">
             <div className="w-10 h-10 rounded-xl bg-gradient-primary flex items-center justify-center shadow-primary text-primary-foreground flex-shrink-0">
-              <Bot size={22} />
+              <TrendingUp size={22} />
             </div>
             <div className="space-y-1">
               <div className="inline-flex items-center gap-1 text-primary text-[10px] font-bold uppercase tracking-wider">
                 <Sparkles size={11} />
-                IA Não Intrusiva
+                DIFERENCIAL EXCLUSIVO OPES
               </div>
               <h3 className="text-base sm:text-lg font-bold text-foreground">
-                Inteligência Artificial silenciosa nos bastidores
+                Inteligência Artificial Preditiva: Antecipe padrões clínicos e economize tempo
               </h3>
               <p className="text-xs text-muted-foreground leading-relaxed">
-                A IA transcreve consultas e sessões em tempo real, organiza a evolução clínica e gera resumos automáticos para você economizar até 70% do tempo de digitação.
+                Nossa IA Preditiva analisa tendências de saúde e marcos evolutivos automaticamente nos bastidores. Além de transcrever consultas e sessões em tempo real, ela correlaciona dados longitudinais para auxiliar na tomada de decisão sem burocracia.
               </p>
             </div>
           </div>
