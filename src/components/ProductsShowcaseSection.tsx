@@ -56,19 +56,19 @@ const ProductsShowcaseSection: React.FC = () => {
                     Opes Pediatra
                   </h3>
                   <p className="text-xs text-primary font-semibold">
-                    Software Médico Completo para Pediatria
+                    Software Médico Especializado para Pediatras
                   </p>
                 </div>
               </div>
 
               <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed mb-4">
-                Prontuário especializado com curvas de crescimento automáticas, controle de vacinas e transcrição inteligente por voz.
+                A plataforma médica mais completa para consultórios e clínicas de pediatria. Elimina a digitação manual, automatiza cálculos antropométricos e organiza toda a rotina clínica.
               </p>
 
               {/* Pricing Highlight */}
               <div className="bg-primary/5 rounded-xl p-3 mb-4 border border-primary/15 flex items-baseline justify-between">
                 <div>
-                  <span className="text-[11px] text-muted-foreground font-medium block">Plano Individual:</span>
+                  <span className="text-[11px] text-muted-foreground font-medium block">Plano Individual Médico:</span>
                   <div className="flex items-baseline gap-1">
                     <span className="text-xs font-semibold text-foreground">R$</span>
                     <span className="text-3xl font-extrabold text-primary">299</span>
@@ -83,27 +83,37 @@ const ProductsShowcaseSection: React.FC = () => {
                 </div>
               </div>
 
-              {/* Feature Highlights Clean */}
-              <ul className="space-y-2 text-xs sm:text-sm text-foreground/90 mb-5">
+              {/* Feature Highlights Clean with Exact Copy */}
+              <ul className="space-y-2.5 text-xs sm:text-sm text-foreground/90 mb-5">
                 <li className="flex items-start gap-2">
                   <CheckCircle size={15} className="text-primary flex-shrink-0 mt-0.5" />
-                  <span>Curvas de Crescimento OMS e CDC automáticas</span>
+                  <span>
+                    <strong className="text-foreground">Curvas OMS e CDC:</strong> Geração automática de gráficos de peso, estatura e IMC compartilháveis no WhatsApp dos pais.
+                  </span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle size={15} className="text-primary flex-shrink-0 mt-0.5" />
-                  <span>Controle vacinal completo e atualizado da SBP</span>
+                  <span>
+                    <strong className="text-foreground">Controle Vacinal SBP:</strong> Mantenha o histórico de vacinação atualizado e mantenha controle de doses atrasadas.
+                  </span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle size={15} className="text-primary flex-shrink-0 mt-0.5" />
-                  <span>Transcrição de consultas por IA (menos digitação)</span>
+                  <span>
+                    <strong className="text-foreground">Análise Preditiva:</strong> IA para otimizar decisões médicas baseadas no histórico das consultas e exames do paciente.
+                  </span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle size={15} className="text-primary flex-shrink-0 mt-0.5" />
-                  <span>Prescrição Digital Integrada (Memed) e atestados</span>
+                  <span>
+                    <strong className="text-foreground">Transcrição de Consulta com IA:</strong> Economize 70% do tempo de digitação apenas conversando com os pais.
+                  </span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle size={15} className="text-primary flex-shrink-0 mt-0.5" />
-                  <span>Agendamento integrado e controle financeiro</span>
+                  <span>
+                    <strong className="text-foreground">Prescrição Digital Integrada (Memed):</strong> Emissão de receitas com assinatura digital válida em todo o Brasil.
+                  </span>
                 </li>
               </ul>
             </div>
@@ -177,7 +187,7 @@ const ProductsShowcaseSection: React.FC = () => {
               {/* Pricing Highlight */}
               <div className="bg-primary/5 rounded-xl p-3 mb-4 border border-primary/15 flex items-baseline justify-between">
                 <div>
-                  <span className="text-[11px] text-muted-foreground font-medium block">Plano Individual:</span>
+                  <span className="text-[11px] text-muted-foreground font-medium block">Plano Individual Especialista:</span>
                   <div className="flex items-baseline gap-1">
                     <span className="text-xs font-semibold text-foreground">R$</span>
                     <span className="text-3xl font-extrabold text-primary">199</span>
@@ -225,27 +235,37 @@ const ProductsShowcaseSection: React.FC = () => {
                 </div>
               </div>
 
-              {/* Feature Highlights Clean */}
-              <ul className="space-y-2 text-xs sm:text-sm text-foreground/90 mb-5">
+              {/* Feature Highlights Clean with Exact Copy */}
+              <ul className="space-y-2.5 text-xs sm:text-sm text-foreground/90 mb-5">
                 <li className="flex items-start gap-2">
                   <CheckCircle size={15} className="text-primary flex-shrink-0 mt-0.5" />
-                  <span>Anotações Clínicas online e evolução de sessões</span>
+                  <span>
+                    <strong className="text-foreground">Anotações Clínicas Online:</strong> Registro ágil e seguro da evolução terapêutica de cada sessão.
+                  </span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle size={15} className="text-primary flex-shrink-0 mt-0.5" />
-                  <span>Transcrição de Voz com IA nos atendimentos</span>
+                  <span>
+                    <strong className="text-foreground">Avaliação de Neurodesenvolvimento:</strong> Instrumentos validados para rastrear marcos motores, cognitivos e comportamentais.
+                  </span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle size={15} className="text-primary flex-shrink-0 mt-0.5" />
-                  <span>Saúde mental, neurodesenvolvimento e laudos</span>
+                  <span>
+                    <strong className="text-foreground">Transcrição de Voz com IA:</strong> Dite as observações e receba relatórios clínicos estruturados.
+                  </span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle size={15} className="text-primary flex-shrink-0 mt-0.5" />
-                  <span>Agendamento integrado e emissão de atestados</span>
+                  <span>
+                    <strong className="text-foreground">Saúde Mental e Terapias:</strong> Planos terapêuticos e acompanhamento de perfis sensoriais.
+                  </span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle size={15} className="text-primary flex-shrink-0 mt-0.5" />
-                  <span>Gráficos e vacinas para enfermagem e fisioterapia</span>
+                  <span>
+                    <strong className="text-foreground">Agendamento Integrado e Atestados:</strong> Emissão de pareceres escolares, atestados e controle de agenda.
+                  </span>
                 </li>
               </ul>
             </div>
