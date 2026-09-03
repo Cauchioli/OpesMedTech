@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { 
-  Sparkles, 
+  Bot,
+  Mic, 
   Calendar, 
   Syringe, 
   LineChart, 
@@ -22,11 +23,19 @@ const FeaturesSection = () => {
 
   const features = [
     {
-      icon: Sparkles,
-      title: "IA Preditiva e Transcrição",
-      description: "Transcreve a consulta por voz e correlaciona padrões clínicos nos bastidores em tempo real",
+      icon: Bot,
+      title: "Análise Preditiva",
+      description: "Decisões guiadas por IA com base no histórico do paciente (Apenas para Pediatria)",
       highlight: true,
-      tag: "Diferencial Opes",
+      tag: "Opes Pediatra",
+      category: "pediatria" as const,
+    },
+    {
+      icon: Mic,
+      title: "Transcrição de Voz com IA",
+      description: "Transcreve e resume consultas e atendimentos em tempo real, economizando tempo de digitação",
+      highlight: true,
+      tag: "Ambos",
       category: "both" as const,
     },
     {
@@ -149,7 +158,7 @@ const FeaturesSection = () => {
         </div>
 
         {/* Features Grid Clean */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto mb-12">
           {filteredFeatures.map((feature, index) => (
             <div
               key={index}

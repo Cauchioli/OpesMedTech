@@ -10,28 +10,33 @@ import { Button } from "@/components/ui/button";
 const FAQSection = () => {
   const consultoraWhatsAppUrl =
     "https://wa.me/5511972240924?text=" +
-    encodeURIComponent("Olá! Gostaria de tirar algumas dúvidas sobre a plataforma Opes.");
+    encodeURIComponent("Olá! Gostaria de tirar algumas dúvidas sobre a plataforma Opes com a consultora.");
 
   const faqs = [
     {
-      question: "Qual a diferença entre Opes Pediatra e Opes Especialidades?",
+      question: "Como funciona o cadastro pelo CRM ou pelo conselho de classe (CREFITO, CRP, COREN)?",
       answer:
-        "O Opes Pediatra (R$ 299/mês) é focado em médicos com curvas de crescimento OMS e CDC, gestão vacinal SBP, prescrição Memed e transcrição por IA. O Opes Especialidades (R$ 199/mês) é desenhado sob medida para Terapeutas Ocupacionais, Psicólogos e Enfermagem, com anotações clínicas, saúde mental, atestados e transcrição de voz.",
+        "No momento do cadastro no sistema, você informa seu número de conselho profissional. Se selecionar CRM, a plataforma habilita os módulos médicos pediátricos (curvas, vacinas, IA para análise preditiva, receituário e todas as outras funcionalidades da plataforma). É o módulo mais completo, apresentando todas as funcionalidades independente do plano escolhido. Caso selecione seu conselho terapêutico (CREFITO, CRP, COREN), o sistema automaticamente carrega o ambiente de Especialidades com formulários adequados à sua profissão.",
     },
     {
       question: "Como funciona o período de teste de 15 dias?",
       answer:
-        "Você tem acesso completo a todas as ferramentas por 15 dias corridos, sem necessidade de cadastrar cartão de crédito e sem fidelidade.",
+        "Você tem acesso total e ilimitado a todas as ferramentas da plataforma conforme profissão, por 15 dias corridos, sem precisar cadastrar cartão de crédito ou compromisso prévio. Ao fim do teste, você escolhe continuar no plano ideal ou a conta é pausada sem nenhuma cobrança surpresa.",
+    },
+    {
+      question: "O que é a IA Não Intrusiva da Opes e como ela funciona na prática?",
+      answer:
+        "Nossa IA opera de forma silenciosa e em segundo plano. Você não precisa aprender prompts ou comandos complexos. Todos os planos contemplam a transcrição e resumo inteligente: basta conversar naturalmente com o paciente e a IA transcreve, sintetiza a anamnese e organiza a informação. Para os planos de Pediatria, a IA Preditiva entra em ação utilizando dados históricos de consultas ajudando a tomada de decisão médica.",
+    },
+    {
+      question: "Qual a diferença entre Opes Pediatra e Opes Especialidades?",
+      answer:
+        "O Opes Pediatra (R$ 299/mês) é focado em médicos pediatras com análise preditiva por IA, curvas OMS e CDC, vacinas SBP e prescrição Memed. O Opes Especialidades (R$ 199/mês) é desenhado sob medida para Terapeutas Ocupacionais, Psicólogos e Enfermagem, com anotações clínicas, saúde mental, atestados e transcrição por voz.",
     },
     {
       question: "O usuário assistente (secretária) é incluso?",
       answer:
         "Sim. Todos os planos incluem usuários assistentes sem cobrança extra (1 assistente no Individual, 3 no Empresarial e até 5 no Corporativo).",
-    },
-    {
-      question: "Como funciona a Transcrição de Voz com IA?",
-      answer:
-        "A IA opera de forma silenciosa nos bastidores: transcreve a consulta ou sessão e gera o resumo clínico automaticamente, reduzindo em até 70% a digitação manual.",
     },
     {
       question: "Como funciona o desconto do Plano Anual?",
@@ -57,7 +62,7 @@ const FAQSection = () => {
             Perguntas Frequentes
           </h2>
           <p className="text-xs sm:text-sm text-muted-foreground">
-            Respostas rápidas sobre a plataforma e planos
+            Respostas sobre a plataforma, planos e IA da Opes Medtech
           </p>
         </div>
 
