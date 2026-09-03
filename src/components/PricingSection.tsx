@@ -38,15 +38,15 @@ const PricingSection = () => {
       ctaVariant: "outline" as const,
     },
     {
-      name: "Empresarial",
+      name: "Clínicas",
       monthlyPrice: 285,
       annualPrice: 242,
       pricePerUser: "por médico",
       userNote: "2 a 9 Médicos + 3 Assistentes",
       savingsBadge: "5% mais econômico",
-      description: "Para clínicas em crescimento",
+      description: "Para clínicas pediátricas em crescimento",
       popular: true,
-      badge: "MAIS POPULAR",
+      badge: "MAIS ESCOLHIDO",
       features: [
         "2 a 9 Médicos + 3 Assistentes",
         "Sem limite de funcionalidades",
@@ -60,7 +60,7 @@ const PricingSection = () => {
       ctaVariant: "default" as const,
     },
     {
-      name: "Corporativo",
+      name: "Redes",
       monthlyPrice: 269,
       annualPrice: 228,
       pricePerUser: "por médico",
@@ -103,7 +103,7 @@ const PricingSection = () => {
       ctaVariant: "outline" as const,
     },
     {
-      name: "Empresarial",
+      name: "Clínicas",
       monthlyPrice: 185,
       annualPrice: 157,
       pricePerUser: "por profissional",
@@ -111,7 +111,7 @@ const PricingSection = () => {
       savingsBadge: "Econômico",
       description: "Para clínicas e consultórios integrados",
       popular: true,
-      badge: "MAIS POPULAR",
+      badge: "MAIS ESCOLHIDO",
       features: [
         "2 a 9 Profissionais + 3 Assistentes",
         "Sem limite de funcionalidades",
@@ -125,7 +125,7 @@ const PricingSection = () => {
       ctaVariant: "default" as const,
     },
     {
-      name: "Corporativo",
+      name: "Redes",
       monthlyPrice: 170,
       annualPrice: 144,
       pricePerUser: "por profissional",
@@ -230,7 +230,7 @@ const PricingSection = () => {
           </span>
         </div>
 
-        {/* Pricing Cards Grid */}
+        {/* Pricing Cards Grid (Individual | Clínicas | Redes) */}
         <div className="grid md:grid-cols-3 gap-5 lg:gap-6 max-w-5xl mx-auto items-stretch">
           {currentPlans.map((plan, index) => {
             const displayPrice = isAnnual ? plan.annualPrice : plan.monthlyPrice;
@@ -249,7 +249,7 @@ const PricingSection = () => {
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2">
                     <div className="flex items-center gap-1 px-3 py-1 rounded-full bg-cyan-400 text-slate-900 text-[10px] font-black shadow-md">
                       <Star size={11} fill="currentColor" />
-                      {plan.badge || "MAIS POPULAR"}
+                      {plan.badge || "MAIS ESCOLHIDO"}
                     </div>
                   </div>
                 )}
@@ -346,7 +346,7 @@ const PricingSection = () => {
                     >
                       <a href="https://www.opespediatra.com/login">{plan.cta}</a>
                     </Button>
-                  ) : plan.name === "Corporativo" ? (
+                  ) : plan.name === "Redes" ? (
                     <Button
                       variant="outline"
                       className="w-full text-xs font-semibold border-emerald-500/40 text-emerald-700 dark:text-emerald-400 hover:bg-emerald-500/10 h-10"

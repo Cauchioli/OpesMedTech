@@ -187,13 +187,13 @@ const LPPsicologia: React.FC = () => {
                 </Button>
               </div>
 
-              {/* Empresarial */}
+              {/* Clínicas */}
               <div className="p-5 rounded-2xl bg-gradient-primary text-primary-foreground shadow-xl scale-105 relative flex flex-col justify-between">
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-cyan-400 text-slate-900 text-[10px] font-black px-2.5 py-0.5 rounded-full shadow">
-                  MAIS POPULAR
+                  MAIS ESCOLHIDO
                 </div>
                 <div>
-                  <h3 className="text-base font-bold mb-0.5">Empresarial</h3>
+                  <h3 className="text-base font-bold mb-0.5">Clínicas</h3>
                   <p className="text-xs text-primary-foreground/80 mb-3">Para clínicas e equipes</p>
                   <div className="mb-3">
                     <div className="flex items-baseline gap-1">
@@ -217,10 +217,10 @@ const LPPsicologia: React.FC = () => {
                 </Button>
               </div>
 
-              {/* Corporativo */}
+              {/* Redes */}
               <div className="p-5 rounded-2xl bg-card border border-border/80 shadow-sm flex flex-col justify-between">
                 <div>
-                  <h3 className="text-base font-bold text-foreground mb-0.5">Corporativo</h3>
+                  <h3 className="text-base font-bold text-foreground mb-0.5">Redes</h3>
                   <p className="text-xs text-muted-foreground mb-3">Para grandes centros</p>
                   <div className="mb-3">
                     <div className="flex items-baseline gap-1">
