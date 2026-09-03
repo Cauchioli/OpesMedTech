@@ -12,7 +12,7 @@ import {
   Shield,
   ArrowRight,
   MessageSquare,
-  HeartHandshake,
+  CheckCircle,
 } from "lucide-react";
 import platformSaudeMental from "@/assets/platform-saude-mental.png";
 
@@ -26,51 +26,51 @@ const LPTerapiaOcupacional: React.FC = () => {
       <Header specialtyTitle="Terapia Ocupacional" />
 
       <main>
-        {/* Hero Section */}
+        {/* Hero Section Clean */}
         <section className="relative pt-20 md:pt-28 pb-12 md:pb-16 overflow-hidden bg-gradient-radial">
           <div className="container-custom relative">
-            <div className="text-center max-w-3xl mx-auto mb-8">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider mb-4 border border-primary/20">
+            <div className="text-center max-w-2xl mx-auto mb-8">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider mb-3 border border-primary/20">
                 <Activity size={14} />
-                Opes Especialidades • Terapia Ocupacional (CREFITO)
+                Para Terapeutas Ocupacionais (CREFITO)
               </div>
 
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground tracking-tight mb-4 leading-tight">
-                Prontuário inteligente e <span className="text-gradient">IA para Terapeutas Ocupacionais</span>
+              <h1 className="text-3xl sm:text-4xl font-bold text-foreground tracking-tight mb-3 leading-tight">
+                Prontuário e <span className="text-gradient">IA para Terapia Ocupacional</span>
               </h1>
 
-              <p className="text-sm sm:text-base text-muted-foreground max-w-xl mx-auto mb-6 leading-relaxed">
-                Integração sensorial, marcos do neurodesenvolvimento, evolução de metas terapêuticas e emissão ágil de pareceres para escolas e famílias por apenas <strong className="text-foreground">R$ 200/mês</strong>.
+              <p className="text-xs sm:text-sm md:text-base text-muted-foreground max-w-lg mx-auto mb-5 leading-relaxed">
+                Anotações clínicas online, saúde mental, transcrição de voz e agendamento integrado por <strong className="text-foreground">R$ 199/mês</strong>.
               </p>
 
               {/* CTAs */}
-              <div className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-6">
+              <div className="flex flex-col sm:flex-row gap-2.5 justify-center items-center mb-4">
                 <Button
                   size="default"
-                  className="w-full sm:w-auto bg-gradient-primary hover:opacity-90 shadow-primary text-sm px-6 h-10 font-bold"
+                  className="w-full sm:w-auto bg-gradient-primary hover:opacity-90 shadow-primary text-xs sm:text-sm px-6 h-10 font-bold"
                   asChild
                 >
                   <a href="https://www.opespediatra.com/login">
                     Iniciar Teste Grátis de 15 Dias
-                    <ArrowRight size={16} className="ml-1.5" />
+                    <ArrowRight size={15} className="ml-1.5" />
                   </a>
                 </Button>
 
                 <Button
                   size="default"
                   variant="outline"
-                  className="w-full sm:w-auto border-emerald-500/40 text-emerald-700 dark:text-emerald-400 hover:bg-emerald-500/10 font-bold px-5 h-10 gap-1.5"
+                  className="w-full sm:w-auto border-emerald-500/40 text-emerald-700 dark:text-emerald-400 hover:bg-emerald-500/10 font-bold px-5 h-10 gap-1.5 text-xs sm:text-sm"
                   asChild
                 >
                   <a href={consultoraWhatsAppUrl} target="_blank" rel="noopener noreferrer">
-                    <MessageSquare size={16} className="text-emerald-500" />
+                    <MessageSquare size={15} className="text-emerald-500" />
                     Falar com a Consultora
                   </a>
                 </Button>
               </div>
 
-              <p className="text-xs text-muted-foreground">
-                ✓ Sem cartão de crédito • Ambiente enxuto sem burocracia médica • Economia de R$ 100/mês
+              <p className="text-[11px] text-muted-foreground">
+                Sem cartão de crédito • 15 dias de teste grátis
               </p>
             </div>
 
@@ -78,66 +78,66 @@ const LPTerapiaOcupacional: React.FC = () => {
             <div className="max-w-3xl mx-auto rounded-2xl overflow-hidden shadow-xl border border-border bg-card">
               <img
                 src={platformSaudeMental}
-                alt="Opes Especialidades, Interface de Neurodesenvolvimento e Terapias"
+                alt="Opes Especialidades, Interface de Saúde Mental e Terapias"
                 className="w-full h-auto object-cover"
               />
             </div>
           </div>
         </section>
 
-        {/* Benefits Grid */}
+        {/* Funcionalidades Oficiais da Terapia Ocupacional */}
         <section className="section-padding bg-muted/30">
           <div className="container-custom">
-            <div className="text-center max-w-3xl mx-auto mb-12">
+            <div className="text-center max-w-2xl mx-auto mb-8">
               <span className="text-xs font-bold uppercase tracking-wider text-primary block mb-1">
-                RECURSOS ESPECÍFICOS PARA T.O.
+                FUNCIONALIDADES PRINCIPAIS
               </span>
               <h2 className="text-2xl sm:text-3xl font-bold text-foreground">
-                Projetado para quem avalia, estimula e transforma o desenvolvimento
+                Tudo o que você precisa para suas sessões de T.O.
               </h2>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
               {[
                 {
-                  icon: Brain,
-                  title: "Integração Sensorial e Marcos",
-                  desc: "Estruture o registro de perfis sensoriais, modulação, práxis e aquisição de marcos motores de forma visual e intuitiva.",
-                },
-                {
-                  icon: Mic,
-                  title: "Transcrição por IA das Sessões",
-                  desc: "Descreva a evolução do paciente por áudio ao final da sessão e a IA sintetiza o relatório em linguagem técnica adequada.",
+                  icon: Calendar,
+                  title: "Agendamento Integrado",
+                  desc: "Gestão simples de horários de atendimento, presenças e confirmações automáticas.",
                 },
                 {
                   icon: FileText,
-                  title: "Pareceres e Relatórios Escolares",
-                  desc: "Crie relatórios multidisciplinares completos para escolas, neuropediatras e famílias com rapidez e profissionalismo.",
+                  title: "Anotações Clínicas Online",
+                  desc: "Registro ágil e estruturado da evolução terapêutica de cada sessão.",
                 },
                 {
-                  icon: HeartHandshake,
-                  title: "Planos Terapêuticos Singulares (PTS)",
-                  desc: "Defina metas, acompanhe a evolução percentual de cada objetivo e apresente relatórios gráficos aos responsáveis.",
+                  icon: Mic,
+                  title: "Transcrição de Voz com IA",
+                  desc: "Dite suas observações e receba o relatório resumido automaticamente.",
                 },
                 {
-                  icon: Calendar,
-                  title: "Agenda de Sessões e Pacotes",
-                  desc: "Gerencie sessões semanais, reposições, presenças e envie lembretes automáticos para evitar faltas.",
+                  icon: Brain,
+                  title: "Saúde Mental e Desenvolvimento",
+                  desc: "Acompanhamento do perfil sensorial, neurodesenvolvimento e marcos motores.",
+                },
+                {
+                  icon: CheckCircle,
+                  title: "Emissão de Atestados",
+                  desc: "Gere atestados, declarações de comparecimento e pareceres em poucos cliques.",
                 },
                 {
                   icon: Shield,
-                  title: "Sigilo Ético CREFITO e LGPD",
-                  desc: "Armazenamento em nuvem com criptografia de ponta a ponta, backups diários e controle rigoroso de privacidade.",
+                  title: "Segurança e Sigilo CREFITO",
+                  desc: "Armazenamento 100% em nuvem com criptografia de ponta a ponta e LGPD.",
                 },
               ].map((item, index) => (
                 <div
                   key={index}
-                  className="p-5 rounded-xl bg-card border border-border/70 shadow-sm hover:shadow-md transition-all"
+                  className="p-4 rounded-xl bg-card border border-border/80 shadow-sm"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-3">
-                    <item.icon size={20} />
+                  <div className="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-2.5">
+                    <item.icon size={18} />
                   </div>
-                  <h3 className="text-base font-bold text-foreground mb-1.5">{item.title}</h3>
+                  <h3 className="text-sm font-bold text-foreground mb-1">{item.title}</h3>
                   <p className="text-xs text-muted-foreground leading-relaxed">{item.desc}</p>
                 </div>
               ))}
@@ -145,102 +145,99 @@ const LPTerapiaOcupacional: React.FC = () => {
           </div>
         </section>
 
-        {/* Pricing Dedicated TO */}
+        {/* Pricing Dedicated TO Clean */}
         <section className="section-padding bg-background">
           <div className="container-custom">
-            <div className="text-center max-w-3xl mx-auto mb-10">
+            <div className="text-center max-w-2xl mx-auto mb-8">
               <span className="text-xs font-bold uppercase tracking-wider text-primary block mb-1">
-                PLANOS OFICIAIS OPES ESPECIALIDADES
+                PLANOS OFICIAIS
               </span>
-              <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-2">
-                Investimento justo e sob medida para Terapeutas Ocupacionais
+              <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-1">
+                Investimento sob medida para Terapeutas Ocupacionais
               </h2>
-              <p className="text-xs sm:text-sm text-muted-foreground">
-                Planos a partir de <strong>R$ 200/mês</strong> com <strong>15% de desconto</strong> na assinatura anual.
+              <p className="text-xs text-muted-foreground">
+                Desconto de 15% na assinatura anual
               </p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-5 max-w-5xl mx-auto">
               {/* Individual */}
-              <div className="p-6 rounded-2xl bg-card border border-border/80 shadow-sm flex flex-col justify-between">
+              <div className="p-5 rounded-2xl bg-card border border-border/80 shadow-sm flex flex-col justify-between">
                 <div>
-                  <h3 className="text-lg font-bold text-foreground mb-1">Individual (1 Terapeuta)</h3>
-                  <p className="text-xs text-muted-foreground mb-4">Para consultório ou atendimento domiciliar</p>
-                  <div className="mb-4 p-3 rounded-xl bg-muted/60 border border-border">
+                  <h3 className="text-base font-bold text-foreground mb-0.5">Individual</h3>
+                  <p className="text-xs text-muted-foreground mb-3">Para consultório individual</p>
+                  <div className="mb-3">
                     <div className="flex items-baseline gap-1">
                       <span className="text-xs font-semibold text-foreground">R$</span>
-                      <span className="text-3xl font-black text-primary">200</span>
+                      <span className="text-3xl font-black text-primary">199</span>
                       <span className="text-xs text-muted-foreground">/mês</span>
                     </div>
-                    <p className="text-xs font-semibold text-emerald-700 dark:text-emerald-400 mt-1.5">
-                      Ou R$ 170/mês no Plano Anual (15% OFF)
-                    </p>
-                    <p className="text-[10px] text-muted-foreground mt-0.5">1 Terapeuta e 1 Assistente inclusa</p>
+                    <p className="text-xs text-muted-foreground mt-0.5">1 Terapeuta + 1 Assistente inclusa</p>
                   </div>
-                  <ul className="space-y-2 text-xs text-muted-foreground mb-5">
-                    <li className="flex items-center gap-1.5">✓ Prontuário para Terapia Ocupacional</li>
-                    <li className="flex items-center gap-1.5">✓ Transcrição de sessões com IA</li>
-                    <li className="flex items-center gap-1.5">✓ Relatórios escolares estruturados</li>
-                    <li className="flex items-center gap-1.5">✓ Agenda e controle de sessões</li>
+                  <ul className="space-y-2 text-xs text-muted-foreground mb-5 pt-2 border-t border-border/40">
+                    <li className="flex items-center gap-1.5">✓ Sem limite de funcionalidades</li>
+                    <li className="flex items-center gap-1.5">✓ Ferramentas de IA incluídas</li>
+                    <li className="flex items-center gap-1.5">✓ Transcrição de sessões</li>
+                    <li className="flex items-center gap-1.5">✓ Anotações clínicas online</li>
+                    <li className="flex items-center gap-1.5">✓ Atualizações automáticas</li>
+                    <li className="flex items-center gap-1.5">✓ Suporte prioritário</li>
                   </ul>
                 </div>
-                <Button asChild className="w-full bg-gradient-primary text-xs font-bold h-9">
-                  <a href="https://www.opespediatra.com/login">Testar Grátis 15 Dias</a>
+                <Button asChild variant="outline" className="w-full text-xs font-bold h-9">
+                  <a href="https://www.opespediatra.com/login">Começar teste grátis</a>
                 </Button>
               </div>
 
-              {/* Clínicas */}
-              <div className="p-6 rounded-2xl bg-gradient-primary text-primary-foreground shadow-xl scale-105 relative flex flex-col justify-between">
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-amber-400 text-slate-900 text-[10px] font-black px-2.5 py-0.5 rounded-full shadow">
-                  MAIS ESCOLHIDO
+              {/* Empresarial */}
+              <div className="p-5 rounded-2xl bg-gradient-primary text-primary-foreground shadow-xl scale-105 relative flex flex-col justify-between">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-cyan-400 text-slate-900 text-[10px] font-black px-2.5 py-0.5 rounded-full shadow">
+                  MAIS POPULAR
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold mb-1">Clínicas Multidisciplinares</h3>
-                  <p className="text-xs text-primary-foreground/90 mb-4">De 2 a 9 Terapeutas e 3 Assistentes</p>
-                  <div className="mb-4 p-3 rounded-xl bg-black/15 border border-white/20">
+                  <h3 className="text-base font-bold mb-0.5">Empresarial</h3>
+                  <p className="text-xs text-primary-foreground/80 mb-3">Para clínicas e equipes</p>
+                  <div className="mb-3">
                     <div className="flex items-baseline gap-1">
                       <span className="text-xs font-semibold">R$</span>
                       <span className="text-3xl font-black text-white">185</span>
                       <span className="text-xs text-primary-foreground/80">/mês por profissional</span>
                     </div>
-                    <p className="text-xs font-semibold text-white mt-1.5">
-                      Ou R$ 157/mês no Plano Anual (15% OFF)
-                    </p>
-                    <p className="text-[10px] text-primary-foreground/90 mt-0.5">Até 3 Assistentes inclusas</p>
+                    <p className="text-xs font-semibold text-white mt-0.5">Econômico</p>
                   </div>
-                  <ul className="space-y-2 text-xs text-primary-foreground/95 mb-5">
-                    <li className="flex items-center gap-1.5">✓ Prontuários integrados para equipe</li>
-                    <li className="flex items-center gap-1.5">✓ Transcrição por IA para todos</li>
-                    <li className="flex items-center gap-1.5">✓ Gestão multi consultório e salas</li>
-                    <li className="flex items-center gap-1.5">✓ Suporte direto via WhatsApp</li>
+                  <ul className="space-y-2 text-xs text-primary-foreground/90 mb-5 pt-2 border-t border-white/20">
+                    <li className="flex items-center gap-1.5">✓ 2 a 9 Profissionais + 3 Assistentes</li>
+                    <li className="flex items-center gap-1.5">✓ Sem limite de funcionalidades</li>
+                    <li className="flex items-center gap-1.5">✓ Ferramentas de IA incluídas</li>
+                    <li className="flex items-center gap-1.5">✓ Desconto de 15% na assinatura Anual</li>
+                    <li className="flex items-center gap-1.5">✓ Relatórios e prontuários da equipe</li>
+                    <li className="flex items-center gap-1.5">✓ Suporte prioritário</li>
                   </ul>
                 </div>
                 <Button asChild className="w-full bg-white text-primary hover:bg-white/95 text-xs font-bold shadow-md h-9">
-                  <a href="https://www.opespediatra.com/login">Testar com a Equipe</a>
+                  <a href="https://www.opespediatra.com/login">Começar teste grátis</a>
                 </Button>
               </div>
 
               {/* Corporativo */}
-              <div className="p-6 rounded-2xl bg-card border border-border/80 shadow-sm flex flex-col justify-between">
+              <div className="p-5 rounded-2xl bg-card border border-border/80 shadow-sm flex flex-col justify-between">
                 <div>
-                  <h3 className="text-lg font-bold text-foreground mb-1">Centros de Reabilitação</h3>
-                  <p className="text-xs text-muted-foreground mb-4">Para 10 ou mais Profissionais</p>
-                  <div className="mb-4 p-3 rounded-xl bg-muted/60 border border-border">
+                  <h3 className="text-base font-bold text-foreground mb-0.5">Corporativo</h3>
+                  <p className="text-xs text-muted-foreground mb-3">Para grandes centros</p>
+                  <div className="mb-3">
                     <div className="flex items-baseline gap-1">
                       <span className="text-xs font-semibold text-foreground">R$</span>
                       <span className="text-3xl font-black text-primary">170</span>
                       <span className="text-xs text-muted-foreground">/mês por profissional</span>
                     </div>
-                    <p className="text-xs font-semibold text-emerald-700 dark:text-emerald-400 mt-1.5">
-                      Ou R$ 145/mês no Plano Anual (15% OFF)
-                    </p>
-                    <p className="text-[10px] text-muted-foreground mt-0.5">Até 5 Assistentes inclusas</p>
+                    <p className="text-xs text-purple-600 dark:text-purple-400 font-semibold mt-0.5">Máxima economia</p>
                   </div>
-                  <ul className="space-y-2 text-xs text-muted-foreground mb-5">
-                    <li className="flex items-center gap-1.5">✓ Máxima economia por usuário</li>
-                    <li className="flex items-center gap-1.5">✓ Treinamento de equipe incluso</li>
-                    <li className="flex items-center gap-1.5">✓ Consultoria comercial personalizada</li>
-                    <li className="flex items-center gap-1.5">✓ Suporte técnico prioritário</li>
+                  <ul className="space-y-2 text-xs text-muted-foreground mb-5 pt-2 border-t border-border/40">
+                    <li className="flex items-center gap-1.5">✓ 10+ Profissionais + 5 Assistentes</li>
+                    <li className="flex items-center gap-1.5">✓ Sem limite de funcionalidades</li>
+                    <li className="flex items-center gap-1.5">✓ Ferramentas de IA incluídas</li>
+                    <li className="flex items-center gap-1.5">✓ Desconto de 15% na assinatura Anual</li>
+                    <li className="flex items-center gap-1.5">✓ Onboarding personalizado</li>
+                    <li className="flex items-center gap-1.5">✓ Suporte dedicado 24/7</li>
                   </ul>
                 </div>
                 <Button asChild variant="outline" className="w-full text-xs font-bold border-emerald-500/40 text-emerald-700 dark:text-emerald-400 h-9">

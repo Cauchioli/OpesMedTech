@@ -4,15 +4,16 @@ import Footer from "@/components/Footer";
 import DudaWhatsAppFloating from "@/components/DudaWhatsAppFloating";
 import { Button } from "@/components/ui/button";
 import {
-  Activity,
+  HeartPulse,
   Mic,
   FileText,
-  HeartPulse,
   Calendar,
+  LineChart,
+  Syringe,
   Shield,
   ArrowRight,
   MessageSquare,
-  Video,
+  CheckCircle,
 } from "lucide-react";
 import platformDashboard from "@/assets/platform-dashboard.jpg";
 
@@ -26,51 +27,51 @@ const LPEnfermagem: React.FC = () => {
       <Header specialtyTitle="Enfermagem e Fisioterapia" />
 
       <main>
-        {/* Hero Section */}
+        {/* Hero Section Clean */}
         <section className="relative pt-20 md:pt-28 pb-12 md:pb-16 overflow-hidden bg-gradient-radial">
           <div className="container-custom relative">
-            <div className="text-center max-w-3xl mx-auto mb-8">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider mb-4 border border-primary/20">
+            <div className="text-center max-w-2xl mx-auto mb-8">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider mb-3 border border-primary/20">
                 <HeartPulse size={14} />
-                Opes Especialidades • Enfermagem e Fisioterapia Pediátrica
+                Para Enfermagem e Fisioterapia Pediátrica
               </div>
 
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground tracking-tight mb-4 leading-tight">
-                Evolução clínica, <span className="text-gradient">fisioterapia e cuidados</span> com IA
+              <h1 className="text-3xl sm:text-4xl font-bold text-foreground tracking-tight mb-3 leading-tight">
+                Prontuário com <span className="text-gradient">IA para Enfermagem e Fisio</span>
               </h1>
 
-              <p className="text-sm sm:text-base text-muted-foreground max-w-xl mx-auto mb-6 leading-relaxed">
-                Prontuário prático para registro de procedimentos, sinais vitais, fisioterapia respiratória e motora e orientações familiares por apenas <strong className="text-foreground">R$ 200/mês</strong>.
+              <p className="text-xs sm:text-sm md:text-base text-muted-foreground max-w-lg mx-auto mb-5 leading-relaxed">
+                Anotações clínicas online, transcrição de voz, curvas de crescimento, vacinas e agendamento por <strong className="text-foreground">R$ 199/mês</strong>.
               </p>
 
               {/* CTAs */}
-              <div className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-6">
+              <div className="flex flex-col sm:flex-row gap-2.5 justify-center items-center mb-4">
                 <Button
                   size="default"
-                  className="w-full sm:w-auto bg-gradient-primary hover:opacity-90 shadow-primary text-sm px-6 h-10 font-bold"
+                  className="w-full sm:w-auto bg-gradient-primary hover:opacity-90 shadow-primary text-xs sm:text-sm px-6 h-10 font-bold"
                   asChild
                 >
                   <a href="https://www.opespediatra.com/login">
                     Iniciar Teste Grátis de 15 Dias
-                    <ArrowRight size={16} className="ml-1.5" />
+                    <ArrowRight size={15} className="ml-1.5" />
                   </a>
                 </Button>
 
                 <Button
                   size="default"
                   variant="outline"
-                  className="w-full sm:w-auto border-emerald-500/40 text-emerald-700 dark:text-emerald-400 hover:bg-emerald-500/10 font-bold px-5 h-10 gap-1.5"
+                  className="w-full sm:w-auto border-emerald-500/40 text-emerald-700 dark:text-emerald-400 hover:bg-emerald-500/10 font-bold px-5 h-10 gap-1.5 text-xs sm:text-sm"
                   asChild
                 >
                   <a href={consultoraWhatsAppUrl} target="_blank" rel="noopener noreferrer">
-                    <MessageSquare size={16} className="text-emerald-500" />
+                    <MessageSquare size={15} className="text-emerald-500" />
                     Falar com a Consultora
                   </a>
                 </Button>
               </div>
 
-              <p className="text-xs text-muted-foreground">
-                ✓ Sem cartão de crédito • Prontuário simplificado para atendimentos em clínica ou domiciliar
+              <p className="text-[11px] text-muted-foreground">
+                Prontuário ágil para consultório, clínica ou atendimento domiciliar
               </p>
             </div>
 
@@ -85,59 +86,59 @@ const LPEnfermagem: React.FC = () => {
           </div>
         </section>
 
-        {/* Benefits Grid */}
+        {/* Funcionalidades Oficiais de Enfermagem e Fisio */}
         <section className="section-padding bg-muted/30">
           <div className="container-custom">
-            <div className="text-center max-w-3xl mx-auto mb-12">
+            <div className="text-center max-w-2xl mx-auto mb-8">
               <span className="text-xs font-bold uppercase tracking-wider text-primary block mb-1">
-                RECURSOS PARA ENFERMEIROS E FISIOTERAPEUTAS
+                FUNCIONALIDADES PRINCIPAIS
               </span>
               <h2 className="text-2xl sm:text-3xl font-bold text-foreground">
-                Agilidade no registro de procedimentos e evolução terapêutica
+                Tudo o que sua rotina de cuidados precisa
               </h2>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
               {[
                 {
-                  icon: HeartPulse,
-                  title: "Sinais Vitais e Parâmetros",
-                  desc: "Registro ágil de saturação, frequência respiratória, temperatura e parâmetros pediátricos com histórico visual.",
-                },
-                {
-                  icon: Activity,
-                  title: "Fisioterapia Respiratória e Motora",
-                  desc: "Módulo focado em técnicas de desobstrução, manobras, reabilitação motora e marcos do desenvolvimento.",
-                },
-                {
-                  icon: Mic,
-                  title: "Transcrição por IA Durante o Plantão",
-                  desc: "Dite a evolução do paciente e procedimentos executados diretamente por voz sem perder tempo digitando.",
+                  icon: Calendar,
+                  title: "Agendamento Integrado",
+                  desc: "Controle de horários na clínica e visitas domiciliares com facilidade.",
                 },
                 {
                   icon: FileText,
-                  title: "Relatórios de Alta e Cuidados Domiciliares",
-                  desc: "Gere orientações claras para os pais e relatórios de passagem de plantão ou encaminhamento médico.",
+                  title: "Anotações Clínicas Online",
+                  desc: "Registro ágil de procedimentos, sinais vitais e evolução do paciente.",
                 },
                 {
-                  icon: Video,
-                  title: "Teleconsulta e Acompanhamento Remoto",
-                  desc: "Realize orientações parentais e tire dúvidas sobre procedimentos e exercícios de forma segura em vídeo.",
+                  icon: Mic,
+                  title: "Transcrição de Voz com IA",
+                  desc: "Dite a evolução e condutas durante o plantão sem perder tempo digitando.",
                 },
                 {
-                  icon: Calendar,
-                  title: "Agenda de Atendimentos e Domicílios",
-                  desc: "Organize seus horários de atendimento na clínica ou visitas domiciliares com controle financeiro integrado.",
+                  icon: LineChart,
+                  title: "Gráficos de Crescimento",
+                  desc: "Curvas de crescimento antropométrico automáticas nos padrões OMS e CDC.",
+                },
+                {
+                  icon: Syringe,
+                  title: "Gestão de Vacinas",
+                  desc: "Controle da caderneta de vacinação da criança com histórico completo.",
+                },
+                {
+                  icon: CheckCircle,
+                  title: "Emissão de Atestados",
+                  desc: "Declarações de atendimento, relatórios de alta e orientações aos pais.",
                 },
               ].map((item, index) => (
                 <div
                   key={index}
-                  className="p-5 rounded-xl bg-card border border-border/70 shadow-sm hover:shadow-md transition-all"
+                  className="p-4 rounded-xl bg-card border border-border/80 shadow-sm"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-3">
-                    <item.icon size={20} />
+                  <div className="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-2.5">
+                    <item.icon size={18} />
                   </div>
-                  <h3 className="text-base font-bold text-foreground mb-1.5">{item.title}</h3>
+                  <h3 className="text-sm font-bold text-foreground mb-1">{item.title}</h3>
                   <p className="text-xs text-muted-foreground leading-relaxed">{item.desc}</p>
                 </div>
               ))}
@@ -145,102 +146,99 @@ const LPEnfermagem: React.FC = () => {
           </div>
         </section>
 
-        {/* Pricing Dedicated Enfermagem */}
+        {/* Pricing Dedicated Enfermagem Clean */}
         <section className="section-padding bg-background">
           <div className="container-custom">
-            <div className="text-center max-w-3xl mx-auto mb-10">
+            <div className="text-center max-w-2xl mx-auto mb-8">
               <span className="text-xs font-bold uppercase tracking-wider text-primary block mb-1">
-                PLANOS OFICIAIS OPES ESPECIALIDADES
+                PLANOS OFICIAIS
               </span>
-              <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-2">
+              <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-1">
                 Investimento sob medida para Enfermagem e Fisioterapia
               </h2>
-              <p className="text-xs sm:text-sm text-muted-foreground">
-                Planos a partir de <strong>R$ 200/mês</strong> com <strong>15% de desconto</strong> no plano anual.
+              <p className="text-xs text-muted-foreground">
+                Desconto de 15% na assinatura anual
               </p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-5 max-w-5xl mx-auto">
               {/* Individual */}
-              <div className="p-6 rounded-2xl bg-card border border-border/80 shadow-sm flex flex-col justify-between">
+              <div className="p-5 rounded-2xl bg-card border border-border/80 shadow-sm flex flex-col justify-between">
                 <div>
-                  <h3 className="text-lg font-bold text-foreground mb-1">Individual (1 Profissional)</h3>
-                  <p className="text-xs text-muted-foreground mb-4">Para atendimento particular ou domiciliar</p>
-                  <div className="mb-4 p-3 rounded-xl bg-muted/60 border border-border">
+                  <h3 className="text-base font-bold text-foreground mb-0.5">Individual</h3>
+                  <p className="text-xs text-muted-foreground mb-3">Para atendimento particular ou domiciliar</p>
+                  <div className="mb-3">
                     <div className="flex items-baseline gap-1">
                       <span className="text-xs font-semibold text-foreground">R$</span>
-                      <span className="text-3xl font-black text-primary">200</span>
+                      <span className="text-3xl font-black text-primary">199</span>
                       <span className="text-xs text-muted-foreground">/mês</span>
                     </div>
-                    <p className="text-xs font-semibold text-emerald-700 dark:text-emerald-400 mt-1.5">
-                      Ou R$ 170/mês no Plano Anual (15% OFF)
-                    </p>
-                    <p className="text-[10px] text-muted-foreground mt-0.5">1 Profissional e 1 Assistente inclusa</p>
+                    <p className="text-xs text-muted-foreground mt-0.5">1 Profissional + 1 Assistente inclusa</p>
                   </div>
-                  <ul className="space-y-2 text-xs text-muted-foreground mb-5">
-                    <li className="flex items-center gap-1.5">✓ Prontuário para enfermagem e fisioterapia</li>
-                    <li className="flex items-center gap-1.5">✓ Transcrição por IA de procedimentos</li>
-                    <li className="flex items-center gap-1.5">✓ Parâmetros e sinais vitais</li>
-                    <li className="flex items-center gap-1.5">✓ Agenda e controle de visitas</li>
+                  <ul className="space-y-2 text-xs text-muted-foreground mb-5 pt-2 border-t border-border/40">
+                    <li className="flex items-center gap-1.5">✓ Sem limite de funcionalidades</li>
+                    <li className="flex items-center gap-1.5">✓ Ferramentas de IA incluídas</li>
+                    <li className="flex items-center gap-1.5">✓ Transcrição de procedimentos</li>
+                    <li className="flex items-center gap-1.5">✓ Anotações clínicas online</li>
+                    <li className="flex items-center gap-1.5">✓ Atualizações automáticas</li>
+                    <li className="flex items-center gap-1.5">✓ Suporte prioritário</li>
                   </ul>
                 </div>
-                <Button asChild className="w-full bg-gradient-primary text-xs font-bold h-9">
-                  <a href="https://www.opespediatra.com/login">Testar Grátis 15 Dias</a>
+                <Button asChild variant="outline" className="w-full text-xs font-bold h-9">
+                  <a href="https://www.opespediatra.com/login">Começar teste grátis</a>
                 </Button>
               </div>
 
-              {/* Clínicas */}
-              <div className="p-6 rounded-2xl bg-gradient-primary text-primary-foreground shadow-xl scale-105 relative flex flex-col justify-between">
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-amber-400 text-slate-900 text-[10px] font-black px-2.5 py-0.5 rounded-full shadow">
-                  MAIS ESCOLHIDO
+              {/* Empresarial */}
+              <div className="p-5 rounded-2xl bg-gradient-primary text-primary-foreground shadow-xl scale-105 relative flex flex-col justify-between">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-cyan-400 text-slate-900 text-[10px] font-black px-2.5 py-0.5 rounded-full shadow">
+                  MAIS POPULAR
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold mb-1">Equipes e Clínicas</h3>
-                  <p className="text-xs text-primary-foreground/90 mb-4">De 2 a 9 Profissionais e 3 Assistentes</p>
-                  <div className="mb-4 p-3 rounded-xl bg-black/15 border border-white/20">
+                  <h3 className="text-base font-bold mb-0.5">Empresarial</h3>
+                  <p className="text-xs text-primary-foreground/80 mb-3">Para equipes e clínicas</p>
+                  <div className="mb-3">
                     <div className="flex items-baseline gap-1">
                       <span className="text-xs font-semibold">R$</span>
                       <span className="text-3xl font-black text-white">185</span>
                       <span className="text-xs text-primary-foreground/80">/mês por profissional</span>
                     </div>
-                    <p className="text-xs font-semibold text-white mt-1.5">
-                      Ou R$ 157/mês no Plano Anual (15% OFF)
-                    </p>
-                    <p className="text-[10px] text-primary-foreground/90 mt-0.5">Até 3 Assistentes inclusas</p>
+                    <p className="text-xs font-semibold text-white mt-0.5">Econômico</p>
                   </div>
-                  <ul className="space-y-2 text-xs text-primary-foreground/95 mb-5">
-                    <li className="flex items-center gap-1.5">✓ Prontuários integrados para equipe</li>
-                    <li className="flex items-center gap-1.5">✓ Transcrição com IA para todo o time</li>
-                    <li className="flex items-center gap-1.5">✓ Relatórios compartilhados</li>
-                    <li className="flex items-center gap-1.5">✓ Suporte direto via WhatsApp</li>
+                  <ul className="space-y-2 text-xs text-primary-foreground/90 mb-5 pt-2 border-t border-white/20">
+                    <li className="flex items-center gap-1.5">✓ 2 a 9 Profissionais + 3 Assistentes</li>
+                    <li className="flex items-center gap-1.5">✓ Sem limite de funcionalidades</li>
+                    <li className="flex items-center gap-1.5">✓ Ferramentas de IA incluídas</li>
+                    <li className="flex items-center gap-1.5">✓ Desconto de 15% na assinatura Anual</li>
+                    <li className="flex items-center gap-1.5">✓ Relatórios e prontuários da equipe</li>
+                    <li className="flex items-center gap-1.5">✓ Suporte prioritário</li>
                   </ul>
                 </div>
                 <Button asChild className="w-full bg-white text-primary hover:bg-white/95 text-xs font-bold shadow-md h-9">
-                  <a href="https://www.opespediatra.com/login">Testar com a Equipe</a>
+                  <a href="https://www.opespediatra.com/login">Começar teste grátis</a>
                 </Button>
               </div>
 
               {/* Corporativo */}
-              <div className="p-6 rounded-2xl bg-card border border-border/80 shadow-sm flex flex-col justify-between">
+              <div className="p-5 rounded-2xl bg-card border border-border/80 shadow-sm flex flex-col justify-between">
                 <div>
-                  <h3 className="text-lg font-bold text-foreground mb-1">Home Care e Policlínicas</h3>
-                  <p className="text-xs text-muted-foreground mb-4">Para 10 ou mais Profissionais</p>
-                  <div className="mb-4 p-3 rounded-xl bg-muted/60 border border-border">
+                  <h3 className="text-base font-bold text-foreground mb-0.5">Corporativo</h3>
+                  <p className="text-xs text-muted-foreground mb-3">Para home care e policlínicas</p>
+                  <div className="mb-3">
                     <div className="flex items-baseline gap-1">
                       <span className="text-xs font-semibold text-foreground">R$</span>
                       <span className="text-3xl font-black text-primary">170</span>
                       <span className="text-xs text-muted-foreground">/mês por profissional</span>
                     </div>
-                    <p className="text-xs font-semibold text-emerald-700 dark:text-emerald-400 mt-1.5">
-                      Ou R$ 145/mês no Plano Anual (15% OFF)
-                    </p>
-                    <p className="text-[10px] text-muted-foreground mt-0.5">Até 5 Assistentes inclusas</p>
+                    <p className="text-xs text-purple-600 dark:text-purple-400 font-semibold mt-0.5">Máxima economia</p>
                   </div>
-                  <ul className="space-y-2 text-xs text-muted-foreground mb-5">
-                    <li className="flex items-center gap-1.5">✓ Máxima economia por usuário</li>
-                    <li className="flex items-center gap-1.5">✓ Treinamento de equipe incluso</li>
-                    <li className="flex items-center gap-1.5">✓ Suporte prioritário via WhatsApp</li>
-                    <li className="flex items-center gap-1.5">✓ Consultoria técnica dedicada</li>
+                  <ul className="space-y-2 text-xs text-muted-foreground mb-5 pt-2 border-t border-border/40">
+                    <li className="flex items-center gap-1.5">✓ 10+ Profissionais + 5 Assistentes</li>
+                    <li className="flex items-center gap-1.5">✓ Sem limite de funcionalidades</li>
+                    <li className="flex items-center gap-1.5">✓ Ferramentas de IA incluídas</li>
+                    <li className="flex items-center gap-1.5">✓ Desconto de 15% na assinatura Anual</li>
+                    <li className="flex items-center gap-1.5">✓ Onboarding personalizado</li>
+                    <li className="flex items-center gap-1.5">✓ Suporte dedicado 24/7</li>
                   </ul>
                 </div>
                 <Button asChild variant="outline" className="w-full text-xs font-bold border-emerald-500/40 text-emerald-700 dark:text-emerald-400 h-9">

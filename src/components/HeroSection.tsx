@@ -17,7 +17,7 @@ const HeroSection = () => {
 
       <div className="container-custom relative">
         {/* Top Selector Badges */}
-        <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2.5 mb-5 animate-fade-in">
+        <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 mb-4 animate-fade-in">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold border border-primary/20">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
@@ -31,7 +31,7 @@ const HeroSection = () => {
             className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-muted hover:bg-muted/80 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors border border-border/50"
           >
             <Stethoscope size={12} className="text-primary" />
-            <span>Opes Pediatria (CRM)</span>
+            <span>Opes Pediatra</span>
           </a>
 
           <a
@@ -39,33 +39,33 @@ const HeroSection = () => {
             className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-muted hover:bg-muted/80 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors border border-border/50"
           >
             <Activity size={12} className="text-primary" />
-            <span>Opes Especialidades (TO • Psicologia • Enfermagem)</span>
+            <span>Opes Especialidades</span>
           </a>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-10 items-center">
           {/* Content */}
           <div className="text-center lg:text-left">
             {/* Headline */}
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4 leading-tight animate-slide-up">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-3 leading-tight animate-slide-up">
               Tecnologia e IA{" "}
               <span className="text-gradient">feitas sob medida</span>{" "}
               para a saúde infantil
             </h1>
 
-            {/* Subheadline */}
+            {/* Subheadline Clean */}
             <p
               className="text-sm md:text-base text-muted-foreground mb-6 max-w-lg mx-auto lg:mx-0 leading-relaxed animate-slide-up"
               style={{ animationDelay: "0.1s" }}
             >
-              Do consultório do <strong className="text-foreground">médico pediatra</strong> às sessões de{" "}
-              <strong className="text-foreground">terapia ocupacional, psicologia e enfermagem</strong>. Reduza o tempo de digitação em{" "}
-              <strong className="text-foreground">70%</strong> com IA não intrusiva.
+              Para <strong className="text-foreground">médicos pediatras</strong> e especialistas em{" "}
+              <strong className="text-foreground">terapia ocupacional, psicologia e enfermagem</strong>. Economize até{" "}
+              <strong className="text-foreground">70%</strong> do tempo de digitação com IA não intrusiva.
             </p>
 
             {/* CTAs */}
             <div
-              className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mb-6 animate-slide-up"
+              className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mb-5 animate-slide-up"
               style={{ animationDelay: "0.2s" }}
             >
               <Button
@@ -89,12 +89,12 @@ const HeroSection = () => {
               </Button>
             </div>
 
-            {/* Quick Links to Verticals */}
+            {/* Quick Links to Verticals Clean */}
             <div
-              className="pt-1 pb-5 flex flex-wrap items-center justify-center lg:justify-start gap-3 text-xs text-muted-foreground animate-slide-up"
+              className="pt-1 pb-4 flex flex-wrap items-center justify-center lg:justify-start gap-3 text-xs text-muted-foreground animate-slide-up"
               style={{ animationDelay: "0.25s" }}
             >
-              <span className="text-foreground font-semibold">Conheça cada solução:</span>
+              <span className="text-foreground font-semibold">Especialidades:</span>
               <Link to="/pediatria" className="text-primary hover:underline font-semibold">
                 Pediatria →
               </Link>
@@ -142,14 +142,14 @@ const HeroSection = () => {
             </div>
 
             {/* Floating Highlight */}
-            <div className="absolute -bottom-4 -left-4 sm:-left-6 bg-card/95 backdrop-blur-md rounded-xl shadow-lg p-3 border border-border animate-float">
-              <div className="flex items-center gap-2.5">
-                <div className="w-9 h-9 rounded-lg bg-gradient-primary flex items-center justify-center shadow-sm">
-                  <Sparkles size={16} className="text-primary-foreground" />
+            <div className="absolute -bottom-3 -left-3 sm:-left-5 bg-card/95 backdrop-blur-md rounded-xl shadow-lg p-2.5 border border-border animate-float">
+              <div className="flex items-center gap-2">
+                <div className="w-8 h-8 rounded-lg bg-gradient-primary flex items-center justify-center shadow-sm">
+                  <Sparkles size={15} className="text-primary-foreground" />
                 </div>
                 <div>
                   <p className="font-bold text-foreground text-xs">70% Menos Digitação</p>
-                  <p className="text-[11px] text-muted-foreground">com Transcrição Inteligente</p>
+                  <p className="text-[10px] text-muted-foreground">com Transcrição Inteligente</p>
                 </div>
               </div>
             </div>
