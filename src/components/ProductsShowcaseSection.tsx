@@ -9,6 +9,7 @@ import {
   MessageSquare,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logoOpesEspecialidades from "@/assets/logo-opes-especialidades.jpg";
 
 const ProductsShowcaseSection: React.FC = () => {
   const consultoraWhatsAppPediatria =
@@ -165,10 +166,14 @@ const ProductsShowcaseSection: React.FC = () => {
             </div>
 
             <div>
-              {/* Product Header */}
+              {/* Product Header with Official Logo */}
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary">
-                  <Activity size={20} />
+                <div className="h-10 px-2.5 py-1 rounded-xl bg-white border border-border/80 flex items-center justify-center shadow-sm">
+                  <img
+                    src={logoOpesEspecialidades}
+                    alt="Opes Especialidades"
+                    className="h-6 w-auto object-contain"
+                  />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-foreground">
@@ -198,7 +203,7 @@ const ProductsShowcaseSection: React.FC = () => {
                   <span className="inline-block text-[11px] font-bold text-emerald-700 dark:text-emerald-400 bg-emerald-100 dark:bg-emerald-950/60 px-2 py-0.5 rounded-full">
                     15% OFF no Anual (R$ 169/mês)
                   </span>
-                  <span className="text-[10px] text-muted-foreground block mt-0.5">1 Especialista + 1 Assistente inclusa</span>
+                  <span className="text-[10px] text-muted-foreground block mt-0.5">1 Profissional + 1 Assistente inclusa</span>
                 </div>
               </div>
 

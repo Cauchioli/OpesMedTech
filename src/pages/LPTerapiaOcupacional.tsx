@@ -15,6 +15,7 @@ import {
   CheckCircle,
 } from "lucide-react";
 import platformSaudeMental from "@/assets/platform-saude-mental.png";
+import logoOpesEspecialidades from "@/assets/logo-opes-especialidades.jpg";
 
 const LPTerapiaOcupacional: React.FC = () => {
   const consultoraWhatsAppUrl =
@@ -30,9 +31,14 @@ const LPTerapiaOcupacional: React.FC = () => {
         <section className="relative pt-20 md:pt-28 pb-12 md:pb-16 overflow-hidden bg-gradient-radial">
           <div className="container-custom relative">
             <div className="text-center max-w-2xl mx-auto mb-8">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider mb-3 border border-primary/20">
-                <Activity size={14} />
-                Para Terapeutas Ocupacionais (CREFITO)
+              {/* Brand & Specialty Badge */}
+              <div className="flex items-center justify-center gap-2 mb-3">
+                <div className="inline-flex items-center gap-2.5 px-3 py-1 rounded-full bg-card border border-border/80 shadow-sm">
+                  <img src={logoOpesEspecialidades} alt="Opes Especialidades" className="h-4 w-auto object-contain" />
+                  <span className="text-[11px] font-bold text-primary uppercase tracking-wider border-l border-border pl-2">
+                    CREFITO
+                  </span>
+                </div>
               </div>
 
               <h1 className="text-3xl sm:text-4xl font-bold text-foreground tracking-tight mb-3 leading-tight">
