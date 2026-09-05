@@ -195,7 +195,7 @@ const FeaturesSection = () => {
                     className="rounded-full border-sky-300 text-sky-700 hover:bg-sky-50 font-bold text-xs sm:text-sm px-5 h-11"
                   >
                     <Link to="/pediatria">
-                      Ver Landing Page da Pediatria
+                      Saber mais sobre Pediatria
                     </Link>
                   </Button>
                 </div>
@@ -408,7 +408,11 @@ const FeaturesSection = () => {
                           : "/enfermagem"
                       }
                     >
-                      Ver Landing Page Dedicada
+                      {activeSpecialty === "to"
+                        ? "Saber mais sobre Terapia Ocupacional"
+                        : activeSpecialty === "psicologia"
+                        ? "Saber mais sobre Psicologia Infantil"
+                        : "Saber mais sobre Enfermagem e Fisio"}
                     </Link>
                   </Button>
                 </div>
