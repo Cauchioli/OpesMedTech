@@ -156,7 +156,7 @@ const LPTerapiaOcupacional: React.FC = () => {
                 Investimento sob medida para Terapeutas Ocupacionais
               </h2>
               <p className="text-xs text-muted-foreground">
-                Desconto de 15% na assinatura anual
+                Planos mensais e anuais com desconto exclusivo
               </p>
             </div>
 
@@ -164,23 +164,22 @@ const LPTerapiaOcupacional: React.FC = () => {
               {/* Individual */}
               <div className="p-5 rounded-2xl bg-card border border-border/80 shadow-sm flex flex-col justify-between">
                 <div>
-                  <h3 className="text-base font-bold text-foreground mb-0.5">Individual</h3>
-                  <p className="text-xs text-muted-foreground mb-3">Para consultório individual</p>
+                  <h3 className="text-xl font-bold text-foreground mb-3">Individual</h3>
                   <div className="mb-3">
                     <div className="flex items-baseline gap-1">
                       <span className="text-xs font-semibold text-foreground">R$</span>
                       <span className="text-3xl font-black text-primary">199</span>
                       <span className="text-xs text-muted-foreground">/mês</span>
                     </div>
-                    <p className="text-xs text-muted-foreground mt-0.5">1 Terapeuta + 1 Assistente inclusa</p>
+                    <p className="text-xs text-emerald-700 dark:text-emerald-400 font-semibold mt-0.5">
+                      15% de desconto no plano anual
+                    </p>
                   </div>
                   <ul className="space-y-2 text-xs text-muted-foreground mb-5 pt-2 border-t border-border/40">
-                    <li className="flex items-center gap-1.5">✓ Sem limite de funcionalidades</li>
-                    <li className="flex items-center gap-1.5">✓ Ferramentas de IA incluídas</li>
-                    <li className="flex items-center gap-1.5">✓ Transcrição de sessões</li>
-                    <li className="flex items-center gap-1.5">✓ Anotações clínicas online</li>
-                    <li className="flex items-center gap-1.5">✓ Atualizações automáticas</li>
-                    <li className="flex items-center gap-1.5">✓ Suporte prioritário</li>
+                    <li className="flex items-center gap-1.5">✓ 1 Profissional da saúde + 1 Assistente</li>
+                    <li className="flex items-center gap-1.5">✓ Funcionalidades conforme área de atuação</li>
+                    <li className="flex items-center gap-1.5">✓ IA para Transcrição</li>
+                    <li className="flex items-center gap-1.5">✓ Relatórios Financeiros</li>
                   </ul>
                 </div>
                 <Button asChild variant="outline" className="w-full text-xs font-bold h-9">
@@ -194,23 +193,21 @@ const LPTerapiaOcupacional: React.FC = () => {
                   MAIS ESCOLHIDO
                 </div>
                 <div>
-                  <h3 className="text-base font-bold mb-0.5">Clínicas</h3>
-                  <p className="text-xs text-primary-foreground/80 mb-3">Para clínicas e equipes</p>
+                  <h3 className="text-xl font-bold mb-3">Clínicas</h3>
                   <div className="mb-3">
                     <div className="flex items-baseline gap-1">
                       <span className="text-xs font-semibold">R$</span>
                       <span className="text-3xl font-black text-white">185</span>
                       <span className="text-xs text-primary-foreground/80">/mês por profissional</span>
                     </div>
-                    <p className="text-xs font-semibold text-white mt-0.5">Econômico</p>
+                    <p className="text-xs font-semibold text-white mt-0.5">5% mais econômico</p>
                   </div>
                   <ul className="space-y-2 text-xs text-primary-foreground/90 mb-5 pt-2 border-t border-white/20">
-                    <li className="flex items-center gap-1.5">✓ 2 a 9 Profissionais + 3 Assistentes</li>
-                    <li className="flex items-center gap-1.5">✓ Sem limite de funcionalidades</li>
-                    <li className="flex items-center gap-1.5">✓ Ferramentas de IA incluídas</li>
-                    <li className="flex items-center gap-1.5">✓ Desconto de 15% na assinatura Anual</li>
-                    <li className="flex items-center gap-1.5">✓ Relatórios e prontuários da equipe</li>
-                    <li className="flex items-center gap-1.5">✓ Suporte prioritário</li>
+                    <li className="flex items-center gap-1.5">✓ 2 a 9 Profissionais da saúde + 3 Assistentes</li>
+                    <li className="flex items-center gap-1.5">✓ Todos os benefícios do Plano Individual</li>
+                    <li className="flex items-center gap-1.5">✓ 5% mais econômico</li>
+                    <li className="flex items-center gap-1.5">✓ 10% de desconto no plano anual</li>
+                    <li className="flex items-center gap-1.5">✓ Suporte Prioritário</li>
                   </ul>
                 </div>
                 <Button asChild className="w-full bg-white text-primary hover:bg-white/95 text-xs font-bold shadow-md h-9">
@@ -221,23 +218,21 @@ const LPTerapiaOcupacional: React.FC = () => {
               {/* Redes */}
               <div className="p-5 rounded-2xl bg-card border border-border/80 shadow-sm flex flex-col justify-between">
                 <div>
-                  <h3 className="text-base font-bold text-foreground mb-0.5">Redes</h3>
-                  <p className="text-xs text-muted-foreground mb-3">Para grandes centros</p>
+                  <h3 className="text-xl font-bold text-foreground mb-3">Redes</h3>
                   <div className="mb-3">
                     <div className="flex items-baseline gap-1">
                       <span className="text-xs font-semibold text-foreground">R$</span>
                       <span className="text-3xl font-black text-primary">170</span>
                       <span className="text-xs text-muted-foreground">/mês por profissional</span>
                     </div>
-                    <p className="text-xs text-purple-600 dark:text-purple-400 font-semibold mt-0.5">Máxima economia</p>
+                    <p className="text-xs text-purple-600 dark:text-purple-400 font-semibold mt-0.5">10% mais econômico</p>
                   </div>
                   <ul className="space-y-2 text-xs text-muted-foreground mb-5 pt-2 border-t border-border/40">
-                    <li className="flex items-center gap-1.5">✓ 10+ Profissionais + 5 Assistentes</li>
-                    <li className="flex items-center gap-1.5">✓ Sem limite de funcionalidades</li>
-                    <li className="flex items-center gap-1.5">✓ Ferramentas de IA incluídas</li>
-                    <li className="flex items-center gap-1.5">✓ Desconto de 15% na assinatura Anual</li>
-                    <li className="flex items-center gap-1.5">✓ Onboarding personalizado</li>
-                    <li className="flex items-center gap-1.5">✓ Suporte dedicado 24/7</li>
+                    <li className="flex items-center gap-1.5">✓ 10+ Profissionais de saúde + 5 Assistentes</li>
+                    <li className="flex items-center gap-1.5">✓ Todos os benefícios do Plano Clínicas</li>
+                    <li className="flex items-center gap-1.5">✓ 10% mais econômico</li>
+                    <li className="flex items-center gap-1.5">✓ 15% de desconto na assinatura anual</li>
+                    <li className="flex items-center gap-1.5">✓ Suporte Dedicado</li>
                   </ul>
                 </div>
                 <Button asChild variant="outline" className="w-full text-xs font-bold border-emerald-500/40 text-emerald-700 dark:text-emerald-400 h-9">

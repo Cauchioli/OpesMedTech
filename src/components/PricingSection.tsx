@@ -22,17 +22,13 @@ const PricingSection = () => {
       name: "Individual",
       monthlyPrice: 299,
       annualPrice: 254,
-      userNote: "1 Médico + 1 Assistente",
-      description: "Ideal para consultórios individuais",
       popular: false,
       features: [
         "1 Médico + 1 Assistente",
-        "Sem limite de funcionalidades",
-        "Ferramentas de IA incluídas",
-        "Transcrição de consultas",
-        "Gestão de vacinas",
-        "Atualizações automáticas",
-        "Suporte prioritário",
+        "Sem limites de funcionalidades",
+        "IA de Transcrição de voz e Análise Preditiva",
+        "Relatórios Financeiros",
+        "Parceria Memed",
       ],
       cta: "Começar teste grátis",
       ctaVariant: "outline" as const,
@@ -40,21 +36,17 @@ const PricingSection = () => {
     {
       name: "Clínicas",
       monthlyPrice: 285,
-      annualPrice: 242,
+      annualPrice: 256,
       pricePerUser: "por médico",
-      userNote: "2 a 9 Médicos + 3 Assistentes",
       savingsBadge: "5% mais econômico",
-      description: "Para clínicas pediátricas em crescimento",
       popular: true,
       badge: "MAIS ESCOLHIDO",
       features: [
         "2 a 9 Médicos + 3 Assistentes",
-        "Sem limite de funcionalidades",
-        "Ferramentas de IA incluídas",
+        "Todos os benefícios do Plano Individual",
         "5% mais econômico",
-        "Desconto de 15% na assinatura Anual",
-        "Relatórios avançados",
-        "Suporte prioritário",
+        "10% de desconto no plano anual",
+        "Suporte Prioritário",
       ],
       cta: "Começar teste grátis",
       ctaVariant: "default" as const,
@@ -64,18 +56,14 @@ const PricingSection = () => {
       monthlyPrice: 269,
       annualPrice: 228,
       pricePerUser: "por médico",
-      userNote: "10+ Médicos + 5 Assistentes",
       savingsBadge: "10% mais econômico",
-      description: "Para grandes clínicas e redes",
       popular: false,
       features: [
         "10+ Médicos + 5 Assistentes",
-        "Sem limite de funcionalidades",
-        "Ferramentas de IA incluídas",
+        "Todos os benefícios do Plano Clínicas",
         "10% mais econômico",
-        "Desconto de 15% na assinatura Anual",
-        "Onboarding personalizado",
-        "Suporte dedicado 24/7",
+        "15% de desconto na assinatura anual",
+        "Suporte Dedicado",
       ],
       cta: "Falar com a Consultora",
       ctaVariant: "outline" as const,
@@ -87,17 +75,12 @@ const PricingSection = () => {
       name: "Individual",
       monthlyPrice: 199,
       annualPrice: 169,
-      userNote: "1 Profissional + 1 Assistente",
-      description: "Para consultórios individuais",
       popular: false,
       features: [
-        "1 Especialista + 1 Assistente",
-        "Sem limite de funcionalidades",
-        "Ferramentas de IA incluídas",
-        "Transcrição de sessões",
-        "Anotações clínicas online",
-        "Atualizações automáticas",
-        "Suporte prioritário",
+        "1 Profissional da saúde + 1 Assistente",
+        "Funcionalidades conforme área de atuação",
+        "IA para Transcrição",
+        "Relatórios Financeiros",
       ],
       cta: "Começar teste grátis",
       ctaVariant: "outline" as const,
@@ -105,21 +88,17 @@ const PricingSection = () => {
     {
       name: "Clínicas",
       monthlyPrice: 185,
-      annualPrice: 157,
+      annualPrice: 166,
       pricePerUser: "por profissional",
-      userNote: "2 a 9 Profissionais + 3 Assistentes",
-      savingsBadge: "Econômico",
-      description: "Para clínicas e consultórios integrados",
+      savingsBadge: "5% mais econômico",
       popular: true,
       badge: "MAIS ESCOLHIDO",
       features: [
-        "2 a 9 Profissionais + 3 Assistentes",
-        "Sem limite de funcionalidades",
-        "Ferramentas de IA incluídas",
-        "Desconto progressivo por usuário",
-        "Desconto de 15% na assinatura Anual",
-        "Relatórios e prontuários da equipe",
-        "Suporte prioritário",
+        "2 a 9 Profissionais da saúde + 3 Assistentes",
+        "Todos os benefícios do Plano Individual",
+        "5% mais econômico",
+        "10% de desconto no plano anual",
+        "Suporte Prioritário",
       ],
       cta: "Começar teste grátis",
       ctaVariant: "default" as const,
@@ -129,18 +108,14 @@ const PricingSection = () => {
       monthlyPrice: 170,
       annualPrice: 144,
       pricePerUser: "por profissional",
-      userNote: "10+ Profissionais + 5 Assistentes",
-      savingsBadge: "Máxima economia",
-      description: "Para centros de reabilitação e redes",
+      savingsBadge: "10% mais econômico",
       popular: false,
       features: [
-        "10+ Profissionais + 5 Assistentes",
-        "Sem limite de funcionalidades",
-        "Ferramentas de IA incluídas",
-        "Maior economia por profissional",
-        "Desconto de 15% na assinatura Anual",
-        "Onboarding personalizado",
-        "Suporte dedicado 24/7",
+        "10+ Profissionais de saúde + 5 Assistentes",
+        "Todos os benefícios do Plano Clínicas",
+        "10% mais econômico",
+        "15% de desconto na assinatura anual",
+        "Suporte Dedicado",
       ],
       cta: "Falar com a Consultora",
       ctaVariant: "outline" as const,
@@ -225,7 +200,7 @@ const PricingSection = () => {
           >
             <span>Anual</span>
             <span className="bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-300 text-[10px] font-bold px-2 py-0.5 rounded-full border border-emerald-500/30">
-              15% OFF
+              Desconto Especial
             </span>
           </span>
         </div>
@@ -255,22 +230,15 @@ const PricingSection = () => {
                 )}
 
                 <div>
-                  {/* Plan Name & Desc */}
+                  {/* Plan Name */}
                   <div className="mb-4">
                     <h3
-                      className={`text-lg font-bold mb-1 ${
+                      className={`text-xl font-bold ${
                         plan.popular ? "text-primary-foreground" : "text-foreground"
                       }`}
                     >
                       {plan.name}
                     </h3>
-                    <p
-                      className={`text-xs ${
-                        plan.popular ? "text-primary-foreground/80" : "text-muted-foreground"
-                      }`}
-                    >
-                      {plan.description}
-                    </p>
                   </div>
 
                   {/* Price Block */}
