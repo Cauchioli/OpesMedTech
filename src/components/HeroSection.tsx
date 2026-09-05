@@ -1,160 +1,127 @@
-import { Shield, Lock, Cloud, MessageSquare, Sparkles, Stethoscope, Activity } from "lucide-react";
+import React from "react";
+import { ArrowRight, MessageSquare, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import heroImage from "@/assets/hero-pediatra-crianca.jpg";
 
-const HeroSection = () => {
+const HeroSection: React.FC = () => {
   const consultoraWhatsAppUrl =
     "https://wa.me/5511972240924?text=" +
-    encodeURIComponent("Olá! Gostaria de entender mais sobre as soluções da Opes Medtech e testar a plataforma.");
+    encodeURIComponent("Olá! Gostaria de falar com a consultora da Opes Medtech para entender a plataforma.");
 
   return (
-    <section className="relative pt-20 md:pt-28 pb-12 md:pb-16 overflow-hidden bg-gradient-radial">
-      {/* Background decoration */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-1/2 -right-1/4 w-[600px] h-[600px] rounded-full bg-gradient-subtle opacity-50 blur-3xl" />
-        <div className="absolute -bottom-1/4 -left-1/4 w-[500px] h-[500px] rounded-full bg-gradient-subtle opacity-30 blur-3xl" />
-      </div>
+    <section className="relative pt-24 md:pt-32 pb-16 md:pb-24 overflow-hidden bg-gradient-to-b from-white via-sky-50/30 to-white">
+      {/* Soft Background Accents */}
+      <div className="absolute top-10 right-0 w-96 h-96 bg-purple-200/20 rounded-full blur-3xl -z-10 pointer-events-none" />
+      <div className="absolute top-40 left-0 w-80 h-80 bg-sky-200/20 rounded-full blur-3xl -z-10 pointer-events-none" />
 
       <div className="container-custom relative">
-        {/* Top Selector Badges */}
-        <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 mb-4 animate-fade-in">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold border border-primary/20">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-            </span>
-            Ecossistema Opes Medtech
-          </div>
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          {/* Left Column: Text & CTAs */}
+          <div className="lg:col-span-6 xl:col-span-6 text-left space-y-5">
+            {/* Tag matching reference */}
+            <div className="inline-block">
+              <span className="text-[11px] sm:text-xs font-bold uppercase tracking-widest text-muted-foreground/80">
+                BEM-VINDO À OPES MEDTECH
+              </span>
+            </div>
 
-          <a
-            href="#produtos"
-            className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-muted hover:bg-muted/80 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors border border-border/50"
-          >
-            <Stethoscope size={12} className="text-primary" />
-            <span>Opes Pediatra</span>
-          </a>
-
-          <a
-            href="#produtos"
-            className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-muted hover:bg-muted/80 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors border border-border/50"
-          >
-            <Activity size={12} className="text-primary" />
-            <span>Opes Especialidades</span>
-          </a>
-        </div>
-
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-10 items-center">
-          {/* Content */}
-          <div className="text-center lg:text-left">
-            {/* Headline */}
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-3 leading-tight animate-slide-up">
-              Tecnologia e IA{" "}
-              <span className="text-gradient">feitas sob medida</span>{" "}
-              para a saúde infantil
+            {/* Headline matching reference */}
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-foreground leading-[1.15]">
+              <span className="bg-gradient-to-r from-sky-500 via-blue-600 to-purple-600 bg-clip-text text-transparent">
+                Tecnologia
+              </span>{" "}
+              <br />
+              <span className="bg-gradient-to-r from-sky-500 via-blue-600 to-purple-600 bg-clip-text text-transparent">
+                para uma saúde
+              </span>{" "}
+              <br />
+              <span className="bg-gradient-to-r from-sky-500 via-blue-600 to-purple-600 bg-clip-text text-transparent">
+                infantil completa
+              </span>
             </h1>
 
-            {/* Subheadline Clean with IA Preditiva */}
-            <p
-              className="text-sm md:text-base text-muted-foreground mb-6 max-w-lg mx-auto lg:mx-0 leading-relaxed animate-slide-up"
-              style={{ animationDelay: "0.1s" }}
-            >
-              Para <strong className="text-foreground">médicos pediatras</strong> e especialistas em{" "}
-              <strong className="text-foreground">terapia ocupacional, psicologia e enfermagem</strong>. Economize até{" "}
-              <strong className="text-foreground">70%</strong> do tempo com transcrição de voz e IA preditiva.
+            {/* Subhead matching reference */}
+            <p className="text-sm sm:text-base text-muted-foreground leading-relaxed max-w-lg">
+              Soluções em nuvem com inteligência artificial para pediatras e profissionais da saúde infantil. Mais tempo para o que realmente importa.
             </p>
 
-            {/* CTAs */}
-            <div
-              className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mb-5 animate-slide-up"
-              style={{ animationDelay: "0.2s" }}
-            >
+            {/* Action Buttons */}
+            <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
               <Button
-                size="default"
-                className="bg-gradient-primary hover:opacity-90 shadow-primary text-sm px-6 h-10 font-semibold"
+                size="lg"
+                className="rounded-full bg-gradient-to-r from-sky-500 via-blue-600 to-purple-600 hover:opacity-95 text-white shadow-md font-bold px-7 h-11 text-xs sm:text-sm"
                 asChild
               >
-                <a href="https://www.opespediatra.com/login">Iniciar Teste Grátis (15 dias)</a>
+                <a href="https://www.opespediatra.com/login">
+                  Começar Teste de 15 Dias
+                  <ArrowRight size={15} className="ml-2" />
+                </a>
               </Button>
 
               <Button
-                size="default"
+                size="lg"
                 variant="outline"
-                className="text-sm font-semibold border-emerald-500/40 text-emerald-700 dark:text-emerald-400 hover:bg-emerald-500/10 gap-1.5 h-10 px-5"
+                className="rounded-full border-emerald-500/40 text-emerald-700 dark:text-emerald-400 hover:bg-emerald-500/10 font-bold px-6 h-11 text-xs sm:text-sm"
                 asChild
               >
                 <a href={consultoraWhatsAppUrl} target="_blank" rel="noopener noreferrer">
-                  <MessageSquare size={15} className="text-emerald-500" />
-                  Fale com a Consultora
+                  <MessageSquare size={15} className="mr-2 text-emerald-500" />
+                  Falar com a Consultora
                 </a>
               </Button>
             </div>
 
-            {/* Quick Links to Verticals Clean */}
-            <div
-              className="pt-1 pb-4 flex flex-wrap items-center justify-center lg:justify-start gap-3 text-xs text-muted-foreground animate-slide-up"
-              style={{ animationDelay: "0.25s" }}
-            >
-              <span className="text-foreground font-semibold">Especialidades:</span>
-              <Link to="/pediatria" className="text-primary hover:underline font-semibold">
-                Pediatria →
-              </Link>
-              <Link to="/terapia-ocupacional" className="text-primary hover:underline font-semibold">
-                Terapia Ocupacional →
-              </Link>
-              <Link to="/psicologia" className="text-primary hover:underline font-semibold">
-                Psicologia →
-              </Link>
-              <Link to="/enfermagem" className="text-primary hover:underline font-semibold">
-                Enfermagem e Fisio →
-              </Link>
-            </div>
-
-            {/* Trust badges */}
-            <div
-              className="flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs text-muted-foreground animate-slide-up"
-              style={{ animationDelay: "0.3s" }}
-            >
-              <div className="flex items-center gap-1.5">
-                <Shield size={14} className="text-primary" />
-                <span>Dados 100% Criptografados</span>
-              </div>
-              <div className="flex items-center gap-1.5">
-                <Lock size={14} className="text-primary" />
-                <span>Conformidade LGPD e CFM</span>
-              </div>
-              <div className="flex items-center gap-1.5">
-                <Cloud size={14} className="text-primary" />
-                <span>Nuvem sem instalação</span>
-              </div>
+            <div className="pt-1 flex items-center gap-3 text-xs text-muted-foreground">
+              <span className="flex items-center gap-1.5 font-medium">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                Sem fidelidade
+              </span>
+              <span>•</span>
+              <span className="flex items-center gap-1.5 font-medium">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                Sem cartão de crédito
+              </span>
             </div>
           </div>
 
-          {/* Hero Media / Video */}
-          <div className="relative animate-fade-in" style={{ animationDelay: "0.4s" }}>
-            <div className="relative rounded-2xl overflow-hidden shadow-xl border border-border bg-black aspect-video">
-              <iframe
-                src="https://www.youtube.com/embed/nf7faWHi-u8?rel=0&modestbranding=1"
-                title="Opes Medtech, Plataforma em Ação"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="absolute inset-0 w-full h-full"
+          {/* Right Column: Hero Visual with Pediatrician and Child */}
+          <div className="lg:col-span-6 xl:col-span-6 relative flex items-center justify-center">
+            {/* Organic Brand Shape Backdrop */}
+            <div className="relative w-full max-w-lg aspect-4/3 rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-gradient-to-tr from-sky-100/60 to-purple-100/60">
+              <img
+                src={heroImage}
+                alt="Pediatra examinando criança sorridente na Opes Medtech"
+                className="w-full h-full object-cover object-center"
               />
-            </div>
 
-            {/* Floating Highlight */}
-            <div className="absolute -bottom-3 -left-3 sm:-left-5 bg-card/95 backdrop-blur-md rounded-xl shadow-lg p-2.5 border border-border animate-float">
-              <div className="flex items-center gap-2">
-                <div className="w-8 h-8 rounded-lg bg-gradient-primary flex items-center justify-center shadow-sm">
-                  <Sparkles size={15} className="text-primary-foreground" />
+              {/* Floating Highlight Pill Badge */}
+              <div className="absolute bottom-3 left-3 right-3 sm:left-auto sm:right-3 bg-white/95 backdrop-blur-md px-3.5 py-2 rounded-2xl border border-sky-100 shadow-lg flex items-center gap-2.5">
+                <div className="w-7 h-7 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center flex-shrink-0">
+                  <Sparkles size={14} />
                 </div>
-                <div>
-                  <p className="font-bold text-foreground text-xs">IA Preditiva Exclusiva</p>
-                  <p className="text-[10px] text-muted-foreground">70% menos tempo digitando</p>
+                <div className="text-left">
+                  <p className="text-[11px] font-bold text-foreground leading-tight">
+                    IA Preditiva & Não Intrusiva
+                  </p>
+                  <p className="text-[10px] text-muted-foreground">
+                    Menos digitação e mais atenção ao paciente
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Wave Transition to Next Section */}
+      <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-none pointer-events-none">
+        <svg
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+          className="relative block w-full h-8 text-background fill-current"
+        >
+          <path d="M0,0 C150,90 350,-40 500,40 C650,120 900,10 1200,30 L1200,120 L0,120 Z" />
+        </svg>
       </div>
     </section>
   );

@@ -132,7 +132,7 @@ const PricingSection = () => {
           <span className="inline-block text-xs font-bold uppercase tracking-wider text-primary mb-2">
             PLANOS E PREÇOS
           </span>
-          <h2 className="text-2xl sm:text-3xl font-bold mb-2 text-foreground">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-2 text-foreground tracking-tight">
             Escolha o plano ideal para sua clínica
           </h2>
           <p className="text-xs sm:text-sm text-muted-foreground">
@@ -140,30 +140,30 @@ const PricingSection = () => {
           </p>
         </div>
 
-        {/* Product Selector Tabs */}
+        {/* Product Selector Tabs Pills */}
         <div className="flex justify-center mb-6">
-          <div className="inline-flex p-1 rounded-xl bg-muted border border-border max-w-sm w-full shadow-inner">
+          <div className="inline-flex p-1.5 rounded-full bg-muted border border-border max-w-md w-full shadow-inner">
             <button
               onClick={() => setSelectedProduct("pediatria")}
-              className={`flex-1 flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg text-xs font-bold transition-all ${
+              className={`flex-1 flex items-center justify-center gap-2 py-2 px-4 rounded-full text-xs font-bold transition-all ${
                 isPediatria
-                  ? "bg-card text-primary shadow-sm border border-border/80"
+                  ? "bg-white text-sky-700 shadow-sm border border-border/60"
                   : "text-muted-foreground hover:text-foreground"
               }`}
             >
-              <Stethoscope size={14} className="text-primary" />
+              <Stethoscope size={14} className="text-sky-600" />
               <span>Opes Pediatra (R$ 299)</span>
             </button>
 
             <button
               onClick={() => setSelectedProduct("especialidades")}
-              className={`flex-1 flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg text-xs font-bold transition-all ${
+              className={`flex-1 flex items-center justify-center gap-2 py-2 px-4 rounded-full text-xs font-bold transition-all ${
                 !isPediatria
-                  ? "bg-card text-primary shadow-sm border border-border/80"
+                  ? "bg-white text-purple-700 shadow-sm border border-border/60"
                   : "text-muted-foreground hover:text-foreground"
               }`}
             >
-              <Activity size={14} className="text-primary" />
+              <Activity size={14} className="text-purple-600" />
               <span>Opes Especialidades (R$ 199)</span>
             </button>
           </div>
@@ -206,14 +206,14 @@ const PricingSection = () => {
         </div>
 
         {/* Pricing Cards Grid (Individual | Clínicas | Redes) */}
-        <div className="grid md:grid-cols-3 gap-5 lg:gap-6 max-w-5xl mx-auto items-stretch">
+        <div className="grid md:grid-cols-3 gap-6 lg:gap-7 max-w-5xl mx-auto items-stretch">
           {currentPlans.map((plan, index) => {
             const displayPrice = isAnnual ? plan.annualPrice : plan.monthlyPrice;
 
             return (
               <div
                 key={index}
-                className={`relative p-6 rounded-2xl border transition-all duration-300 flex flex-col justify-between ${
+                className={`relative p-7 rounded-3xl border transition-all duration-300 flex flex-col justify-between ${
                   plan.popular
                     ? "bg-gradient-primary text-primary-foreground border-transparent shadow-xl scale-105 z-10"
                     : "bg-card border-border/80 hover:border-primary/40 hover:shadow-md"
@@ -233,7 +233,7 @@ const PricingSection = () => {
                   {/* Plan Name */}
                   <div className="mb-4">
                     <h3
-                      className={`text-xl font-bold ${
+                      className={`text-xl font-extrabold ${
                         plan.popular ? "text-primary-foreground" : "text-foreground"
                       }`}
                     >
@@ -304,11 +304,11 @@ const PricingSection = () => {
                   </ul>
                 </div>
 
-                {/* Card CTA */}
+                {/* Card CTA with Pill Buttons */}
                 <div className="space-y-2 pt-1">
                   {plan.ctaVariant === "default" || plan.popular ? (
                     <Button
-                      className="w-full font-bold shadow-sm h-10 text-xs bg-white text-primary hover:bg-white/95"
+                      className="w-full font-bold shadow-sm h-10 text-xs bg-white text-primary hover:bg-white/95 rounded-full"
                       size="sm"
                       asChild
                     >
@@ -317,7 +317,7 @@ const PricingSection = () => {
                   ) : plan.name === "Redes" ? (
                     <Button
                       variant="outline"
-                      className="w-full text-xs font-semibold border-emerald-500/40 text-emerald-700 dark:text-emerald-400 hover:bg-emerald-500/10 h-10"
+                      className="w-full text-xs font-semibold border-emerald-500/40 text-emerald-700 dark:text-emerald-400 hover:bg-emerald-500/10 h-10 rounded-full"
                       size="sm"
                       asChild
                     >
@@ -329,7 +329,7 @@ const PricingSection = () => {
                   ) : (
                     <Button
                       variant="outline"
-                      className="w-full font-bold shadow-sm h-10 text-xs border-primary/30 hover:bg-primary/5 text-foreground"
+                      className="w-full font-bold shadow-sm h-10 text-xs border-primary/30 hover:bg-primary/5 text-foreground rounded-full"
                       size="sm"
                       asChild
                     >
