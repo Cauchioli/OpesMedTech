@@ -85,27 +85,6 @@ const FAQSection = () => {
             ))}
           </Accordion>
         </div>
-
-        {/* Still have questions CTA */}
-        <div className="max-w-sm mx-auto text-center p-4 rounded-xl bg-card border border-border shadow-sm">
-          <p className="text-xs font-semibold text-foreground mb-1">
-            Ficou com alguma dúvida?
-          </p>
-          <p className="text-[11px] text-muted-foreground mb-3">
-            Fale diretamente com nossa consultora no WhatsApp
-          </p>
-          <Button
-            asChild
-            variant="outline"
-            size="sm"
-            className="border-emerald-500/40 text-emerald-700 dark:text-emerald-400 hover:bg-emerald-500/10 font-semibold gap-1.5 text-xs h-8"
-          >
-            <a href={consultoraWhatsAppUrl} target="_blank" rel="noopener noreferrer">
-              <MessageSquare size={13} className="text-emerald-500" />
-              Falar com a Consultora
-            </a>
-          </Button>
-        </div>
       </div>
     </section>
   );

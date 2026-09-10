@@ -18,11 +18,11 @@ const HeroSection: React.FC = () => {
           className="w-full h-full object-cover object-[78%_center] lg:object-right"
         />
         {/* Gradiente suave na esquerda para garantir leitura perfeita dos textos em qualquer resolução */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 sm:via-white/80 to-transparent lg:w-3/5" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 sm:via-white/80 to-transparent lg:w-1/2" />
         <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white to-transparent" />
       </div>
 
-      <div className="container-custom relative z-10 w-full">
+      <div className="w-full max-w-[1400px] mx-auto px-6 sm:px-10 lg:pl-16 xl:pl-20 lg:pr-8 relative z-10">
         <div className="max-w-xl lg:max-w-2xl text-left space-y-5">
           {/* Tag matching reference */}
           <div className="inline-block">
@@ -34,21 +34,17 @@ const HeroSection: React.FC = () => {
           {/* Headline matching reference */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-foreground leading-[1.12]">
             <span className="bg-gradient-to-r from-sky-500 via-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Tecnologia
+              Gestão inteligente
             </span>{" "}
             <br />
             <span className="bg-gradient-to-r from-sky-500 via-blue-600 to-purple-600 bg-clip-text text-transparent">
-              para uma saúde
-            </span>{" "}
-            <br />
-            <span className="bg-gradient-to-r from-sky-500 via-blue-600 to-purple-600 bg-clip-text text-transparent">
-              infantil completa
+              para suas consultas
             </span>
           </h1>
 
           {/* Subhead matching reference */}
           <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed max-w-lg">
-            Soluções em nuvem com inteligência artificial para pediatras e profissionais da saúde infantil. Mais tempo para o que realmente importa.
+            Nossa Inteligência Artificial otimiza sua rotina clínica infantil para que você dedique mais tempo ao que realmente importa: um atendimento humano e acolhedor.
           </p>
 
           {/* Action Buttons */}
