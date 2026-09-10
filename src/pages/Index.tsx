@@ -2,7 +2,6 @@ import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import ProductsShowcaseSection from "@/components/ProductsShowcaseSection";
 import FeaturesSection from "@/components/FeaturesSection";
-import PlatformActionSection from "@/components/PlatformActionSection";
 import BeforeAfterSection from "@/components/BeforeAfterSection";
 import AboutSection from "@/components/AboutSection";
 import CredibilitySection from "@/components/CredibilitySection";
@@ -22,13 +21,10 @@ const Index = () => {
         {/* 2. Escolha a sua Jornada + Barra de Confiança */}
         <ProductsShowcaseSection />
 
-        {/* 3. Hub Central: Recursos e Preços Contextualizados (Pediatria x Especialidades) */}
+        {/* 3. Hub Central Unificado: Recursos, Telas do Sistema e Planos por Especialidade */}
         <FeaturesSection />
 
-        {/* 4. Veja a Plataforma em Ação: Telas Reais com Filtro por Especialidade */}
-        <PlatformActionSection />
-
-        {/* 5. Produtividade: Antes e Depois da IA */}
+        {/* 4. Produtividade: Antes e Depois da IA */}
         <BeforeAfterSection />
 
         {/* 5. Sobre a Opes MedTech (Reposicionada mais abaixo) */}
