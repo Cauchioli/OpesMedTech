@@ -19,9 +19,10 @@ import {
   MessageSquare,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import platformGraficos from "@/assets/platform-graficos.jpg";
-import platformSaudeMental from "@/assets/platform-saude-mental.png";
-import platformDashboard from "@/assets/platform-dashboard.jpg";
+import telaGraficos from "@/assets/telas/tela-graficos-curvas.jpeg";
+import telaSaudeMental from "@/assets/telas/tela-saude-mental.jpeg";
+import telaAnotacao from "@/assets/telas/tela-anotacao-transcricao.jpeg";
+import telaVacinas from "@/assets/telas/tela-vacinas.jpeg";
 import logoOpesEspecialidades from "@/assets/logo-opes-especialidades.jpg";
 import mascoteRobo from "@/assets/mascote-robo-opes.png";
 
@@ -328,7 +329,7 @@ const FeaturesSection = () => {
               <div className="lg:col-span-5 relative space-y-3">
                 <div className="rounded-2xl overflow-hidden border-2 border-sky-100 shadow-xl bg-slate-900 relative group">
                   <img
-                    src={platformGraficos}
+                    src={telaGraficos}
                     alt="Gráficos de Crescimento OMS e CDC no Opes Pediatra"
                     className="w-full h-auto object-cover"
                   />
@@ -679,7 +680,13 @@ const FeaturesSection = () => {
               <div className="lg:col-span-5 relative space-y-3">
                 <div className="rounded-2xl overflow-hidden border-2 border-purple-100 shadow-xl bg-card">
                   <img
-                    src={activeSpecialty === "enfermagem" ? platformDashboard : platformSaudeMental}
+                    src={
+                      activeSpecialty === "enfermagem"
+                        ? telaVacinas
+                        : activeSpecialty === "psicologia"
+                        ? telaAnotacao
+                        : telaSaudeMental
+                    }
                     alt="Interface do Opes Especialidades"
                     className="w-full h-auto object-cover"
                   />

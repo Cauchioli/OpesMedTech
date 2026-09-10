@@ -16,6 +16,11 @@ import {
 } from "lucide-react";
 import logoOpesEspecialidades from "@/assets/logo-opes-especialidades.jpg";
 import heroPsicologiaOficial from "@/assets/hero-psicologia-oficial.jpeg";
+import telaAgenda from "@/assets/telas/tela-agenda.jpeg";
+import telaAnotacao from "@/assets/telas/tela-anotacao-transcricao.jpeg";
+import telaSaudeMental from "@/assets/telas/tela-saude-mental.jpeg";
+import telaTeleconsulta from "@/assets/telas/tela-teleconsulta.jpeg";
+import telaFinanceiro from "@/assets/telas/tela-financeiro.jpeg";
 
 const LPPsicologia: React.FC = () => {
   const consultoraWhatsAppUrl =
@@ -164,6 +169,78 @@ const LPPsicologia: React.FC = () => {
                   </div>
                   <h3 className="text-sm font-bold text-foreground mb-1">{item.title}</h3>
                   <p className="text-xs text-muted-foreground leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Galeria de Telas de Psicologia em Ação */}
+        <section className="section-padding bg-muted/20 border-t border-border/50">
+          <div className="container-custom">
+            <div className="text-center max-w-2xl mx-auto mb-10">
+              <span className="text-xs font-bold uppercase tracking-wider text-purple-600 block mb-1">
+                INTERFACE DO SISTEMA
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-bold text-foreground">
+                Veja as telas de Psicologia em ação
+              </h2>
+              <p className="text-xs text-muted-foreground mt-1">
+                Ambiente seguro, intuitivo e com total proteção de sigilo profissional para suas sessões
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              {[
+                {
+                  title: "Anotação e Transcrição por Voz",
+                  category: "Prontuário com IA",
+                  desc: "Dite suas impressões clínicas e tenha o resumo estruturado com acesso restrito.",
+                  image: telaAnotacao,
+                },
+                {
+                  title: "Saúde Mental e Neurodesenvolvimento",
+                  category: "Protocolos Clínicos",
+                  desc: "Questionários padronizados para avaliação socioemocional e comportamental.",
+                  image: telaSaudeMental,
+                },
+                {
+                  title: "Teleconsulta Integrada",
+                  category: "Atendimento Online",
+                  desc: "Sessões por vídeo protegidas com visualização paralela do prontuário do paciente.",
+                  image: telaTeleconsulta,
+                },
+                {
+                  title: "Agenda Inteligente de Sessões",
+                  category: "Organização",
+                  desc: "Controle de horários semanais, pacientes recorrentes e lembretes automáticos.",
+                  image: telaAgenda,
+                },
+                {
+                  title: "Gestão Financeira do Consultório",
+                  category: "Financeiro",
+                  desc: "Acompanhamento de honorários, pagamentos em aberto, PIX e relatórios mensais.",
+                  image: telaFinanceiro,
+                },
+              ].map((screen, sIdx) => (
+                <div
+                  key={sIdx}
+                  className="bg-card rounded-2xl overflow-hidden border border-border/80 shadow-xs hover:shadow-lg transition-all flex flex-col justify-between"
+                >
+                  <div className="h-44 sm:h-48 overflow-hidden bg-slate-100">
+                    <img
+                      src={screen.image}
+                      alt={screen.title}
+                      className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="p-4">
+                    <span className="text-[10px] font-bold text-purple-600 uppercase tracking-wider block mb-1">
+                      {screen.category}
+                    </span>
+                    <h3 className="text-sm font-bold text-foreground mb-1">{screen.title}</h3>
+                    <p className="text-xs text-muted-foreground leading-relaxed">{screen.desc}</p>
+                  </div>
                 </div>
               ))}
             </div>

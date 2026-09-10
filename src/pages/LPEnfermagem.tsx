@@ -17,6 +17,13 @@ import {
 } from "lucide-react";
 import logoOpesEspecialidades from "@/assets/logo-opes-especialidades.jpg";
 import heroEnfermagemOficial from "@/assets/hero-enfermagem-oficial.jpeg";
+import telaAgenda from "@/assets/telas/tela-agenda.jpeg";
+import telaAnotacao from "@/assets/telas/tela-anotacao-transcricao.jpeg";
+import telaGraficos from "@/assets/telas/tela-graficos-curvas.jpeg";
+import telaVacinas from "@/assets/telas/tela-vacinas.jpeg";
+import telaExames from "@/assets/telas/tela-exames-voz.jpeg";
+import telaTeleconsulta from "@/assets/telas/tela-teleconsulta.jpeg";
+import telaFinanceiro from "@/assets/telas/tela-financeiro.jpeg";
 
 const LPEnfermagem: React.FC = () => {
   const consultoraWhatsAppUrl =
@@ -165,6 +172,84 @@ const LPEnfermagem: React.FC = () => {
                   </div>
                   <h3 className="text-sm font-bold text-foreground mb-1">{item.title}</h3>
                   <p className="text-xs text-muted-foreground leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Galeria de Telas de Enfermagem e Fisio em Ação */}
+        <section className="section-padding bg-muted/20 border-t border-border/50">
+          <div className="container-custom">
+            <div className="text-center max-w-2xl mx-auto mb-10">
+              <span className="text-xs font-bold uppercase tracking-wider text-cyan-600 block mb-1">
+                INTERFACE DO SISTEMA
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-bold text-foreground">
+                Veja as telas de Enfermagem e Fisioterapia em ação
+              </h2>
+              <p className="text-xs text-muted-foreground mt-1">
+                Acompanhamento completo de procedimentos clínicos, evolução, vacinas e curvas de crescimento
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+              {[
+                {
+                  title: "Anotações e Evolução Clínica",
+                  category: "Prontuário",
+                  desc: "Registro ágil de sinais vitais, curativos, procedimentos e evolução de plantão.",
+                  image: telaAnotacao,
+                },
+                {
+                  title: "Curvas de Crescimento OMS e CDC",
+                  category: "Antropometria",
+                  desc: "Acompanhamento antropométrico infantil com gráficos automáticos de peso e altura.",
+                  image: telaGraficos,
+                },
+                {
+                  title: "Controle e Histórico de Vacinas",
+                  category: "Imunização",
+                  desc: "Caderneta vacinal completa com doses aplicadas e controle de aprazamento.",
+                  image: telaVacinas,
+                },
+                {
+                  title: "Solicitação de Exames por Voz",
+                  category: "Prescrição",
+                  desc: "Dite os exames necessários e gere pedidos timbrados formatados com IA.",
+                  image: telaExames,
+                },
+                {
+                  title: "Teleconsulta Integrada",
+                  category: "Telecuidado",
+                  desc: "Orientação a distância com prontuário e anotações abertos na mesma tela.",
+                  image: telaTeleconsulta,
+                },
+                {
+                  title: "Agenda Integrada",
+                  category: "Gestão",
+                  desc: "Organização de horários de clínica e visitas domiciliares com facilidade.",
+                  image: telaAgenda,
+                },
+              ].map((screen, sIdx) => (
+                <div
+                  key={sIdx}
+                  className="bg-card rounded-2xl overflow-hidden border border-border/80 shadow-xs hover:shadow-lg transition-all flex flex-col justify-between"
+                >
+                  <div className="h-44 sm:h-48 overflow-hidden bg-slate-100">
+                    <img
+                      src={screen.image}
+                      alt={screen.title}
+                      className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="p-4">
+                    <span className="text-[10px] font-bold text-cyan-600 uppercase tracking-wider block mb-1">
+                      {screen.category}
+                    </span>
+                    <h3 className="text-sm font-bold text-foreground mb-1">{screen.title}</h3>
+                    <p className="text-xs text-muted-foreground leading-relaxed">{screen.desc}</p>
+                  </div>
                 </div>
               ))}
             </div>

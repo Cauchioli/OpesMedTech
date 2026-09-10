@@ -19,8 +19,13 @@ import {
   Bot,
 } from "lucide-react";
 import heroMedicaOficial from "@/assets/hero-medica-menino-oficial.png";
-import platformGraficos from "@/assets/platform-graficos.jpg";
 import mascoteRobo from "@/assets/mascote-robo-opes.png";
+import telaAgenda from "@/assets/telas/tela-agenda.jpeg";
+import telaAnotacao from "@/assets/telas/tela-anotacao-transcricao.jpeg";
+import telaGraficos from "@/assets/telas/tela-graficos-curvas.jpeg";
+import telaVacinas from "@/assets/telas/tela-vacinas.jpeg";
+import telaExames from "@/assets/telas/tela-exames-voz.jpeg";
+import telaTeleconsulta from "@/assets/telas/tela-teleconsulta.jpeg";
 
 const LPPediatria: React.FC = () => {
   const consultoraWhatsAppUrl =
@@ -188,6 +193,84 @@ const LPPediatria: React.FC = () => {
                   </div>
                   <h3 className="text-sm font-bold text-foreground mb-1">{item.title}</h3>
                   <p className="text-xs text-muted-foreground leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Galeria de Telas Oficiais do Opes Pediatra */}
+        <section className="section-padding bg-muted/20 border-t border-border/50">
+          <div className="container-custom">
+            <div className="text-center max-w-2xl mx-auto mb-10">
+              <span className="text-xs font-bold uppercase tracking-wider text-sky-600 block mb-1">
+                INTERFACE DA PLATAFORMA
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-bold text-foreground">
+                Veja as telas do Opes Pediatra em ação
+              </h2>
+              <p className="text-xs text-muted-foreground mt-1">
+                Telas limpas, ágeis e desenvolvidas para o fluxo dinâmico da consulta pediátrica
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+              {[
+                {
+                  title: "Anotação e Transcrição por Voz",
+                  category: "IA no Atendimento",
+                  desc: "A inteligência artificial capta a conversa e estrutura o prontuário em tempo real.",
+                  image: telaAnotacao,
+                },
+                {
+                  title: "Curvas de Crescimento OMS e CDC",
+                  category: "Antropometria",
+                  desc: "Gráficos automáticos de peso, altura e IMC prontos para envio aos pais.",
+                  image: telaGraficos,
+                },
+                {
+                  title: "Cronograma de Vacinação",
+                  category: "Imunização",
+                  desc: "Timeline completa de vacinas aplicadas e alertas de doses pendentes.",
+                  image: telaVacinas,
+                },
+                {
+                  title: "Teleconsulta com Prontuário",
+                  category: "Telemedicina",
+                  desc: "Vídeo consulta integrada com transcrição simultânea e anotações.",
+                  image: telaTeleconsulta,
+                },
+                {
+                  title: "Solicitação de Exames por Voz",
+                  category: "Prescrição",
+                  desc: "Dite os exames e o sistema formata o pedido oficial timbrado com IA.",
+                  image: telaExames,
+                },
+                {
+                  title: "Agenda Inteligente",
+                  category: "Produtividade",
+                  desc: "Visão semanal e diária com controle de horários, retornos e secretária.",
+                  image: telaAgenda,
+                },
+              ].map((screen, sIdx) => (
+                <div
+                  key={sIdx}
+                  className="bg-card rounded-2xl overflow-hidden border border-border/80 shadow-xs hover:shadow-lg transition-all flex flex-col justify-between"
+                >
+                  <div className="h-44 sm:h-48 overflow-hidden bg-slate-100">
+                    <img
+                      src={screen.image}
+                      alt={screen.title}
+                      className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="p-4">
+                    <span className="text-[10px] font-bold text-sky-600 uppercase tracking-wider block mb-1">
+                      {screen.category}
+                    </span>
+                    <h3 className="text-sm font-bold text-foreground mb-1">{screen.title}</h3>
+                    <p className="text-xs text-muted-foreground leading-relaxed">{screen.desc}</p>
+                  </div>
                 </div>
               ))}
             </div>

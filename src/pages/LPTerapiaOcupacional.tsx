@@ -16,9 +16,13 @@ import {
   Check,
   Star,
 } from "lucide-react";
-import platformSaudeMental from "@/assets/platform-saude-mental.png";
 import logoOpesEspecialidades from "@/assets/logo-opes-especialidades.jpg";
 import heroTOOficial from "@/assets/hero-to-oficial.jpeg";
+import telaAgenda from "@/assets/telas/tela-agenda.jpeg";
+import telaAnotacao from "@/assets/telas/tela-anotacao-transcricao.jpeg";
+import telaSaudeMental from "@/assets/telas/tela-saude-mental.jpeg";
+import telaTeleconsulta from "@/assets/telas/tela-teleconsulta.jpeg";
+import telaFinanceiro from "@/assets/telas/tela-financeiro.jpeg";
 
 const LPTerapiaOcupacional: React.FC = () => {
   const consultoraWhatsAppUrl =
@@ -167,6 +171,78 @@ const LPTerapiaOcupacional: React.FC = () => {
                   </div>
                   <h3 className="text-sm font-bold text-foreground mb-1">{item.title}</h3>
                   <p className="text-xs text-muted-foreground leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Galeria de Telas de T.O. em Ação */}
+        <section className="section-padding bg-muted/20 border-t border-border/50">
+          <div className="container-custom">
+            <div className="text-center max-w-2xl mx-auto mb-10">
+              <span className="text-xs font-bold uppercase tracking-wider text-purple-600 block mb-1">
+                INTERFACE DO SISTEMA
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-bold text-foreground">
+                Veja as telas de Terapia Ocupacional em ação
+              </h2>
+              <p className="text-xs text-muted-foreground mt-1">
+                Ferramentas pensadas para o registro rápido do perfil sensorial, neurodesenvolvimento e evolução clínica
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              {[
+                {
+                  title: "Anotação e Transcrição por Voz",
+                  category: "Prontuário com IA",
+                  desc: "Dite o progresso do paciente na sessão e tenha o resumo terapêutico gerado na hora.",
+                  image: telaAnotacao,
+                },
+                {
+                  title: "Saúde Mental e Perfil Sensorial",
+                  category: "Protocolos Clínicos",
+                  desc: "Avaliação estruturada do desenvolvimento, integração sensorial e marcos motores.",
+                  image: telaSaudeMental,
+                },
+                {
+                  title: "Teleconsulta Integrada",
+                  category: "Atendimento Remoto",
+                  desc: "Orientação aos pais e teleatendimento com histórico do paciente aberto na mesma tela.",
+                  image: telaTeleconsulta,
+                },
+                {
+                  title: "Agenda Inteligente",
+                  category: "Organização",
+                  desc: "Controle visual de sessões terapêuticas, presenças, faltas e remarcações.",
+                  image: telaAgenda,
+                },
+                {
+                  title: "Gestão Financeira",
+                  category: "Financeiro",
+                  desc: "Relatórios de atendimentos, recebimentos, PIX e controle financeiro simples.",
+                  image: telaFinanceiro,
+                },
+              ].map((screen, sIdx) => (
+                <div
+                  key={sIdx}
+                  className="bg-card rounded-2xl overflow-hidden border border-border/80 shadow-xs hover:shadow-lg transition-all flex flex-col justify-between"
+                >
+                  <div className="h-44 sm:h-48 overflow-hidden bg-slate-100">
+                    <img
+                      src={screen.image}
+                      alt={screen.title}
+                      className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="p-4">
+                    <span className="text-[10px] font-bold text-purple-600 uppercase tracking-wider block mb-1">
+                      {screen.category}
+                    </span>
+                    <h3 className="text-sm font-bold text-foreground mb-1">{screen.title}</h3>
+                    <p className="text-xs text-muted-foreground leading-relaxed">{screen.desc}</p>
+                  </div>
                 </div>
               ))}
             </div>
