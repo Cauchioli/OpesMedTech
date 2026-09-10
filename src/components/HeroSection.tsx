@@ -1,7 +1,7 @@
 import React from "react";
 import { ArrowRight, MessageSquare, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-pediatra-crianca.jpg";
+import heroImageOficial from "@/assets/hero-medica-menino-oficial.png";
 
 const HeroSection: React.FC = () => {
   const consultoraWhatsAppUrl =
@@ -84,13 +84,13 @@ const HeroSection: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Column: Hero Visual with Pediatrician and Child */}
+          {/* Right Column: Hero Visual with Official Pediatrician and Child */}
           <div className="lg:col-span-6 xl:col-span-6 relative flex items-center justify-center">
             {/* Organic Brand Shape Backdrop */}
-            <div className="relative w-full max-w-lg aspect-4/3 rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-gradient-to-tr from-sky-100/60 to-purple-100/60">
+            <div className="relative w-full max-w-lg aspect-16/10 rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-gradient-to-tr from-sky-100/60 to-purple-100/60">
               <img
-                src={heroImage}
-                alt="Pediatra examinando criança sorridente na Opes Medtech"
+                src={heroImageOficial}
+                alt="Médica pediatra examinando criança sorridente na Opes Medtech"
                 className="w-full h-full object-cover object-center"
               />
 

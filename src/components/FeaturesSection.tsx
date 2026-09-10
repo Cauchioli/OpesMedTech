@@ -7,29 +7,151 @@ import {
   Syringe, 
   LineChart, 
   Pill, 
-  FileText, 
-  Brain, 
   BarChart3,
   Stethoscope,
   Activity,
-  CheckCircle,
+  Check,
+  Star,
   ArrowRight,
   Sparkles,
   Users,
-  ShieldCheck,
+  Brain,
+  MessageSquare,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import platformGraficos from "@/assets/platform-graficos.jpg";
 import platformSaudeMental from "@/assets/platform-saude-mental.png";
 import platformDashboard from "@/assets/platform-dashboard.jpg";
 import logoOpesEspecialidades from "@/assets/logo-opes-especialidades.jpg";
+import mascoteRobo from "@/assets/mascote-robo-opes.png";
 
 type MainProductTab = "pediatria" | "especialidades";
 type SpecialtySubTab = "to" | "psicologia" | "enfermagem";
+type BillingCycle = "monthly" | "annual";
 
 const FeaturesSection = () => {
   const [activeProduct, setActiveProduct] = useState<MainProductTab>("pediatria");
   const [activeSpecialty, setActiveSpecialty] = useState<SpecialtySubTab>("to");
+  const [billingCycle, setBillingCycle] = useState<BillingCycle>("monthly");
+
+  const consultoraWhatsAppUrl =
+    "https://wa.me/5511972240924?text=" +
+    encodeURIComponent("Olá! Gostaria de falar com a consultora comercial da Opes Medtech para tirar dúvidas e fechar um plano.");
+
+  const isAnnual = billingCycle === "annual";
+
+  // Planos Oficiais de Pediatria
+  const pediatriaPlans = [
+    {
+      name: "Individual",
+      monthlyPrice: 299,
+      annualPrice: 254,
+      userNote: "1 Médico + 1 Assistente",
+      popular: false,
+      features: [
+        "1 Médico + 1 Assistente",
+        "Sem limites de funcionalidades",
+        "IA de Transcrição e Análise Preditiva",
+        "Relatórios Financeiros",
+        "Parceria Memed",
+      ],
+      cta: "Começar teste grátis",
+      ctaVariant: "outline" as const,
+    },
+    {
+      name: "Clínicas",
+      monthlyPrice: 285,
+      annualPrice: 256,
+      pricePerUser: "por médico",
+      userNote: "2 a 9 Médicos + 3 Assistentes",
+      savingsBadge: "5% mais econômico",
+      popular: true,
+      badge: "MAIS ESCOLHIDO",
+      features: [
+        "2 a 9 Médicos + 3 Assistentes",
+        "Todos os benefícios do Individual",
+        "5% mais econômico",
+        "10% de desconto no plano anual",
+        "Suporte Prioritário",
+      ],
+      cta: "Começar teste grátis",
+      ctaVariant: "default" as const,
+    },
+    {
+      name: "Redes",
+      monthlyPrice: 269,
+      annualPrice: 228,
+      pricePerUser: "por médico",
+      userNote: "10+ Médicos + 5 Assistentes",
+      savingsBadge: "10% mais econômico",
+      popular: false,
+      features: [
+        "10+ Médicos + 5 Assistentes",
+        "Todos os benefícios de Clínicas",
+        "10% mais econômico",
+        "15% de desconto na assinatura anual",
+        "Suporte Dedicado",
+      ],
+      cta: "Falar com a Consultora",
+      ctaVariant: "outline" as const,
+    },
+  ];
+
+  // Planos Oficiais de Especialidades
+  const especialidadesPlans = [
+    {
+      name: "Individual",
+      monthlyPrice: 199,
+      annualPrice: 169,
+      userNote: "1 Profissional + 1 Assistente",
+      popular: false,
+      features: [
+        "1 Profissional da saúde + 1 Assistente",
+        "Funcionalidades conforme área de atuação",
+        "IA para Transcrição",
+        "Relatórios Financeiros",
+      ],
+      cta: "Começar teste grátis",
+      ctaVariant: "outline" as const,
+    },
+    {
+      name: "Clínicas",
+      monthlyPrice: 185,
+      annualPrice: 166,
+      pricePerUser: "por profissional",
+      userNote: "2 a 9 Profissionais + 3 Assistentes",
+      savingsBadge: "5% mais econômico",
+      popular: true,
+      badge: "MAIS ESCOLHIDO",
+      features: [
+        "2 a 9 Profissionais + 3 Assistentes",
+        "Todos os benefícios do Individual",
+        "5% mais econômico",
+        "10% de desconto no plano anual",
+        "Suporte Prioritário",
+      ],
+      cta: "Começar teste grátis",
+      ctaVariant: "default" as const,
+    },
+    {
+      name: "Redes",
+      monthlyPrice: 170,
+      annualPrice: 144,
+      pricePerUser: "por profissional",
+      userNote: "10+ Profissionais + 5 Assistentes",
+      savingsBadge: "10% mais econômico",
+      popular: false,
+      features: [
+        "10+ Profissionais + 5 Assistentes",
+        "Todos os benefícios de Clínicas",
+        "10% mais econômico",
+        "15% de desconto na assinatura anual",
+        "Suporte Dedicado",
+      ],
+      cta: "Falar com a Consultora",
+      ctaVariant: "outline" as const,
+    },
+  ];
 
   return (
     <section id="funcionalidades" className="section-padding bg-gradient-to-b from-white via-sky-50/20 to-white relative">
@@ -38,17 +160,17 @@ const FeaturesSection = () => {
         <div className="text-center max-w-3xl mx-auto mb-10">
           <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider mb-2 border border-primary/20">
             <Sparkles size={13} />
-            EXPLORE A PLATAFORMA EM DETALHES
+            CONHEÇA A PLATAFORMA EM DETALHES
           </div>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-foreground tracking-tight mb-3">
-            Tudo o que você precisa na sua rotina clínica
+            Recursos e Planos integrados para a sua atuação
           </h2>
           <p className="text-xs sm:text-sm text-muted-foreground max-w-xl mx-auto">
-            Alterne entre os ecossistemas abaixo para conhecer as ferramentas e fluxos de atendimento pensados para a sua profissão.
+            Selecione seu segmento para ver as funcionalidades práticas e os valores correspondentes sem confusão.
           </p>
         </div>
 
-        {/* Master Product Switcher (Botãozinho Comutador Principal) */}
+        {/* Master Product Switcher */}
         <div className="flex justify-center mb-10">
           <div className="inline-flex p-1.5 rounded-full bg-muted border border-border max-w-md w-full shadow-inner">
             <button
@@ -80,31 +202,32 @@ const FeaturesSection = () => {
         {/* Dynamic Interactive Panel */}
         {activeProduct === "pediatria" ? (
           /* ========================================================================= */
-          /* ABA OPES PEDIATRA (VISÃO COMPLETA PARA MÉDICOS)                           */
+          /* ABA OPES PEDIATRA (RECURSOS + IMAGEM + PREÇOS DE PEDIATRIA INTEGRADOS)    */
           /* ========================================================================= */
-          <div className="rounded-3xl bg-white border border-sky-100 p-6 sm:p-10 shadow-lg relative overflow-hidden animate-in fade-in duration-300">
+          <div className="rounded-3xl bg-white border border-sky-100 p-6 sm:p-10 shadow-lg relative overflow-hidden animate-in fade-in duration-300 space-y-12">
             {/* Soft Ambient Glow */}
-            <div className="absolute top-0 right-0 w-80 h-80 bg-sky-100/40 rounded-full blur-3xl -z-10 pointer-events-none" />
+            <div className="absolute top-0 right-0 w-96 h-96 bg-sky-100/40 rounded-full blur-3xl -z-10 pointer-events-none" />
 
+            {/* Top Block: Features & Screens */}
             <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
               {/* Left Side: Features List */}
               <div className="lg:col-span-7 space-y-6">
                 <div>
                   <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-100 text-sky-700 text-[11px] font-bold uppercase tracking-wider mb-2">
                     <Stethoscope size={13} />
-                    Para Consultórios e Clínicas de Pediatria
+                    Para Médicos Pediatras (CRM)
                   </div>
                   <h3 className="text-2xl sm:text-3xl font-extrabold text-foreground mb-2">
-                    Ecossistema Completo para o Médico Pediatra
+                    Ecossistema Completo para o Pediatra
                   </h3>
                   <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
-                    Projetado para poupar horas de digitação e trazer precisão clínica com curvas antropométricas automáticas, gestão de vacinas e inteligência artificial preditiva.
+                    Elimina a digitação burocrática e traz precisão clínica com curvas antropométricas automáticas, gestão vacinal SBP e inteligência artificial preditiva.
                   </p>
                 </div>
 
                 {/* Feature Cards Grid */}
                 <div className="grid sm:grid-cols-2 gap-3.5">
-                  <div className="p-3.5 rounded-2xl bg-sky-50/50 border border-sky-100/80">
+                  <div className="p-3.5 rounded-2xl bg-sky-50/60 border border-sky-100/90">
                     <div className="flex items-center gap-2.5 mb-1.5">
                       <div className="w-7 h-7 rounded-lg bg-sky-200/60 text-sky-700 flex items-center justify-center">
                         <Bot size={15} />
@@ -116,7 +239,7 @@ const FeaturesSection = () => {
                     </p>
                   </div>
 
-                  <div className="p-3.5 rounded-2xl bg-sky-50/50 border border-sky-100/80">
+                  <div className="p-3.5 rounded-2xl bg-sky-50/60 border border-sky-100/90">
                     <div className="flex items-center gap-2.5 mb-1.5">
                       <div className="w-7 h-7 rounded-lg bg-sky-200/60 text-sky-700 flex items-center justify-center">
                         <LineChart size={15} />
@@ -128,7 +251,7 @@ const FeaturesSection = () => {
                     </p>
                   </div>
 
-                  <div className="p-3.5 rounded-2xl bg-sky-50/50 border border-sky-100/80">
+                  <div className="p-3.5 rounded-2xl bg-sky-50/60 border border-sky-100/90">
                     <div className="flex items-center gap-2.5 mb-1.5">
                       <div className="w-7 h-7 rounded-lg bg-sky-200/60 text-sky-700 flex items-center justify-center">
                         <Syringe size={15} />
@@ -140,7 +263,7 @@ const FeaturesSection = () => {
                     </p>
                   </div>
 
-                  <div className="p-3.5 rounded-2xl bg-sky-50/50 border border-sky-100/80">
+                  <div className="p-3.5 rounded-2xl bg-sky-50/60 border border-sky-100/90">
                     <div className="flex items-center gap-2.5 mb-1.5">
                       <div className="w-7 h-7 rounded-lg bg-sky-200/60 text-sky-700 flex items-center justify-center">
                         <Mic size={15} />
@@ -152,7 +275,7 @@ const FeaturesSection = () => {
                     </p>
                   </div>
 
-                  <div className="p-3.5 rounded-2xl bg-sky-50/50 border border-sky-100/80">
+                  <div className="p-3.5 rounded-2xl bg-sky-50/60 border border-sky-100/90">
                     <div className="flex items-center gap-2.5 mb-1.5">
                       <div className="w-7 h-7 rounded-lg bg-sky-200/60 text-sky-700 flex items-center justify-center">
                         <Pill size={15} />
@@ -164,7 +287,7 @@ const FeaturesSection = () => {
                     </p>
                   </div>
 
-                  <div className="p-3.5 rounded-2xl bg-sky-50/50 border border-sky-100/80">
+                  <div className="p-3.5 rounded-2xl bg-sky-50/60 border border-sky-100/90">
                     <div className="flex items-center gap-2.5 mb-1.5">
                       <div className="w-7 h-7 rounded-lg bg-sky-200/60 text-sky-700 flex items-center justify-center">
                         <BarChart3 size={15} />
@@ -172,13 +295,13 @@ const FeaturesSection = () => {
                       <h4 className="text-xs font-bold text-foreground">Relatórios Financeiros</h4>
                     </div>
                     <p className="text-[11px] text-muted-foreground leading-relaxed">
-                      Controle financeiro simples do consultório com faturamento e relatórios da clínica.
+                      Controle financeiro simples com faturamento e relatórios gerenciais da clínica.
                     </p>
                   </div>
                 </div>
 
                 {/* CTAs Pediatria */}
-                <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+                <div className="pt-1 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
                   <Button
                     asChild
                     className="rounded-full bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white font-bold text-xs sm:text-sm px-6 h-11 shadow-sm"
@@ -201,34 +324,168 @@ const FeaturesSection = () => {
                 </div>
               </div>
 
-              {/* Right Side: Visual Mockup */}
-              <div className="lg:col-span-5 relative">
-                <div className="rounded-2xl overflow-hidden border-2 border-sky-100 shadow-xl bg-slate-900">
+              {/* Right Side: Mockup + 3D Mascot Spotlight */}
+              <div className="lg:col-span-5 relative space-y-3">
+                <div className="rounded-2xl overflow-hidden border-2 border-sky-100 shadow-xl bg-slate-900 relative group">
                   <img
                     src={platformGraficos}
                     alt="Gráficos de Crescimento OMS e CDC no Opes Pediatra"
                     className="w-full h-auto object-cover"
                   />
+                  {/* Floating Mascot Badge */}
+                  <div className="absolute top-3 right-3 bg-white/95 backdrop-blur-md p-1.5 rounded-2xl shadow-lg border border-sky-100 flex items-center gap-2">
+                    <img src={mascoteRobo} alt="Mascote IA Opes" className="w-10 h-10 object-contain" />
+                    <div className="pr-2">
+                      <span className="block text-[10px] font-black text-sky-900 leading-tight">IA Preditiva</span>
+                      <span className="text-[9px] text-muted-foreground">Exclusiva Opes</span>
+                    </div>
+                  </div>
                 </div>
-                <div className="mt-3 p-3 rounded-xl bg-sky-50 border border-sky-100 flex items-center justify-between text-xs">
-                  <span className="font-bold text-sky-900">Plano Individual Pediatria</span>
-                  <span className="font-extrabold text-sky-700">R$ 299/mês (15% OFF Anual)</span>
+              </div>
+            </div>
+
+            {/* Integrated Pricing Block for Pediatria (Evita duplo chaveamento) */}
+            <div className="pt-8 border-t border-sky-100">
+              <div className="text-center max-w-xl mx-auto mb-6">
+                <span className="text-xs font-bold uppercase tracking-wider text-sky-600 block mb-1">
+                  PLANOS OFICIAIS DE PEDIATRIA
+                </span>
+                <h4 className="text-xl sm:text-2xl font-extrabold text-foreground">
+                  Valores exclusivos para Médicos Pediatras
+                </h4>
+                <p className="text-xs text-muted-foreground mt-1">
+                  15 dias de teste grátis, sem cartão de crédito
+                </p>
+
+                {/* Billing Cycle Switcher */}
+                <div className="flex items-center justify-center gap-3 mt-4">
+                  <span
+                    className={`text-xs font-semibold cursor-pointer ${
+                      !isAnnual ? "text-foreground font-bold" : "text-muted-foreground"
+                    }`}
+                    onClick={() => setBillingCycle("monthly")}
+                  >
+                    Mensal
+                  </span>
+
+                  <button
+                    onClick={() => setBillingCycle(isAnnual ? "monthly" : "annual")}
+                    className="relative w-11 h-6 rounded-full bg-muted border border-border transition-colors p-0.5 flex items-center focus:outline-none"
+                    aria-label="Alternar ciclo de pagamento"
+                  >
+                    <div
+                      className={`w-4 h-4 rounded-full bg-sky-600 transition-transform duration-200 shadow-xs ${
+                        isAnnual ? "translate-x-5 bg-emerald-600" : "translate-x-0"
+                      }`}
+                    />
+                  </button>
+
+                  <span
+                    className={`text-xs font-semibold flex items-center gap-1.5 cursor-pointer ${
+                      isAnnual ? "text-emerald-700 font-bold" : "text-muted-foreground"
+                    }`}
+                    onClick={() => setBillingCycle("annual")}
+                  >
+                    <span>Anual</span>
+                    <span className="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded-full border border-emerald-500/30">
+                      Desconto Especial
+                    </span>
+                  </span>
                 </div>
+              </div>
+
+              {/* 3 Pediatria Pricing Cards Grid */}
+              <div className="grid md:grid-cols-3 gap-5 max-w-4xl mx-auto items-stretch">
+                {pediatriaPlans.map((plan, index) => {
+                  const displayPrice = isAnnual ? plan.annualPrice : plan.monthlyPrice;
+
+                  return (
+                    <div
+                      key={index}
+                      className={`relative p-6 rounded-3xl border transition-all duration-300 flex flex-col justify-between ${
+                        plan.popular
+                          ? "bg-gradient-primary text-primary-foreground border-transparent shadow-xl scale-103 z-10"
+                          : "bg-sky-50/40 border-sky-100 hover:border-sky-300 hover:shadow-md"
+                      }`}
+                    >
+                      {plan.popular && (
+                        <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                          <div className="flex items-center gap-1 px-3 py-0.5 rounded-full bg-cyan-400 text-slate-900 text-[10px] font-black shadow-md">
+                            <Star size={10} fill="currentColor" />
+                            {plan.badge || "MAIS ESCOLHIDO"}
+                          </div>
+                        </div>
+                      )}
+
+                      <div>
+                        <h5 className={`text-lg font-extrabold mb-2 ${plan.popular ? "text-white" : "text-foreground"}`}>
+                          {plan.name}
+                        </h5>
+
+                        <div className="mb-3">
+                          <div className="flex items-baseline gap-1">
+                            <span className={`text-xs font-semibold ${plan.popular ? "text-white/80" : "text-muted-foreground"}`}>R$</span>
+                            <span className={`text-3xl font-black ${plan.popular ? "text-white" : "text-sky-700"}`}>{displayPrice}</span>
+                            <span className={`text-xs ${plan.popular ? "text-white/80" : "text-muted-foreground"}`}>/mês {plan.pricePerUser || ""}</span>
+                          </div>
+                          {plan.savingsBadge && (
+                            <p className={`text-[11px] font-semibold mt-0.5 ${plan.popular ? "text-cyan-200" : "text-purple-600"}`}>
+                              {plan.savingsBadge}
+                            </p>
+                          )}
+                        </div>
+
+                        <ul className="space-y-2 mb-5 pt-2 border-t border-border/30 text-xs">
+                          {plan.features.map((f, fIdx) => (
+                            <li key={fIdx} className="flex items-start gap-2">
+                              <Check size={13} className={`flex-shrink-0 mt-0.5 ${plan.popular ? "text-cyan-300" : "text-sky-600"}`} />
+                              <span className={plan.popular ? "text-white/95" : "text-foreground/85"}>{f}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div>
+                        {plan.name === "Redes" ? (
+                          <Button
+                            variant="outline"
+                            className="w-full rounded-full border-emerald-500/40 text-emerald-700 hover:bg-emerald-500/10 font-bold text-xs h-9"
+                            asChild
+                          >
+                            <a href={consultoraWhatsAppUrl} target="_blank" rel="noopener noreferrer">
+                              <MessageSquare size={13} className="mr-1.5 text-emerald-500" />
+                              Falar com a Consultora
+                            </a>
+                          </Button>
+                        ) : (
+                          <Button
+                            className={`w-full rounded-full font-bold text-xs h-9 ${
+                              plan.popular ? "bg-white text-primary hover:bg-white/95 shadow-md" : "bg-sky-600 hover:bg-sky-700 text-white"
+                            }`}
+                            asChild
+                          >
+                            <a href="https://www.opespediatra.com/login">{plan.cta}</a>
+                          </Button>
+                        )}
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>
         ) : (
           /* ========================================================================= */
-          /* ABA OPES ESPECIALIDADES (VISÃO COMPLETA PARA TERAPEUTAS, PSICÓLOGOS, ENF)  */
+          /* ABA OPES ESPECIALIDADES (RECURSOS MULTIDISCIPLINARES + PREÇOS INTEGRADOS) */
           /* ========================================================================= */
-          <div className="rounded-3xl bg-white border border-purple-100 p-6 sm:p-10 shadow-lg relative overflow-hidden animate-in fade-in duration-300">
+          <div className="rounded-3xl bg-white border border-purple-100 p-6 sm:p-10 shadow-lg relative overflow-hidden animate-in fade-in duration-300 space-y-12">
             {/* Soft Ambient Glow */}
-            <div className="absolute top-0 right-0 w-80 h-80 bg-purple-100/40 rounded-full blur-3xl -z-10 pointer-events-none" />
+            <div className="absolute top-0 right-0 w-96 h-96 bg-purple-100/40 rounded-full blur-3xl -z-10 pointer-events-none" />
 
-            {/* Sub-Specialty Switcher (Sub-Abas de Especialidades) */}
-            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pb-6 mb-6 border-b border-purple-100/70">
+            {/* Sub-Specialty Switcher */}
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pb-6 border-b border-purple-100/70">
               <div className="flex items-center gap-3">
-                <div className="h-9 px-2 py-0.5 rounded-xl bg-white border border-purple-100 flex items-center justify-center shadow-2xs">
+                <div className="h-9 px-2.5 py-0.5 rounded-xl bg-white border border-purple-100 flex items-center justify-center shadow-2xs">
                   <img src={logoOpesEspecialidades} alt="Opes Especialidades" className="h-5 w-auto object-contain" />
                 </div>
                 <div>
@@ -245,7 +502,7 @@ const FeaturesSection = () => {
               <div className="inline-flex p-1 rounded-full bg-purple-50 border border-purple-100 w-full sm:w-auto">
                 <button
                   onClick={() => setActiveSpecialty("to")}
-                  className={`flex-1 sm:flex-none py-1.5 px-3.5 rounded-full text-xs font-bold transition-all ${
+                  className={`flex-1 sm:flex-none py-1.5 px-4 rounded-full text-xs font-bold transition-all ${
                     activeSpecialty === "to"
                       ? "bg-purple-600 text-white shadow-xs"
                       : "text-purple-900 hover:text-purple-600"
@@ -255,7 +512,7 @@ const FeaturesSection = () => {
                 </button>
                 <button
                   onClick={() => setActiveSpecialty("psicologia")}
-                  className={`flex-1 sm:flex-none py-1.5 px-3.5 rounded-full text-xs font-bold transition-all ${
+                  className={`flex-1 sm:flex-none py-1.5 px-4 rounded-full text-xs font-bold transition-all ${
                     activeSpecialty === "psicologia"
                       ? "bg-purple-600 text-white shadow-xs"
                       : "text-purple-900 hover:text-purple-600"
@@ -265,7 +522,7 @@ const FeaturesSection = () => {
                 </button>
                 <button
                   onClick={() => setActiveSpecialty("enfermagem")}
-                  className={`flex-1 sm:flex-none py-1.5 px-3.5 rounded-full text-xs font-bold transition-all ${
+                  className={`flex-1 sm:flex-none py-1.5 px-4 rounded-full text-xs font-bold transition-all ${
                     activeSpecialty === "enfermagem"
                       ? "bg-purple-600 text-white shadow-xs"
                       : "text-purple-900 hover:text-purple-600"
@@ -383,7 +640,7 @@ const FeaturesSection = () => {
                 )}
 
                 {/* CTAs Especialidades */}
-                <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+                <div className="pt-1 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
                   <Button
                     asChild
                     className="rounded-full bg-gradient-to-r from-purple-600 to-violet-700 hover:from-purple-700 hover:to-violet-800 text-white font-bold text-xs sm:text-sm px-6 h-11 shadow-sm"
@@ -418,8 +675,8 @@ const FeaturesSection = () => {
                 </div>
               </div>
 
-              {/* Right Side: Visual Mockup */}
-              <div className="lg:col-span-5 relative">
+              {/* Right Side: Mockup Visual */}
+              <div className="lg:col-span-5 relative space-y-3">
                 <div className="rounded-2xl overflow-hidden border-2 border-purple-100 shadow-xl bg-card">
                   <img
                     src={activeSpecialty === "enfermagem" ? platformDashboard : platformSaudeMental}
@@ -427,10 +684,136 @@ const FeaturesSection = () => {
                     className="w-full h-auto object-cover"
                   />
                 </div>
-                <div className="mt-3 p-3 rounded-xl bg-purple-50 border border-purple-100 flex items-center justify-between text-xs">
-                  <span className="font-bold text-purple-950">Plano Individual Especialidades</span>
-                  <span className="font-extrabold text-purple-700">R$ 199/mês (15% OFF Anual)</span>
+              </div>
+            </div>
+
+            {/* Integrated Pricing Block for Especialidades */}
+            <div className="pt-8 border-t border-purple-100">
+              <div className="text-center max-w-xl mx-auto mb-6">
+                <span className="text-xs font-bold uppercase tracking-wider text-purple-600 block mb-1">
+                  PLANOS OFICIAIS DE ESPECIALIDADES
+                </span>
+                <h4 className="text-xl sm:text-2xl font-extrabold text-foreground">
+                  Valores exclusivos para T.O., Psicologia, Enfermagem e Fisioterapia
+                </h4>
+                <p className="text-xs text-muted-foreground mt-1">
+                  15 dias de teste grátis, sem cartão de crédito e sem fidelidade
+                </p>
+
+                {/* Billing Cycle Switcher */}
+                <div className="flex items-center justify-center gap-3 mt-4">
+                  <span
+                    className={`text-xs font-semibold cursor-pointer ${
+                      !isAnnual ? "text-foreground font-bold" : "text-muted-foreground"
+                    }`}
+                    onClick={() => setBillingCycle("monthly")}
+                  >
+                    Mensal
+                  </span>
+
+                  <button
+                    onClick={() => setBillingCycle(isAnnual ? "monthly" : "annual")}
+                    className="relative w-11 h-6 rounded-full bg-muted border border-border transition-colors p-0.5 flex items-center focus:outline-none"
+                    aria-label="Alternar ciclo de pagamento"
+                  >
+                    <div
+                      className={`w-4 h-4 rounded-full bg-purple-600 transition-transform duration-200 shadow-xs ${
+                        isAnnual ? "translate-x-5 bg-emerald-600" : "translate-x-0"
+                      }`}
+                    />
+                  </button>
+
+                  <span
+                    className={`text-xs font-semibold flex items-center gap-1.5 cursor-pointer ${
+                      isAnnual ? "text-emerald-700 font-bold" : "text-muted-foreground"
+                    }`}
+                    onClick={() => setBillingCycle("annual")}
+                  >
+                    <span>Anual</span>
+                    <span className="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded-full border border-emerald-500/30">
+                      Desconto Especial
+                    </span>
+                  </span>
                 </div>
+              </div>
+
+              {/* 3 Especialidades Pricing Cards Grid */}
+              <div className="grid md:grid-cols-3 gap-5 max-w-4xl mx-auto items-stretch">
+                {especialidadesPlans.map((plan, index) => {
+                  const displayPrice = isAnnual ? plan.annualPrice : plan.monthlyPrice;
+
+                  return (
+                    <div
+                      key={index}
+                      className={`relative p-6 rounded-3xl border transition-all duration-300 flex flex-col justify-between ${
+                        plan.popular
+                          ? "bg-gradient-primary text-primary-foreground border-transparent shadow-xl scale-103 z-10"
+                          : "bg-purple-50/40 border-purple-100 hover:border-purple-300 hover:shadow-md"
+                      }`}
+                    >
+                      {plan.popular && (
+                        <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                          <div className="flex items-center gap-1 px-3 py-0.5 rounded-full bg-cyan-400 text-slate-900 text-[10px] font-black shadow-md">
+                            <Star size={10} fill="currentColor" />
+                            {plan.badge || "MAIS ESCOLHIDO"}
+                          </div>
+                        </div>
+                      )}
+
+                      <div>
+                        <h5 className={`text-lg font-extrabold mb-2 ${plan.popular ? "text-white" : "text-foreground"}`}>
+                          {plan.name}
+                        </h5>
+
+                        <div className="mb-3">
+                          <div className="flex items-baseline gap-1">
+                            <span className={`text-xs font-semibold ${plan.popular ? "text-white/80" : "text-muted-foreground"}`}>R$</span>
+                            <span className={`text-3xl font-black ${plan.popular ? "text-white" : "text-purple-700"}`}>{displayPrice}</span>
+                            <span className={`text-xs ${plan.popular ? "text-white/80" : "text-muted-foreground"}`}>/mês {plan.pricePerUser || ""}</span>
+                          </div>
+                          {plan.savingsBadge && (
+                            <p className={`text-[11px] font-semibold mt-0.5 ${plan.popular ? "text-cyan-200" : "text-purple-600"}`}>
+                              {plan.savingsBadge}
+                            </p>
+                          )}
+                        </div>
+
+                        <ul className="space-y-2 mb-5 pt-2 border-t border-border/30 text-xs">
+                          {plan.features.map((f, fIdx) => (
+                            <li key={fIdx} className="flex items-start gap-2">
+                              <Check size={13} className={`flex-shrink-0 mt-0.5 ${plan.popular ? "text-cyan-300" : "text-purple-600"}`} />
+                              <span className={plan.popular ? "text-white/95" : "text-foreground/85"}>{f}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div>
+                        {plan.name === "Redes" ? (
+                          <Button
+                            variant="outline"
+                            className="w-full rounded-full border-emerald-500/40 text-emerald-700 hover:bg-emerald-500/10 font-bold text-xs h-9"
+                            asChild
+                          >
+                            <a href={consultoraWhatsAppUrl} target="_blank" rel="noopener noreferrer">
+                              <MessageSquare size={13} className="mr-1.5 text-emerald-500" />
+                              Falar com a Consultora
+                            </a>
+                          </Button>
+                        ) : (
+                          <Button
+                            className={`w-full rounded-full font-bold text-xs h-9 ${
+                              plan.popular ? "bg-white text-primary hover:bg-white/95 shadow-md" : "bg-purple-600 hover:bg-purple-700 text-white"
+                            }`}
+                            asChild
+                          >
+                            <a href="https://www.opespediatra.com/login">{plan.cta}</a>
+                          </Button>
+                        )}
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>
