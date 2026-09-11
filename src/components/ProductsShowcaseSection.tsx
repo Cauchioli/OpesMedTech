@@ -109,63 +109,63 @@ const ProductsShowcaseSection: React.FC = () => {
         </div>
 
         {/* Trust Badges Bar matching Reference */}
-        <div className="max-w-5xl mx-auto pt-6 border-t border-border/50">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6 items-center">
+        <div className="max-w-5xl mx-auto pt-8 sm:pt-10 mt-8 sm:mt-10 border-t border-border/70">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5 items-stretch">
             {/* Pillar 1 */}
-            <div className="flex items-center gap-3 p-2">
-              <div className="w-9 h-9 rounded-full bg-sky-50 border border-sky-200/60 flex items-center justify-center text-sky-600 flex-shrink-0">
-                <Cloud size={18} />
+            <div className="flex items-center gap-4 p-4 rounded-2xl bg-sky-50/60 border border-sky-100/90 shadow-xs hover:bg-sky-50 transition-all">
+              <div className="w-13 h-13 sm:w-14 sm:h-14 rounded-2xl bg-white border border-sky-200/80 flex items-center justify-center text-sky-600 flex-shrink-0 shadow-xs">
+                <Cloud size={26} />
               </div>
               <div className="text-left">
-                <span className="block text-xs font-bold text-foreground leading-tight">
+                <span className="block text-base sm:text-lg font-extrabold text-foreground leading-snug">
                   100%
                 </span>
-                <span className="text-[11px] text-muted-foreground leading-tight">
+                <span className="text-xs sm:text-sm text-muted-foreground leading-snug">
                   na nuvem
                 </span>
               </div>
             </div>
 
             {/* Pillar 2 */}
-            <div className="flex items-center gap-3 p-2">
-              <div className="w-9 h-9 rounded-full bg-sky-50 border border-sky-200/60 flex items-center justify-center text-sky-600 flex-shrink-0">
-                <ShieldCheck size={18} />
+            <div className="flex items-center gap-4 p-4 rounded-2xl bg-sky-50/60 border border-sky-100/90 shadow-xs hover:bg-sky-50 transition-all">
+              <div className="w-13 h-13 sm:w-14 sm:h-14 rounded-2xl bg-white border border-sky-200/80 flex items-center justify-center text-sky-600 flex-shrink-0 shadow-xs">
+                <ShieldCheck size={26} />
               </div>
               <div className="text-left">
-                <span className="block text-xs font-bold text-foreground leading-tight">
+                <span className="block text-sm sm:text-base font-extrabold text-foreground leading-snug">
                   Seguro
                 </span>
-                <span className="text-[11px] text-muted-foreground leading-tight">
+                <span className="text-xs sm:text-sm text-muted-foreground leading-snug">
                   e em conformidade com a LGPD
                 </span>
               </div>
             </div>
 
             {/* Pillar 3 */}
-            <div className="flex items-center gap-3 p-2">
-              <div className="w-9 h-9 rounded-full bg-purple-50 border border-purple-200/60 flex items-center justify-center text-purple-600 flex-shrink-0">
-                <Brain size={18} />
+            <div className="flex items-center gap-4 p-4 rounded-2xl bg-purple-50/60 border border-purple-100/90 shadow-xs hover:bg-purple-50 transition-all">
+              <div className="w-13 h-13 sm:w-14 sm:h-14 rounded-2xl bg-white border border-purple-200/80 flex items-center justify-center text-purple-600 flex-shrink-0 shadow-xs">
+                <Brain size={26} />
               </div>
               <div className="text-left">
-                <span className="block text-xs font-bold text-foreground leading-tight">
+                <span className="block text-sm sm:text-base font-extrabold text-foreground leading-snug">
                   Inteligência Artificial
                 </span>
-                <span className="text-[11px] text-muted-foreground leading-tight">
+                <span className="text-xs sm:text-sm text-muted-foreground leading-snug">
                   a favor do cuidado
                 </span>
               </div>
             </div>
 
             {/* Pillar 4 */}
-            <div className="flex items-center gap-3 p-2">
-              <div className="w-9 h-9 rounded-full bg-purple-50 border border-purple-200/60 flex items-center justify-center text-purple-600 flex-shrink-0">
-                <Heart size={18} />
+            <div className="flex items-center gap-4 p-4 rounded-2xl bg-purple-50/60 border border-purple-100/90 shadow-xs hover:bg-purple-50 transition-all">
+              <div className="w-13 h-13 sm:w-14 sm:h-14 rounded-2xl bg-white border border-purple-200/80 flex items-center justify-center text-purple-600 flex-shrink-0 shadow-xs">
+                <Heart size={26} />
               </div>
               <div className="text-left">
-                <span className="block text-xs font-bold text-foreground leading-tight">
+                <span className="block text-sm sm:text-base font-extrabold text-foreground leading-snug">
                   Feito por quem
                 </span>
-                <span className="text-[11px] text-muted-foreground leading-tight">
+                <span className="text-xs sm:text-sm text-muted-foreground leading-snug">
                   acredita em um futuro mais saudável
                 </span>
               </div>
