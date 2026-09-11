@@ -50,7 +50,7 @@ const LPPediatria: React.FC = () => {
               className="w-full h-full object-cover object-[78%_center] lg:object-right"
             />
             {/* Gradiente suave na esquerda para garantir leitura perfeita dos textos */}
-            <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 sm:via-white/85 to-transparent lg:w-3/5" />
+            <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/75 sm:to-transparent sm:via-white/85 lg:w-3/5" />
             <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-white to-transparent" />
           </div>
 
@@ -119,7 +119,7 @@ const LPPediatria: React.FC = () => {
               </div>
 
               {/* Trio de Selos de Apoio da Referência */}
-              <div className="pt-3 grid grid-cols-3 gap-2.5 max-w-lg border-t border-border/60">
+              <div className="pt-3 grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-2.5 max-w-lg border-t border-border/60">
                 <div className="flex items-center gap-2">
                   <div className="w-8 h-8 rounded-lg bg-sky-50 border border-sky-200/60 flex items-center justify-center text-sky-600 flex-shrink-0">
                     <BookOpen size={16} />

@@ -45,7 +45,7 @@ const LPEnfermagem: React.FC = () => {
               className="w-full h-full object-cover object-[75%_center] lg:object-right"
             />
             {/* Gradiente suave na esquerda para garantir leitura perfeita dos textos */}
-            <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 sm:via-white/85 to-transparent lg:w-3/5" />
+            <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/75 sm:to-transparent sm:via-white/85 lg:w-3/5" />
             <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-white to-transparent" />
           </div>
 
@@ -99,8 +99,8 @@ const LPEnfermagem: React.FC = () => {
 
               {/* Pill e Tags Clínicas da Referência */}
               <div className="pt-3 space-y-3 max-w-xl">
-                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-cyan-50 to-blue-50 border border-cyan-200/60 shadow-2xs">
-                  <span className="w-1.5 h-1.5 rounded-full bg-cyan-600 animate-pulse" />
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-2xl sm:rounded-full bg-gradient-to-r from-cyan-50 to-blue-50 border border-cyan-200/60 shadow-2xs">
+                  <span className="w-1.5 h-1.5 rounded-full bg-cyan-600 animate-pulse flex-shrink-0" />
                   <span className="text-xs font-semibold text-cyan-950">
                     Profissionais mais preparados. Crianças com mais possibilidades.
                   </span>

@@ -18,7 +18,7 @@ const HeroSection: React.FC = () => {
           className="w-full h-full object-cover object-[78%_center] lg:object-right"
         />
         {/* Gradiente suave na esquerda para garantir leitura perfeita dos textos em qualquer resolução */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 sm:via-white/80 to-transparent lg:w-1/2" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/75 sm:to-transparent sm:via-white/80 lg:w-1/2" />
         <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white to-transparent" />
       </div>
 
