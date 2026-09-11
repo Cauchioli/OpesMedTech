@@ -760,7 +760,7 @@ const FeaturesSection = () => {
                       : "text-purple-900 hover:text-purple-600"
                   }`}
                 >
-                  Enfermagem e Fisio
+                  Enfermagem
                 </button>
               </div>
             </div>
@@ -773,7 +773,7 @@ const FeaturesSection = () => {
                   <div className="space-y-4">
                     <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-[11px] font-bold uppercase tracking-wider">
                       <Activity size={13} />
-                      Terapia Ocupacional (CREFITO)
+                      Terapia Ocupacional
                     </div>
                     <h4 className="text-xl sm:text-2xl font-bold text-foreground">
                       Prontuário e Evolução Terapêutica de T.O.
@@ -810,10 +810,10 @@ const FeaturesSection = () => {
                       Psicologia Infantil e Neuropsicologia (CRP)
                     </div>
                     <h4 className="text-xl sm:text-2xl font-bold text-foreground">
-                      Sigilo Ético Rigoroso e IA para Psicólogos
+                      Prontuário Eletrônico e IA para Psicólogos
                     </h4>
                     <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
-                      Anotações de sessão protegidas por criptografia, modelos de laudos, relatórios socioemocionais e transcrição por voz.
+                      Anotações de sessão protegidas por criptografia, relatórios socioemocionais e transcrição por voz.
                     </p>
 
                     <div className="grid sm:grid-cols-2 gap-3 pt-1">
@@ -823,15 +823,15 @@ const FeaturesSection = () => {
                       </div>
                       <div className="p-3 rounded-2xl bg-purple-50/50 border border-purple-100">
                         <span className="font-bold text-xs text-foreground block mb-0.5">Anotações Clínicas Online</span>
-                        <span className="text-[11px] text-muted-foreground">Prontuário com sigilo ético absoluto (LGPD).</span>
+                        <span className="text-[11px] text-muted-foreground">Prontuário seguro e estruturado com conformidade LGPD.</span>
                       </div>
                       <div className="p-3 rounded-2xl bg-purple-50/50 border border-purple-100">
                         <span className="font-bold text-xs text-foreground block mb-0.5">Transcrição de Voz</span>
                         <span className="text-[11px] text-muted-foreground">Resumos clínicos imediatos após cada sessão.</span>
                       </div>
                       <div className="p-3 rounded-2xl bg-purple-50/50 border border-purple-100">
-                        <span className="font-bold text-xs text-foreground block mb-0.5">Saúde Mental & Laudos</span>
-                        <span className="text-[11px] text-muted-foreground">Emissão de atestados e laudos psicológicos.</span>
+                        <span className="font-bold text-xs text-foreground block mb-0.5">Saúde Mental & Relatórios</span>
+                        <span className="text-[11px] text-muted-foreground">Emissão de atestados e pareceres psicológicos.</span>
                       </div>
                     </div>
                   </div>
@@ -841,7 +841,7 @@ const FeaturesSection = () => {
                   <div className="space-y-4">
                     <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-[11px] font-bold uppercase tracking-wider">
                       <Users size={13} />
-                      Enfermagem Pediátrica e Fisioterapia (COREN/CREFITO)
+                      Enfermagem Pediátrica (COREN)
                     </div>
                     <h4 className="text-xl sm:text-2xl font-bold text-foreground">
                       Cuidado Clínico e Gestão de Cuidados
@@ -857,7 +857,7 @@ const FeaturesSection = () => {
                       </div>
                       <div className="p-3 rounded-2xl bg-purple-50/50 border border-purple-100">
                         <span className="font-bold text-xs text-foreground block mb-0.5">Anotações Clínicas Online</span>
-                        <span className="text-[11px] text-muted-foreground">Evolução de enfermagem e condutas fisioterápicas.</span>
+                        <span className="text-[11px] text-muted-foreground">Evolução e anotações clínicas de enfermagem.</span>
                       </div>
                       <div className="p-3 rounded-2xl bg-purple-50/50 border border-purple-100">
                         <span className="font-bold text-xs text-foreground block mb-0.5">Transcrição de Voz</span>
@@ -901,7 +901,7 @@ const FeaturesSection = () => {
                         ? "Saber mais sobre Terapia Ocupacional"
                         : activeSpecialty === "psicologia"
                         ? "Saber mais sobre Psicologia Infantil"
-                        : "Saber mais sobre Enfermagem e Fisio"}
+                        : "Saber mais sobre Enfermagem"}
                     </Link>
                   </Button>
                 </div>
@@ -943,7 +943,7 @@ const FeaturesSection = () => {
                 accent="purple"
                 badgeText="TELAS REAIS PARA PSICOLOGIA INFANTIL"
                 title="Módulos liberados para Psicologia Infantil"
-                subtitle="Sigilo ético absoluto (CRP/LGPD), notas de sessão criptografadas, transcrição por voz e teleconsulta."
+                subtitle="Prontuário seguro e criptografado com conformidade LGPD, transcrição por voz e teleconsulta."
                 onOpenModal={setModalScreen}
               />
             )}
@@ -952,8 +952,8 @@ const FeaturesSection = () => {
               <ScreensGrid
                 screens={screensEnfermagem}
                 accent="purple"
-                badgeText="TELAS REAIS PARA ENFERMAGEM E FISIOTERAPIA"
-                title="Módulos liberados para Enfermagem e Fisioterapia"
+                badgeText="TELAS REAIS PARA ENFERMAGEM"
+                title="Módulos liberados para Enfermagem Pediátrica"
                 subtitle="Gestão vacinal, curvas de crescimento OMS, anotações de plantão e pedidos de exames por voz."
                 onOpenModal={setModalScreen}
               />
@@ -966,7 +966,7 @@ const FeaturesSection = () => {
                   PLANOS OFICIAIS DE ESPECIALIDADES
                 </span>
                 <h4 className="text-xl sm:text-2xl font-extrabold text-foreground">
-                  Valores exclusivos para T.O., Psicologia, Enfermagem e Fisioterapia
+                  Valores exclusivos para T.O., Psicologia e Enfermagem
                 </h4>
                 <p className="text-xs text-muted-foreground mt-1">
                   15 dias de teste grátis, sem cartão de crédito e sem fidelidade

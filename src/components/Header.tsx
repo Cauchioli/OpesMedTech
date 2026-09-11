@@ -89,7 +89,7 @@ const Header: React.FC<HeaderProps> = ({ specialtyTitle }) => {
                 <DropdownMenuItem asChild className="rounded-lg cursor-pointer">
                   <Link to="/terapia-ocupacional" className="flex flex-col items-start gap-0.5 p-2">
                     <span className="font-semibold text-foreground text-xs">Terapia Ocupacional</span>
-                    <span className="text-[11px] text-muted-foreground">Integração sensorial (CREFITO)</span>
+                    <span className="text-[11px] text-muted-foreground">Integração sensorial e motora</span>
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className="rounded-lg cursor-pointer">
@@ -100,8 +100,8 @@ const Header: React.FC<HeaderProps> = ({ specialtyTitle }) => {
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className="rounded-lg cursor-pointer">
                   <Link to="/enfermagem" className="flex flex-col items-start gap-0.5 p-2">
-                    <span className="font-semibold text-foreground text-xs">Enfermagem e Fisioterapia</span>
-                    <span className="text-[11px] text-muted-foreground">Cuidados clínicos (COREN/CREFITO)</span>
+                    <span className="font-semibold text-foreground text-xs">Enfermagem Pediátrica</span>
+                    <span className="text-[11px] text-muted-foreground">Cuidados clínicos (COREN)</span>
                   </Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
@@ -195,7 +195,7 @@ const Header: React.FC<HeaderProps> = ({ specialtyTitle }) => {
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <span>Terapia Ocupacional</span>
-                  <span className="text-[10px] text-muted-foreground">CREFITO</span>
+                  <span className="text-[10px] text-muted-foreground">T.O.</span>
                 </Link>
                 <Link
                   to="/psicologia"
@@ -210,8 +210,8 @@ const Header: React.FC<HeaderProps> = ({ specialtyTitle }) => {
                   className="px-3 py-1.5 rounded-md text-xs font-semibold text-primary hover:bg-muted flex items-center justify-between"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <span>Enfermagem e Fisio</span>
-                  <span className="text-[10px] text-muted-foreground">COREN/CREFITO</span>
+                  <span>Enfermagem</span>
+                  <span className="text-[10px] text-muted-foreground">COREN</span>
                 </Link>
               </div>
             </div>

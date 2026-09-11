@@ -10,9 +10,9 @@ const Footer = () => {
   const links = {
     produtos: [
       { label: "Opes Pediatria (CRM)", href: "/pediatria" },
-      { label: "Terapia Ocupacional (CREFITO)", href: "/terapia-ocupacional" },
+      { label: "Terapia Ocupacional", href: "/terapia-ocupacional" },
       { label: "Psicologia Infantil (CRP)", href: "/psicologia" },
-      { label: "Enfermagem e Fisioterapia (COREN)", href: "/enfermagem" },
+      { label: "Enfermagem Pediátrica (COREN)", href: "/enfermagem" },
       { label: "Funcionalidades da Plataforma", href: "/#funcionalidades" },
       { label: "Planos e Preços", href: "/#precos" },
       { label: "Perguntas Frequentes (FAQ)", href: "/#faq" },

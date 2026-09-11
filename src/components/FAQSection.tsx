@@ -14,9 +14,9 @@ const FAQSection = () => {
 
   const faqs = [
     {
-      question: "Como funciona o cadastro pelo CRM ou pelo conselho de classe (CREFITO, CRP, COREN)?",
+      question: "Como funciona o cadastro pelo CRM ou pelo conselho de classe (CRP, COREN)?",
       answer:
-        "No momento do cadastro no sistema, você informa seu número de conselho profissional. Se selecionar CRM, a plataforma habilita os módulos médicos pediátricos (curvas, vacinas, IA para análise preditiva, receituário e todas as outras funcionalidades da plataforma). É o módulo mais completo, apresentando todas as funcionalidades independente do plano escolhido. Caso selecione seu conselho terapêutico (CREFITO, CRP, COREN), o sistema automaticamente carrega o ambiente de Especialidades com formulários adequados à sua profissão.",
+        "No momento do cadastro no sistema, você informa seu número de conselho profissional. Se selecionar CRM, a plataforma habilita os módulos médicos pediátricos (curvas, vacinas, IA para análise preditiva, receituário e todas as outras funcionalidades da plataforma). É o módulo mais completo, apresentando todas as funcionalidades independente do plano escolhido. Caso selecione seu conselho profissional (CRP, COREN), o sistema automaticamente carrega o ambiente de Especialidades com formulários adequados à sua profissão.",
     },
     {
       question: "Como funciona o período de teste de 15 dias?",

@@ -43,7 +43,7 @@ const AboutSection = () => {
                   Opes Especialidades
                 </h3>
                 <p className="text-[11px] text-muted-foreground leading-relaxed">
-                  Anotações clínicas, saúde mental, laudos e atestados por R$ 199/mês.
+                  Anotações clínicas, saúde mental, relatórios e atestados por R$ 199/mês.
                 </p>
               </div>
             </div>

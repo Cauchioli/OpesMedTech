@@ -155,15 +155,15 @@ const SPECIALTY_TABS = [
   {
     key: "to" as SpecialtyKey,
     label: "Terapia Ocupacional",
-    badge: "CREFITO",
+    badge: "Especialidades",
     icon: Activity,
     gradient: "from-purple-600 to-violet-700",
     activeBg: "bg-purple-600 text-white shadow-md",
   },
   {
     key: "enfermagem" as SpecialtyKey,
-    label: "Enfermagem e Fisio",
-    badge: "COREN / CREFITO",
+    label: "Enfermagem",
+    badge: "COREN",
     icon: Users,
     gradient: "from-cyan-600 to-blue-600",
     activeBg: "bg-cyan-600 text-white shadow-md",

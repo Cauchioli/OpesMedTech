@@ -27,7 +27,7 @@ export const DudaWhatsAppFloating: React.FC<DudaWhatsAppFloatingProps> = ({
         );
       case "Enfermagem":
         return encodeURIComponent(
-          "Olá! Atuo na área de Enfermagem e Fisioterapia pediátrica e gostaria de conhecer as ferramentas do Opes Especialidades."
+          "Olá! Atuo na área de Enfermagem pediátrica e gostaria de conhecer as ferramentas do Opes Especialidades."
         );
       default:
         return encodeURIComponent(

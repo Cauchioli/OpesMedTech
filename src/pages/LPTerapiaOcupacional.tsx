@@ -35,83 +35,78 @@ const LPTerapiaOcupacional: React.FC = () => {
 
       <main>
         {/* Hero Section Padronizado 2 Colunas com Imagem Oficial */}
-        <section className="relative pt-24 md:pt-32 pb-14 md:pb-20 overflow-hidden bg-gradient-to-b from-white via-purple-50/30 to-white">
-          <div className="container-custom relative">
-            <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-              {/* Left Column */}
-              <div className="lg:col-span-6 space-y-5 text-left">
-                <div className="flex items-center gap-2">
-                  <div className="inline-flex items-center gap-2.5 px-3 py-1 rounded-full bg-card border border-purple-200/60 shadow-xs">
-                    <img src={logoOpesEspecialidades} alt="Opes Especialidades" className="h-4 w-auto object-contain" />
-                    <span className="text-[11px] font-bold text-purple-700 uppercase tracking-wider border-l border-border pl-2">
-                      CREFITO
-                    </span>
-                  </div>
-                </div>
+        {/* Hero Section Full Bleed com Foto Oficial de Fundo */}
+        <section className="relative min-h-[560px] lg:min-h-[620px] pt-28 md:pt-36 pb-16 md:pb-24 overflow-hidden bg-white flex items-center">
+          {/* Imagem de Fundo Grande Sem Bordas (Full Bleed) */}
+          <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden">
+            <img
+              src={heroTOOficial}
+              alt="Terapeuta Ocupacional com criança em atividade com brinquedos de empilhar"
+              className="w-full h-full object-cover object-[75%_center] lg:object-right"
+            />
+            {/* Gradiente suave na esquerda para garantir leitura perfeita dos textos */}
+            <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 sm:via-white/80 to-transparent lg:w-1/2" />
+            <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-white to-transparent" />
+          </div>
 
-                <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-foreground tracking-tight leading-[1.15]">
-                  Prontuário e <br />
-                  <span className="bg-gradient-to-r from-purple-600 via-violet-600 to-sky-600 bg-clip-text text-transparent">
-                    IA para Terapia Ocupacional
-                  </span>
-                </h1>
-
-                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed max-w-lg">
-                  Anotações clínicas online, acompanhamento de desenvolvimento sensorial e motor, transcrição de voz e agendamento por <strong className="text-foreground">R$ 199/mês</strong>.
-                </p>
-
-                {/* CTAs */}
-                <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
-                  <Button
-                    size="lg"
-                    className="rounded-full bg-gradient-to-r from-purple-600 to-violet-700 hover:from-purple-700 hover:to-violet-800 text-white shadow-md font-bold px-7 h-11 text-xs sm:text-sm"
-                    asChild
-                  >
-                    <a href="https://www.opespediatra.com/login">
-                      Iniciar Teste de 15 Dias
-                      <ArrowRight size={15} className="ml-2" />
-                    </a>
-                  </Button>
-
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="rounded-full border-emerald-500/40 text-emerald-700 hover:bg-emerald-500/10 font-bold px-6 h-11 text-xs sm:text-sm"
-                    asChild
-                  >
-                    <a href={consultoraWhatsAppUrl} target="_blank" rel="noopener noreferrer">
-                      <MessageSquare size={15} className="mr-2 text-emerald-500" />
-                      Falar com a Consultora
-                    </a>
-                  </Button>
-                </div>
-
-                <div className="pt-1 flex items-center gap-3 text-xs text-muted-foreground">
-                  <span className="flex items-center gap-1.5 font-medium">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                    Sem fidelidade
-                  </span>
-                  <span>•</span>
-                  <span className="flex items-center gap-1.5 font-medium">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                    15 dias liberados
+          <div className="w-full max-w-[1400px] mx-auto px-6 sm:px-10 lg:pl-16 xl:pl-20 lg:pr-8 relative z-10">
+            <div className="max-w-xl lg:max-w-2xl text-left space-y-5">
+              <div className="flex items-center gap-2">
+                <div className="inline-flex items-center gap-2.5 px-3 py-1 rounded-full bg-card border border-purple-200/60 shadow-xs">
+                  <img src={logoOpesEspecialidades} alt="Opes Especialidades" className="h-4 w-auto object-contain" />
+                  <span className="text-[11px] font-bold text-purple-700 uppercase tracking-wider border-l border-border pl-2">
+                    Especialidades
                   </span>
                 </div>
               </div>
 
-              {/* Right Column: Foto Oficial TO */}
-              <div className="lg:col-span-6 relative flex items-center justify-center">
-                <div className="relative w-full max-w-lg aspect-16/10 rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-gradient-to-tr from-purple-100/60 to-sky-100/60">
-                  <img
-                    src={heroTOOficial}
-                    alt="Terapeuta Ocupacional com criança em atividade com brinquedos de empilhar"
-                    className="w-full h-full object-cover object-center"
-                  />
-                  <div className="absolute bottom-3 right-3 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-2xl border border-purple-100 shadow-md flex items-center gap-2">
-                    <Activity size={15} className="text-purple-600" />
-                    <span className="text-[11px] font-black text-purple-950">Perfil Sensorial & Motor</span>
-                  </div>
-                </div>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-foreground tracking-tight leading-[1.12]">
+                Prontuário e <br />
+                <span className="bg-gradient-to-r from-purple-600 via-violet-600 to-sky-600 bg-clip-text text-transparent">
+                  IA para Terapia Ocupacional
+                </span>
+              </h1>
+
+              <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed max-w-lg">
+                Anotações clínicas online, acompanhamento de desenvolvimento sensorial e motor, transcrição de voz e agendamento por <strong className="text-foreground">R$ 199/mês</strong>.
+              </p>
+
+              {/* CTAs */}
+              <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+                <Button
+                  size="lg"
+                  className="rounded-full bg-gradient-to-r from-purple-600 to-violet-700 hover:from-purple-700 hover:to-violet-800 text-white shadow-md font-bold px-7 h-12 text-xs sm:text-sm"
+                  asChild
+                >
+                  <a href="https://www.opespediatra.com/login">
+                    Iniciar Teste de 15 Dias
+                    <ArrowRight size={15} className="ml-2" />
+                  </a>
+                </Button>
+
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="rounded-full bg-white/80 backdrop-blur-xs border-emerald-500/40 text-emerald-700 hover:bg-emerald-500/10 font-bold px-6 h-12 text-xs sm:text-sm shadow-xs"
+                  asChild
+                >
+                  <a href={consultoraWhatsAppUrl} target="_blank" rel="noopener noreferrer">
+                    <MessageSquare size={15} className="mr-2 text-emerald-500" />
+                    Falar com a Consultora
+                  </a>
+                </Button>
+              </div>
+
+              <div className="pt-1 flex items-center gap-3 text-xs text-muted-foreground">
+                <span className="flex items-center gap-1.5 font-medium">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                  Sem fidelidade
+                </span>
+                <span>•</span>
+                <span className="flex items-center gap-1.5 font-medium">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                  15 dias liberados
+                </span>
               </div>
             </div>
           </div>
@@ -158,7 +153,7 @@ const LPTerapiaOcupacional: React.FC = () => {
                 },
                 {
                   icon: Shield,
-                  title: "Segurança e Sigilo CREFITO",
+                  title: "Segurança e Conformidade Ética",
                   desc: "Armazenamento 100% em nuvem com criptografia de ponta a ponta e LGPD.",
                 },
               ].map((item, index) => (
