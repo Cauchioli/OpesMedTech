@@ -33,7 +33,7 @@ const LPPsicologia: React.FC = () => {
 
       <main>
         {/* Hero Section Full Bleed com Foto Oficial de Fundo */}
-        <section className="relative min-h-[560px] lg:min-h-[620px] pt-28 md:pt-36 pb-16 md:pb-24 overflow-hidden bg-white flex items-center">
+        <section className="relative min-h-[580px] lg:min-h-[660px] pt-28 md:pt-36 pb-16 md:pb-24 overflow-hidden bg-white flex items-center">
           {/* Imagem de Fundo Grande Sem Bordas (Full Bleed) */}
           <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden">
             <img
@@ -42,14 +42,14 @@ const LPPsicologia: React.FC = () => {
               className="w-full h-full object-cover object-[75%_center] lg:object-right"
             />
             {/* Gradiente suave na esquerda para garantir leitura perfeita dos textos */}
-            <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 sm:via-white/80 to-transparent lg:w-1/2" />
+            <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 sm:via-white/85 to-transparent lg:w-3/5" />
             <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-white to-transparent" />
           </div>
 
           <div className="w-full max-w-[1400px] mx-auto px-6 sm:px-10 lg:pl-16 xl:pl-20 lg:pr-8 relative z-10">
             <div className="max-w-xl lg:max-w-2xl text-left space-y-5">
-              <div className="flex items-center gap-2">
-                <div className="inline-flex items-center gap-2.5 px-3 py-1 rounded-full bg-card border border-purple-200/60 shadow-xs">
+              <div className="flex flex-wrap items-center gap-2">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-50 border border-purple-200/80 shadow-2xs">
                   <img src={logoOpesEspecialidades} alt="Opes Especialidades" className="h-4 w-auto object-contain" />
                   <span className="text-[11px] font-bold text-purple-700 uppercase tracking-wider border-l border-border pl-2">
                     CRP
@@ -58,14 +58,14 @@ const LPPsicologia: React.FC = () => {
               </div>
 
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-foreground tracking-tight leading-[1.12]">
-                Prontuário e <br />
+                Psicologia Infantil <br />
                 <span className="bg-gradient-to-r from-purple-600 via-violet-600 to-sky-600 bg-clip-text text-transparent">
-                  IA para Psicologia Infantil
+                  Escuta que fortalece hoje e para a vida toda.
                 </span>
               </h1>
 
               <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed max-w-lg">
-                Anotações clínicas online, acompanhamento de saúde mental, transcrição de voz com IA e agendamento por <strong className="text-foreground">R$ 199/mês</strong>.
+                Conteúdos, práticas e estratégias para apoiar o desenvolvimento emocional das crianças. Anotações clínicas online com IA, saúde mental e agendamento por <strong className="text-foreground">R$ 199/mês</strong>.
               </p>
 
               {/* CTAs */}
@@ -94,16 +94,30 @@ const LPPsicologia: React.FC = () => {
                 </Button>
               </div>
 
-              <div className="pt-1 flex items-center gap-3 text-xs text-muted-foreground">
-                <span className="flex items-center gap-1.5 font-medium">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                  Sem fidelidade
-                </span>
-                <span>•</span>
-                <span className="flex items-center gap-1.5 font-medium">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                  15 dias liberados
-                </span>
+              {/* Pill e Tags Clínicas da Referência */}
+              <div className="pt-3 space-y-3 max-w-xl">
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-sky-50 to-purple-50 border border-purple-200/60 shadow-2xs">
+                  <span className="w-1.5 h-1.5 rounded-full bg-purple-600 animate-pulse" />
+                  <span className="text-xs font-semibold text-purple-950">
+                    Profissionais mais preparados. Crianças com mais possibilidades.
+                  </span>
+                </div>
+
+                <div className="pt-2 border-t border-purple-200/60">
+                  <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 text-[10px] sm:text-[11px] font-bold tracking-wider text-purple-800 uppercase">
+                    <span>Emoções</span>
+                    <span>•</span>
+                    <span>Comportamento</span>
+                    <span>•</span>
+                    <span>Rotina</span>
+                    <span>•</span>
+                    <span>Vínculos</span>
+                    <span>•</span>
+                    <span>Saúde Mental</span>
+                    <span>•</span>
+                    <span>Qualidade de Vida</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

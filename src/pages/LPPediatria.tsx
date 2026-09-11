@@ -17,6 +17,9 @@ import {
   Star,
   Sparkles,
   Bot,
+  BookOpen,
+  Users,
+  Heart,
 } from "lucide-react";
 import heroMedicaOficial from "@/assets/hero-medica-menino-oficial.png";
 import mascoteRobo from "@/assets/mascote-robo-opes.png";
@@ -38,7 +41,7 @@ const LPPediatria: React.FC = () => {
 
       <main>
         {/* Hero Section Full Bleed com Foto Oficial de Fundo */}
-        <section className="relative min-h-[560px] lg:min-h-[620px] pt-28 md:pt-36 pb-16 md:pb-24 overflow-hidden bg-white flex items-center">
+        <section className="relative min-h-[580px] lg:min-h-[660px] pt-28 md:pt-36 pb-16 md:pb-24 overflow-hidden bg-white flex items-center">
           {/* Imagem de Fundo Grande Sem Bordas (Full Bleed) */}
           <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden">
             <img
@@ -47,26 +50,46 @@ const LPPediatria: React.FC = () => {
               className="w-full h-full object-cover object-[78%_center] lg:object-right"
             />
             {/* Gradiente suave na esquerda para garantir leitura perfeita dos textos */}
-            <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 sm:via-white/80 to-transparent lg:w-1/2" />
+            <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 sm:via-white/85 to-transparent lg:w-3/5" />
             <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-white to-transparent" />
+          </div>
+
+          {/* Lettering e Elementos Decorativos da Referência sobrepostos à direita */}
+          <div className="absolute top-32 right-8 lg:right-16 hidden md:flex flex-col items-end pointer-events-none z-10 max-w-xs text-right">
+            <span className="text-sm lg:text-base font-semibold text-sky-700/80 italic font-serif leading-tight">
+              Infâncias mais saudáveis para um amanhã mais brilhante
+            </span>
+            <Heart size={16} className="text-sky-500 fill-sky-200/50 mt-1" />
+          </div>
+
+          <div className="absolute bottom-6 right-8 hidden lg:block pointer-events-none z-10">
+            <div className="px-4 py-2 rounded-xl bg-gradient-to-r from-purple-900/80 to-blue-900/80 backdrop-blur-md border border-white/20 shadow-lg text-white text-[11px] font-black uppercase tracking-wider">
+              Tecnologia a serviço de novas histórias
+            </div>
           </div>
 
           <div className="w-full max-w-[1400px] mx-auto px-6 sm:px-10 lg:pl-16 xl:pl-20 lg:pr-8 relative z-10">
             <div className="max-w-xl lg:max-w-2xl text-left space-y-5">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-100 text-sky-700 text-xs font-bold uppercase tracking-wider border border-sky-200/50">
-                <Stethoscope size={14} />
-                Para Médicos Pediatras (CRM)
+              <div className="flex flex-wrap items-center gap-2">
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-100 text-sky-700 text-xs font-bold uppercase tracking-wider border border-sky-200/50">
+                  <Stethoscope size={14} />
+                  Opes Pediatra (CRM)
+                </div>
+                <div className="inline-flex items-center gap-2 bg-white/90 backdrop-blur-xs px-3 py-1 rounded-full border border-sky-100 shadow-2xs">
+                  <img src={mascoteRobo} alt="IA Opes" className="w-4 h-4 object-contain" />
+                  <span className="text-[11px] font-black text-sky-900">IA Preditiva SBP</span>
+                </div>
               </div>
 
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-foreground tracking-tight leading-[1.12]">
-                Pediatria com <br />
-                <span className="bg-gradient-to-r from-sky-500 via-blue-600 to-purple-600 bg-clip-text text-transparent">
-                  IA e Menos Digitação
+                Saúde infantil <br />
+                <span className="bg-gradient-to-r from-sky-600 via-blue-600 to-purple-600 bg-clip-text text-transparent">
+                  em cada fase
                 </span>
               </h1>
 
               <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed max-w-lg">
-                Prontuário médico completo, curvas de crescimento OMS/CDC, gestão vacinal SBP, inteligência artificial preditiva e prescrição Memed.
+                Conteúdos, orientações e novidades para apoiar o pediatra no cuidado com o desenvolvimento das crianças. Prontuário com IA, curvas OMS, vacinas e prescrição Memed.
               </p>
 
               {/* CTAs */}
@@ -95,23 +118,31 @@ const LPPediatria: React.FC = () => {
                 </Button>
               </div>
 
-              <div className="pt-1 flex items-center gap-3 text-xs text-muted-foreground">
-                <span className="flex items-center gap-1.5 font-medium">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                  Sem cartão de crédito
-                </span>
-                <span>•</span>
-                <span className="flex items-center gap-1.5 font-medium">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                  15 dias liberados
-                </span>
-              </div>
-
-              {/* Floating Mascot Badge */}
-              <div className="pt-1">
-                <div className="inline-flex items-center gap-2.5 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-2xl border border-sky-100 shadow-sm">
-                  <img src={mascoteRobo} alt="IA Opes" className="w-6 h-6 object-contain" />
-                  <span className="text-[11px] font-black text-sky-900">IA Preditiva SBP Exclusiva</span>
+              {/* Trio de Selos de Apoio da Referência */}
+              <div className="pt-3 grid grid-cols-3 gap-2.5 max-w-lg border-t border-border/60">
+                <div className="flex items-center gap-2">
+                  <div className="w-8 h-8 rounded-lg bg-sky-50 border border-sky-200/60 flex items-center justify-center text-sky-600 flex-shrink-0">
+                    <BookOpen size={16} />
+                  </div>
+                  <span className="text-[11px] sm:text-xs font-semibold text-muted-foreground leading-tight">
+                    Conteúdo confiável
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-8 h-8 rounded-lg bg-sky-50 border border-sky-200/60 flex items-center justify-center text-sky-600 flex-shrink-0">
+                    <Users size={16} />
+                  </div>
+                  <span className="text-[11px] sm:text-xs font-semibold text-muted-foreground leading-tight">
+                    Com a visão de especialistas
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-8 h-8 rounded-lg bg-sky-50 border border-sky-200/60 flex items-center justify-center text-sky-600 flex-shrink-0">
+                    <Heart size={16} />
+                  </div>
+                  <span className="text-[11px] sm:text-xs font-semibold text-muted-foreground leading-tight">
+                    Mais saúde para o futuro
+                  </span>
                 </div>
               </div>
             </div>

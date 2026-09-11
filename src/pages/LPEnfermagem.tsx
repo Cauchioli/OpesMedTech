@@ -36,7 +36,7 @@ const LPEnfermagem: React.FC = () => {
 
       <main>
         {/* Hero Section Full Bleed com Foto Oficial de Fundo */}
-        <section className="relative min-h-[560px] lg:min-h-[620px] pt-28 md:pt-36 pb-16 md:pb-24 overflow-hidden bg-white flex items-center">
+        <section className="relative min-h-[580px] lg:min-h-[660px] pt-28 md:pt-36 pb-16 md:pb-24 overflow-hidden bg-white flex items-center">
           {/* Imagem de Fundo Grande Sem Bordas (Full Bleed) */}
           <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden">
             <img
@@ -45,14 +45,14 @@ const LPEnfermagem: React.FC = () => {
               className="w-full h-full object-cover object-[75%_center] lg:object-right"
             />
             {/* Gradiente suave na esquerda para garantir leitura perfeita dos textos */}
-            <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 sm:via-white/80 to-transparent lg:w-1/2" />
+            <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 sm:via-white/85 to-transparent lg:w-3/5" />
             <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-white to-transparent" />
           </div>
 
           <div className="w-full max-w-[1400px] mx-auto px-6 sm:px-10 lg:pl-16 xl:pl-20 lg:pr-8 relative z-10">
             <div className="max-w-xl lg:max-w-2xl text-left space-y-5">
-              <div className="flex items-center gap-2">
-                <div className="inline-flex items-center gap-2.5 px-3 py-1 rounded-full bg-card border border-cyan-200/60 shadow-xs">
+              <div className="flex flex-wrap items-center gap-2">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-50 border border-cyan-200/80 shadow-2xs">
                   <img src={logoOpesEspecialidades} alt="Opes Especialidades" className="h-4 w-auto object-contain" />
                   <span className="text-[11px] font-bold text-cyan-700 uppercase tracking-wider border-l border-border pl-2">
                     COREN
@@ -61,14 +61,14 @@ const LPEnfermagem: React.FC = () => {
               </div>
 
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-foreground tracking-tight leading-[1.12]">
-                Prontuário e <br />
+                Enfermagem Infantil <br />
                 <span className="bg-gradient-to-r from-cyan-600 via-sky-600 to-blue-600 bg-clip-text text-transparent">
-                  IA para Enfermagem Pediátrica
+                  Cuidado que faz a diferença hoje e no amanhã.
                 </span>
               </h1>
 
               <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed max-w-lg">
-                Anotações clínicas online, acompanhamento de procedimentos, transcrição de voz com IA, curvas de crescimento OMS e agendamento por <strong className="text-foreground">R$ 199/mês</strong>.
+                Conteúdos, práticas e estratégias para apoiar a saúde e o desenvolvimento das crianças em todas as fases. Anotações clínicas online, procedimentos, curvas OMS, vacinas e agendamento por <strong className="text-foreground">R$ 199/mês</strong>.
               </p>
 
               {/* CTAs */}
@@ -97,16 +97,30 @@ const LPEnfermagem: React.FC = () => {
                 </Button>
               </div>
 
-              <div className="pt-1 flex items-center gap-3 text-xs text-muted-foreground">
-                <span className="flex items-center gap-1.5 font-medium">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                  Sem fidelidade
-                </span>
-                <span>•</span>
-                <span className="flex items-center gap-1.5 font-medium">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                  15 dias liberados
-                </span>
+              {/* Pill e Tags Clínicas da Referência */}
+              <div className="pt-3 space-y-3 max-w-xl">
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-cyan-50 to-blue-50 border border-cyan-200/60 shadow-2xs">
+                  <span className="w-1.5 h-1.5 rounded-full bg-cyan-600 animate-pulse" />
+                  <span className="text-xs font-semibold text-cyan-950">
+                    Profissionais mais preparados. Crianças com mais possibilidades.
+                  </span>
+                </div>
+
+                <div className="pt-2 border-t border-cyan-200/60">
+                  <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 text-[10px] sm:text-[11px] font-bold tracking-wider text-cyan-800 uppercase">
+                    <span>Saúde Infantil</span>
+                    <span>•</span>
+                    <span>Prevenção</span>
+                    <span>•</span>
+                    <span>Rotina</span>
+                    <span>•</span>
+                    <span>Acolhimento</span>
+                    <span>•</span>
+                    <span>Educação em Saúde</span>
+                    <span>•</span>
+                    <span>Qualidade de Vida</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
