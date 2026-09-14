@@ -306,8 +306,8 @@ const FeaturesSection = () => {
     },
     {
       name: "Clínicas",
-      monthlyPrice: 285,
-      annualPrice: 256,
+      monthlyPrice: 284,
+      annualPrice: 241,
       pricePerUser: "por médico",
       userNote: "2 a 9 Médicos + 3 Assistentes",
       savingsBadge: "5% mais econômico",
@@ -317,7 +317,7 @@ const FeaturesSection = () => {
         "2 a 9 Médicos + 3 Assistentes",
         "Todos os benefícios do Individual",
         "5% mais econômico",
-        "10% de desconto no plano anual",
+        "15% de desconto no plano anual",
         "Suporte Prioritário",
       ],
       cta: "Começar teste grátis",
@@ -325,7 +325,7 @@ const FeaturesSection = () => {
     },
     {
       name: "Redes",
-      monthlyPrice: 269,
+      monthlyPrice: 268,
       annualPrice: 228,
       pricePerUser: "por médico",
       userNote: "10+ Médicos + 5 Assistentes",
@@ -348,7 +348,7 @@ const FeaturesSection = () => {
     {
       name: "Individual",
       monthlyPrice: 199,
-      annualPrice: 169,
+      annualPrice: 179,
       userNote: "1 Profissional + 1 Assistente",
       popular: false,
       features: [
@@ -362,8 +362,8 @@ const FeaturesSection = () => {
     },
     {
       name: "Clínicas",
-      monthlyPrice: 185,
-      annualPrice: 166,
+      monthlyPrice: 189,
+      annualPrice: 170,
       pricePerUser: "por profissional",
       userNote: "2 a 9 Profissionais + 3 Assistentes",
       savingsBadge: "5% mais econômico",
@@ -381,8 +381,8 @@ const FeaturesSection = () => {
     },
     {
       name: "Redes",
-      monthlyPrice: 170,
-      annualPrice: 144,
+      monthlyPrice: 179,
+      annualPrice: 161,
       pricePerUser: "por profissional",
       userNote: "10+ Profissionais + 5 Assistentes",
       savingsBadge: "10% mais econômico",
@@ -391,7 +391,7 @@ const FeaturesSection = () => {
         "10+ Profissionais + 5 Assistentes",
         "Todos os benefícios de Clínicas",
         "10% mais econômico",
-        "15% de desconto na assinatura anual",
+        "10% de desconto na assinatura anual",
         "Suporte Dedicado",
       ],
       cta: "Falar com a Consultora",

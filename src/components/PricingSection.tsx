@@ -35,8 +35,8 @@ const PricingSection = () => {
     },
     {
       name: "Clínicas",
-      monthlyPrice: 285,
-      annualPrice: 256,
+      monthlyPrice: 284,
+      annualPrice: 241,
       pricePerUser: "por médico",
       savingsBadge: "5% mais econômico",
       popular: true,
@@ -45,7 +45,7 @@ const PricingSection = () => {
         "2 a 9 Médicos + 3 Assistentes",
         "Todos os benefícios do Plano Individual",
         "5% mais econômico",
-        "10% de desconto no plano anual",
+        "15% de desconto no plano anual",
         "Suporte Prioritário",
       ],
       cta: "Começar teste grátis",
@@ -53,7 +53,7 @@ const PricingSection = () => {
     },
     {
       name: "Redes",
-      monthlyPrice: 269,
+      monthlyPrice: 268,
       annualPrice: 228,
       pricePerUser: "por médico",
       savingsBadge: "10% mais econômico",
@@ -74,7 +74,7 @@ const PricingSection = () => {
     {
       name: "Individual",
       monthlyPrice: 199,
-      annualPrice: 169,
+      annualPrice: 179,
       popular: false,
       features: [
         "1 Profissional da saúde + 1 Assistente",
@@ -87,8 +87,8 @@ const PricingSection = () => {
     },
     {
       name: "Clínicas",
-      monthlyPrice: 185,
-      annualPrice: 166,
+      monthlyPrice: 189,
+      annualPrice: 170,
       pricePerUser: "por profissional",
       savingsBadge: "5% mais econômico",
       popular: true,
@@ -105,8 +105,8 @@ const PricingSection = () => {
     },
     {
       name: "Redes",
-      monthlyPrice: 170,
-      annualPrice: 144,
+      monthlyPrice: 179,
+      annualPrice: 161,
       pricePerUser: "por profissional",
       savingsBadge: "10% mais econômico",
       popular: false,
@@ -114,7 +114,7 @@ const PricingSection = () => {
         "10+ Profissionais de saúde + 5 Assistentes",
         "Todos os benefícios do Plano Clínicas",
         "10% mais econômico",
-        "15% de desconto na assinatura anual",
+        "10% de desconto na assinatura anual",
         "Suporte Dedicado",
       ],
       cta: "Falar com a Consultora",

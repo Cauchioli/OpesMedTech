@@ -363,7 +363,7 @@ const LPPediatria: React.FC = () => {
                   <div className="mb-3">
                     <div className="flex items-baseline gap-1">
                       <span className="text-xs font-semibold">R$</span>
-                      <span className="text-3xl font-black text-white">285</span>
+                      <span className="text-3xl font-black text-white">284</span>
                       <span className="text-xs text-primary-foreground/80">/mês por médico</span>
                     </div>
                     <p className="text-xs font-semibold text-cyan-200 mt-0.5">5% mais econômico</p>
@@ -372,7 +372,7 @@ const LPPediatria: React.FC = () => {
                     <li className="flex items-center gap-1.5"><Check size={13} className="text-cyan-300" /> 2 a 9 Médicos + 3 Assistentes</li>
                     <li className="flex items-center gap-1.5"><Check size={13} className="text-cyan-300" /> Todos os benefícios do Individual</li>
                     <li className="flex items-center gap-1.5"><Check size={13} className="text-cyan-300" /> 5% mais econômico</li>
-                    <li className="flex items-center gap-1.5"><Check size={13} className="text-cyan-300" /> 10% de desconto no plano anual (R$ 256/mês)</li>
+                    <li className="flex items-center gap-1.5"><Check size={13} className="text-cyan-300" /> 15% de desconto no plano anual (R$ 241/mês)</li>
                     <li className="flex items-center gap-1.5"><Check size={13} className="text-cyan-300" /> Suporte Prioritário</li>
                   </ul>
                 </div>
@@ -388,7 +388,7 @@ const LPPediatria: React.FC = () => {
                   <div className="mb-3">
                     <div className="flex items-baseline gap-1">
                       <span className="text-xs font-semibold text-foreground">R$</span>
-                      <span className="text-3xl font-black text-sky-700">269</span>
+                      <span className="text-3xl font-black text-sky-700">268</span>
                       <span className="text-xs text-muted-foreground">/mês por médico</span>
                     </div>
                     <p className="text-xs text-purple-600 font-semibold mt-0.5">10% mais econômico</p>

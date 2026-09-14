@@ -291,7 +291,7 @@ const LPEnfermagem: React.FC = () => {
                       <span className="text-xs text-muted-foreground">/mês</span>
                     </div>
                     <p className="text-xs text-emerald-700 font-semibold mt-0.5">
-                      15% de desconto no plano anual (R$ 169/mês)
+                      10% de desconto no plano anual (R$ 179/mês)
                     </p>
                   </div>
                   <ul className="space-y-2 text-xs text-muted-foreground mb-5 pt-2 border-t border-border/40">
@@ -316,7 +316,7 @@ const LPEnfermagem: React.FC = () => {
                   <div className="mb-3">
                     <div className="flex items-baseline gap-1">
                       <span className="text-xs font-semibold">R$</span>
-                      <span className="text-3xl font-black text-white">185</span>
+                      <span className="text-3xl font-black text-white">189</span>
                       <span className="text-xs text-primary-foreground/80">/mês por profissional</span>
                     </div>
                     <p className="text-xs font-semibold text-cyan-200 mt-0.5">5% mais econômico</p>
@@ -325,7 +325,7 @@ const LPEnfermagem: React.FC = () => {
                     <li className="flex items-center gap-1.5"><Check size={13} className="text-cyan-300" /> 2 a 9 Profissionais da saúde + 3 Assistentes</li>
                     <li className="flex items-center gap-1.5"><Check size={13} className="text-cyan-300" /> Todos os benefícios do Individual</li>
                     <li className="flex items-center gap-1.5"><Check size={13} className="text-cyan-300" /> 5% mais econômico</li>
-                    <li className="flex items-center gap-1.5"><Check size={13} className="text-cyan-300" /> 10% de desconto no plano anual (R$ 166/mês)</li>
+                    <li className="flex items-center gap-1.5"><Check size={13} className="text-cyan-300" /> 10% de desconto no plano anual (R$ 170/mês)</li>
                     <li className="flex items-center gap-1.5"><Check size={13} className="text-cyan-300" /> Suporte Prioritário</li>
                   </ul>
                 </div>
@@ -341,7 +341,7 @@ const LPEnfermagem: React.FC = () => {
                   <div className="mb-3">
                     <div className="flex items-baseline gap-1">
                       <span className="text-xs font-semibold text-foreground">R$</span>
-                      <span className="text-3xl font-black text-cyan-700">170</span>
+                      <span className="text-3xl font-black text-cyan-700">179</span>
                       <span className="text-xs text-muted-foreground">/mês por profissional</span>
                     </div>
                     <p className="text-xs text-cyan-600 font-semibold mt-0.5">10% mais econômico</p>
@@ -350,7 +350,7 @@ const LPEnfermagem: React.FC = () => {
                     <li className="flex items-center gap-1.5"><Check size={13} className="text-cyan-600" /> 10+ Profissionais de saúde + 5 Assistentes</li>
                     <li className="flex items-center gap-1.5"><Check size={13} className="text-cyan-600" /> Todos os benefícios de Clínicas</li>
                     <li className="flex items-center gap-1.5"><Check size={13} className="text-cyan-600" /> 10% mais econômico</li>
-                    <li className="flex items-center gap-1.5"><Check size={13} className="text-cyan-600" /> 15% de desconto na assinatura anual (R$ 144/mês)</li>
+                    <li className="flex items-center gap-1.5"><Check size={13} className="text-cyan-600" /> 10% de desconto na assinatura anual (R$ 161/mês)</li>
                     <li className="flex items-center gap-1.5"><Check size={13} className="text-cyan-600" /> Suporte Dedicado</li>
                   </ul>
                 </div>

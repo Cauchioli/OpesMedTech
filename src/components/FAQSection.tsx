@@ -36,12 +36,12 @@ const FAQSection = () => {
     {
       question: "O usuário assistente (secretária) é incluso?",
       answer:
-        "Sim. Todos os planos incluem usuários assistentes sem cobrança extra (1 assistente no Individual, 3 no Empresarial e até 5 no Corporativo).",
+        "Sim. Todos os planos incluem usuários assistentes sem cobrança extra (1 assistente no Individual, 3 no Clínicas e até 5 no Redes).",
     },
     {
       question: "Como funciona o desconto do Plano Anual?",
       answer:
-        "A assinatura anual oferece 15% de desconto em qualquer plano. No Opes Pediatra Individual o valor cai para R$ 254/mês, e no Opes Especialidades Individual cai para R$ 169/mês.",
+        "A assinatura anual oferece desconto especial: 15% de desconto no Opes Pediatra (R$ 254/mês no Individual) e 10% de desconto no Opes Especialidades (R$ 179/mês no Individual).",
     },
     {
       question: "Preciso instalar algum software?",
