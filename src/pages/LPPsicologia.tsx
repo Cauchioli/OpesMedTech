@@ -17,8 +17,8 @@ import {
 import logoOpesEspecialidades from "@/assets/logo-opes-especialidades.jpg";
 import heroPsicologiaOficial from "@/assets/hero-psicologia-oficial.jpeg";
 import telaAgenda from "@/assets/telas/tela-agenda.jpeg";
-import telaAnotacao from "@/assets/telas/tela-anotacao-transcricao.jpeg";
-import telaSaudeMental from "@/assets/telas/tela-saude-mental.jpeg";
+import telaAnotacao from "@/assets/telas/tela-anotacao-especialidades.jpeg";
+import telaSaudeMental from "@/assets/telas/tela-saude-mental-especialidades.jpeg";
 import telaTeleconsulta from "@/assets/telas/tela-teleconsulta.jpeg";
 import telaFinanceiro from "@/assets/telas/tela-financeiro.jpeg";
 

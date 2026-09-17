@@ -18,9 +18,9 @@ import {
 import logoOpesEspecialidades from "@/assets/logo-opes-especialidades.jpg";
 import heroEnfermagemOficial from "@/assets/hero-enfermagem-oficial.jpeg";
 import telaAgenda from "@/assets/telas/tela-agenda.jpeg";
-import telaAnotacao from "@/assets/telas/tela-anotacao-transcricao.jpeg";
+import telaAnotacao from "@/assets/telas/tela-anotacao-especialidades.jpeg";
 import telaGraficos from "@/assets/telas/tela-graficos-curvas.jpeg";
-import telaVacinas from "@/assets/telas/tela-vacinas.jpeg";
+import telaVacinas from "@/assets/telas/tela-vacinas-especialidades.jpeg";
 import telaExames from "@/assets/telas/tela-exames-voz.jpeg";
 import telaTeleconsulta from "@/assets/telas/tela-teleconsulta.jpeg";
 import telaFinanceiro from "@/assets/telas/tela-financeiro.jpeg";

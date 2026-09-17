@@ -26,11 +26,14 @@ import { Button } from "@/components/ui/button";
 // Telas oficiais reais
 import telaAgenda from "@/assets/telas/tela-agenda.jpeg";
 import telaAnotacao from "@/assets/telas/tela-anotacao-transcricao.jpeg";
+import telaAnotacaoEspecialidades from "@/assets/telas/tela-anotacao-especialidades.jpeg";
 import telaSaudeMental from "@/assets/telas/tela-saude-mental.jpeg";
+import telaSaudeMentalEspecialidades from "@/assets/telas/tela-saude-mental-especialidades.jpeg";
 import telaTeleconsulta from "@/assets/telas/tela-teleconsulta.jpeg";
 import telaFinanceiro from "@/assets/telas/tela-financeiro.jpeg";
 import telaGraficos from "@/assets/telas/tela-graficos-curvas.jpeg";
 import telaVacinas from "@/assets/telas/tela-vacinas.jpeg";
+import telaVacinasEspecialidades from "@/assets/telas/tela-vacinas-especialidades.jpeg";
 import telaExames from "@/assets/telas/tela-exames-voz.jpeg";
 import telaProntuario from "@/assets/telas/tela-prontuario-paciente.jpeg";
 import logoOpesEspecialidades from "@/assets/logo-opes-especialidades.jpg";
@@ -280,11 +283,24 @@ const FeaturesSection = () => {
 
   const isAnnual = billingCycle === "annual";
 
-  // Telas por especialidade
+  // Telas por especialidade (substituindo pelas telas oficiais de Especialidades com logo e sem robô)
+  const getEspecialidadesScreen = (screen: ScreenItem): ScreenItem => {
+    if (screen.id === "anotacao") {
+      return { ...screen, image: telaAnotacaoEspecialidades };
+    }
+    if (screen.id === "saude-mental") {
+      return { ...screen, image: telaSaudeMentalEspecialidades };
+    }
+    if (screen.id === "vacinas") {
+      return { ...screen, image: telaVacinasEspecialidades };
+    }
+    return screen;
+  };
+
   const screensPediatria = ALL_SCREENS.filter((s) => s.specialties.includes("pediatria"));
-  const screensTO = ALL_SCREENS.filter((s) => s.specialties.includes("to"));
-  const screensPsicologia = ALL_SCREENS.filter((s) => s.specialties.includes("psicologia"));
-  const screensEnfermagem = ALL_SCREENS.filter((s) => s.specialties.includes("enfermagem"));
+  const screensTO = ALL_SCREENS.filter((s) => s.specialties.includes("to")).map(getEspecialidadesScreen);
+  const screensPsicologia = ALL_SCREENS.filter((s) => s.specialties.includes("psicologia")).map(getEspecialidadesScreen);
+  const screensEnfermagem = ALL_SCREENS.filter((s) => s.specialties.includes("enfermagem")).map(getEspecialidadesScreen);
 
   // Planos Oficiais de Pediatria
   const pediatriaPlans = [
