@@ -929,10 +929,10 @@ const FeaturesSection = () => {
                   <img
                     src={
                       activeSpecialty === "enfermagem"
-                        ? telaVacinas
+                        ? telaVacinasEspecialidades
                         : activeSpecialty === "psicologia"
-                        ? telaAnotacao
-                        : telaSaudeMental
+                        ? telaAnotacaoEspecialidades
+                        : telaSaudeMentalEspecialidades
                     }
                     alt="Interface do Opes Especialidades"
                     className="w-full h-auto object-cover"
