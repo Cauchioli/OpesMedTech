@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 const CTASection = () => {
   const consultoraWhatsAppUrl =
     "https://wa.me/5511972240924?text=" +
-    encodeURIComponent("Olá! Gostaria de conversar sobre a Opes Medtech e iniciar meu teste de 15 dias.");
+    encodeURIComponent("Olá! Gostaria de conversar sobre a Opes Medtech e iniciar meu teste de 7 dias.");
 
   return (
     <section className="section-padding">
@@ -37,7 +37,7 @@ const CTASection = () => {
                 asChild
               >
                 <a href="https://www.opespediatra.com/login">
-                  Iniciar Teste Grátis de 15 Dias
+                  Iniciar Teste Grátis de 7 Dias
                   <ArrowRight size={16} className="ml-1.5 group-hover:translate-x-1 transition-transform" />
                 </a>
               </Button>

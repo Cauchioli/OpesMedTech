@@ -19,9 +19,9 @@ const FAQSection = () => {
         "No momento do cadastro no sistema, você informa seu número de conselho profissional. Se selecionar CRM, a plataforma habilita os módulos médicos pediátricos (curvas, vacinas, IA para análise preditiva, receituário e todas as outras funcionalidades da plataforma). É o módulo mais completo, apresentando todas as funcionalidades independente do plano escolhido. Caso selecione seu conselho profissional (CRP, COREN), o sistema automaticamente carrega o ambiente de Especialidades com formulários adequados à sua profissão.",
     },
     {
-      question: "Como funciona o período de teste de 15 dias?",
+      question: "Como funciona o período de teste de 7 dias?",
       answer:
-        "Você tem acesso total e ilimitado a todas as ferramentas da plataforma conforme profissão, por 15 dias corridos, sem precisar cadastrar cartão de crédito ou compromisso prévio. Ao fim do teste, você escolhe continuar no plano ideal ou a conta é pausada sem nenhuma cobrança surpresa.",
+        "Você tem acesso total e ilimitado a todas as ferramentas da plataforma conforme profissão, por 7 dias corridos, sem precisar cadastrar cartão de crédito ou compromisso prévio. Ao fim do teste, você escolhe continuar no plano ideal ou a conta é pausada sem nenhuma cobrança surpresa.",
     },
     {
       question: "O que é a IA Não Intrusiva da Opes e como ela funciona na prática?",

@@ -27,7 +27,7 @@ import telaFinanceiro from "@/assets/telas/tela-financeiro.jpeg";
 const LPTerapiaOcupacional: React.FC = () => {
   const consultoraWhatsAppUrl =
     "https://wa.me/5511972240924?text=" +
-    encodeURIComponent("Olá! Sou Terapeuta Ocupacional e gostaria de testar o Opes Especialidades por 15 dias.");
+    encodeURIComponent("Olá! Sou Terapeuta Ocupacional e gostaria de testar o Opes Especialidades por 7 dias.");
 
   return (
     <div className="min-h-screen bg-background flex flex-col justify-between">
@@ -79,7 +79,7 @@ const LPTerapiaOcupacional: React.FC = () => {
                   asChild
                 >
                   <a href="https://www.opespediatra.com/login">
-                    Iniciar Teste de 15 Dias
+                    Iniciar Teste de 7 Dias
                     <ArrowRight size={15} className="ml-2" />
                   </a>
                 </Button>

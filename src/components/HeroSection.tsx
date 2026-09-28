@@ -55,7 +55,7 @@ const HeroSection: React.FC = () => {
               asChild
             >
               <a href="https://www.opespediatra.com/login">
-                Começar Teste de 15 Dias
+                Começar Teste de 7 Dias
                 <ArrowRight size={15} className="ml-2" />
               </a>
             </Button>
@@ -86,7 +86,7 @@ const HeroSection: React.FC = () => {
             <span>•</span>
             <span className="flex items-center gap-1.5 font-medium">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-              15 dias liberados
+              7 dias liberados
             </span>
           </div>
 

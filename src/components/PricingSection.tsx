@@ -136,7 +136,7 @@ const PricingSection = () => {
             Escolha o plano ideal para sua clínica
           </h2>
           <p className="text-xs sm:text-sm text-muted-foreground">
-            Teste grátis por 15 dias, sem cartão de crédito e sem fidelidade
+            Teste grátis por 7 dias, sem cartão de crédito e sem fidelidade
           </p>
         </div>
 

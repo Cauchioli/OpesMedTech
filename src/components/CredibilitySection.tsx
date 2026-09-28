@@ -14,7 +14,7 @@ const CredibilitySection = () => {
     },
     {
       icon: Calendar,
-      value: "15 dias",
+      value: "7 dias",
       label: "Teste grátis",
     },
   ];

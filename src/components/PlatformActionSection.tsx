@@ -324,7 +324,7 @@ const PlatformActionSection: React.FC = () => {
             className="rounded-full bg-gradient-primary hover:opacity-95 text-white font-bold text-xs sm:text-sm px-8 h-12 shadow-primary"
           >
             <a href="https://www.opespediatra.com/login">
-              Testar todas as telas por 15 dias grátis
+              Testar todas as telas por 7 dias grátis
               <ArrowRight size={16} className="ml-2" />
             </a>
           </Button>

@@ -17,7 +17,7 @@ const TermsOfUse = () => {
           </p>
           <h2 className="text-xl font-bold text-foreground mt-6 mb-2">2. Período de Teste e Cancelamento</h2>
           <p>
-            O usuário dispõe de 15 dias de teste grátis sem necessidade de inserção de cartão de crédito. O cancelamento pode ser efetuado a qualquer momento pelo painel da plataforma.
+            O usuário dispõe de 7 dias de teste grátis sem necessidade de inserção de cartão de crédito. O cancelamento pode ser efetuado a qualquer momento pelo painel da plataforma.
           </p>
         </div>
       </main>

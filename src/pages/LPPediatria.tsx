@@ -33,7 +33,7 @@ import telaTeleconsulta from "@/assets/telas/tela-teleconsulta.jpeg";
 const LPPediatria: React.FC = () => {
   const consultoraWhatsAppUrl =
     "https://wa.me/5511972240924?text=" +
-    encodeURIComponent("Olá! Sou médico(a) pediatra e gostaria de testar o Opes Pediatra por 15 dias.");
+    encodeURIComponent("Olá! Sou médico(a) pediatra e gostaria de testar o Opes Pediatra por 7 dias.");
 
   return (
     <div className="min-h-screen bg-background flex flex-col justify-between">
@@ -100,7 +100,7 @@ const LPPediatria: React.FC = () => {
                   asChild
                 >
                   <a href="https://www.opespediatra.com/login">
-                    Iniciar Teste de 15 Dias
+                    Iniciar Teste de 7 Dias
                     <ArrowRight size={15} className="ml-2" />
                   </a>
                 </Button>

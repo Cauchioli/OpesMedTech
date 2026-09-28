@@ -545,7 +545,7 @@ const FeaturesSection = () => {
                     className="rounded-full bg-gradient-to-r from-sky-500 via-blue-600 to-purple-600 hover:opacity-95 text-white font-bold text-xs sm:text-sm px-6 h-11 shadow-sm"
                   >
                     <a href="https://www.opespediatra.com/login">
-                      Começar Teste de 15 Dias
+                      Começar Teste de 7 Dias
                       <ArrowRight size={15} className="ml-2" />
                     </a>
                   </Button>
@@ -602,7 +602,7 @@ const FeaturesSection = () => {
                   Valores exclusivos para Médicos Pediatras
                 </h4>
                 <p className="text-xs text-muted-foreground mt-1">
-                  15 dias de teste grátis, sem cartão de crédito e sem fidelidade
+                  7 dias de teste grátis, sem cartão de crédito e sem fidelidade
                 </p>
 
                 {/* Billing Cycle Switcher */}
@@ -894,7 +894,7 @@ const FeaturesSection = () => {
                     className="rounded-full bg-gradient-to-r from-purple-600 to-violet-700 hover:from-purple-700 hover:to-violet-800 text-white font-bold text-xs sm:text-sm px-6 h-11 shadow-sm"
                   >
                     <a href="https://www.opespediatra.com/login">
-                      Começar Teste de 15 Dias
+                      Começar Teste de 7 Dias
                       <ArrowRight size={15} className="ml-2" />
                     </a>
                   </Button>
@@ -985,7 +985,7 @@ const FeaturesSection = () => {
                   Valores exclusivos para T.O., Psicologia e Enfermagem
                 </h4>
                 <p className="text-xs text-muted-foreground mt-1">
-                  15 dias de teste grátis, sem cartão de crédito e sem fidelidade
+                  7 dias de teste grátis, sem cartão de crédito e sem fidelidade
                 </p>
 
                 {/* Billing Cycle Switcher */}

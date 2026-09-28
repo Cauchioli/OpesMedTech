@@ -15,7 +15,7 @@ export const DudaWhatsAppFloating: React.FC<DudaWhatsAppFloatingProps> = ({
     switch (specialtyContext) {
       case "Pediatria":
         return encodeURIComponent(
-          "Olá! Gostaria de conhecer mais sobre o Opes Pediatria e tirar algumas dúvidas sobre a plataforma e os 15 dias de teste."
+          "Olá! Gostaria de conhecer mais sobre o Opes Pediatria e tirar algumas dúvidas sobre a plataforma e os 7 dias de teste."
         );
       case "Terapia Ocupacional":
         return encodeURIComponent(
@@ -78,7 +78,7 @@ export const DudaWhatsAppFloating: React.FC<DudaWhatsAppFloatingProps> = ({
                 Olá! Como posso te ajudar hoje?
               </p>
               <p className="text-muted-foreground text-[11px]">
-                Tire dúvidas sobre planos, demonstração do sistema ou teste grátis de 15 dias sem burocracia.
+                Tire dúvidas sobre planos, demonstração do sistema ou teste grátis de 7 dias sem burocracia.
               </p>
             </div>
 
@@ -89,7 +89,7 @@ export const DudaWhatsAppFloating: React.FC<DudaWhatsAppFloatingProps> = ({
               </div>
               <div className="flex items-center gap-1.5">
                 <ShieldCheck size={12} className="text-primary" />
-                <span>Orientações sobre teste grátis de 15 dias</span>
+                <span>Orientações sobre teste grátis de 7 dias</span>
               </div>
             </div>
 

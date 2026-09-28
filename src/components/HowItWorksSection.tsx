@@ -11,7 +11,7 @@ const HowItWorksSection = () => {
     {
       icon: Rocket,
       step: "02",
-      title: "Teste por 15 dias",
+      title: "Teste por 7 dias",
       description: "Explore todas as funcionalidades sem limites, com suporte humanizado incluso.",
     },
     {
