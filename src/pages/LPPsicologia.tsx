@@ -123,6 +123,29 @@ const LPPsicologia: React.FC = () => {
           </div>
         </section>
 
+        {/* Video Showcase Section */}
+        <section className="py-12 bg-muted/20 border-y border-border/50">
+          <div className="container-custom">
+            <div className="text-center max-w-xl mx-auto mb-6">
+              <span className="text-xs font-bold uppercase tracking-wider text-purple-600 block mb-1">
+                DEMONSTRAÇÃO EM VÍDEO
+              </span>
+              <h2 className="text-xl sm:text-2xl font-bold text-foreground">
+                Veja o Opes Especialidades em funcionamento
+              </h2>
+            </div>
+            <div className="max-w-3xl mx-auto rounded-3xl overflow-hidden shadow-xl border border-border bg-black aspect-video relative">
+              <iframe
+                src="https://www.youtube.com/embed/LRYN_DfBAV4?rel=0&modestbranding=1"
+                title="Opes Especialidades, Demonstração Oficial"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="absolute inset-0 w-full h-full"
+              />
+            </div>
+          </div>
+        </section>
+
         {/* Funcionalidades Oficiais de Psicologia */}
         <section className="section-padding bg-muted/30">
           <div className="container-custom">
