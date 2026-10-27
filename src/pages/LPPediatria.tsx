@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DudaWhatsAppFloating from "@/components/DudaWhatsAppFloating";
@@ -31,6 +31,9 @@ import telaExames from "@/assets/telas/tela-exames-voz.jpeg";
 import telaTeleconsulta from "@/assets/telas/tela-teleconsulta.jpeg";
 
 const LPPediatria: React.FC = () => {
+  const [billingCycle, setBillingCycle] = useState<"monthly" | "annual">("monthly");
+  const isAnnual = billingCycle === "annual";
+
   const consultoraWhatsAppUrl =
     "https://wa.me/5511972240924?text=" +
     encodeURIComponent("Olá! Sou médico(a) pediatra e gostaria de testar o Opes Pediatra por 7 dias.");
@@ -173,7 +176,7 @@ const LPPediatria: React.FC = () => {
         </section>
 
         {/* Benefits Grid Clean */}
-        <section className="section-padding bg-background">
+        <section id="funcionalidades" className="section-padding bg-background scroll-mt-20">
           <div className="container-custom">
             <div className="text-center max-w-2xl mx-auto mb-10">
               <span className="text-xs font-bold uppercase tracking-wider text-primary block mb-1">
@@ -311,18 +314,54 @@ const LPPediatria: React.FC = () => {
         </section>
 
         {/* Pricing Banner Pediatria Clean */}
-        <section className="section-padding bg-sky-50/30 border-t border-border/50">
+        <section id="precos" className="section-padding bg-sky-50/30 border-t border-border/50 scroll-mt-20">
           <div className="container-custom">
             <div className="text-center max-w-2xl mx-auto mb-8">
               <span className="text-xs font-bold uppercase tracking-wider text-sky-600 block mb-1">
                 PLANOS OFICIAIS DE PEDIATRIA
               </span>
               <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-1">
-                Valores transparentes para o seu consultório
+                Valores exclusivos para Médicos Pediatras
               </h2>
               <p className="text-xs text-muted-foreground">
-                Planos mensais e anuais com desconto exclusivo
+                7 dias de teste grátis, sem cartão de crédito e sem fidelidade
               </p>
+
+              {/* Billing Cycle Switcher */}
+              <div className="flex items-center justify-center gap-3 mt-4">
+                <span
+                  className={`text-xs font-semibold cursor-pointer ${
+                    !isAnnual ? "text-foreground font-bold" : "text-muted-foreground"
+                  }`}
+                  onClick={() => setBillingCycle("monthly")}
+                >
+                  Mensal
+                </span>
+
+                <button
+                  onClick={() => setBillingCycle(isAnnual ? "monthly" : "annual")}
+                  className="relative w-11 h-6 rounded-full bg-muted border border-border transition-colors p-0.5 flex items-center focus:outline-none"
+                  aria-label="Alternar ciclo de pagamento"
+                >
+                  <div
+                    className={`w-4 h-4 rounded-full bg-sky-600 transition-transform duration-200 shadow-xs ${
+                      isAnnual ? "translate-x-5 bg-emerald-600" : "translate-x-0"
+                    }`}
+                  />
+                </button>
+
+                <span
+                  className={`text-xs font-semibold flex items-center gap-1.5 cursor-pointer ${
+                    isAnnual ? "text-emerald-700 font-bold" : "text-muted-foreground"
+                  }`}
+                  onClick={() => setBillingCycle("annual")}
+                >
+                  <span>Anual</span>
+                  <span className="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded-full border border-emerald-500/30">
+                    Desconto Especial
+                  </span>
+                </span>
+              </div>
             </div>
 
             <div className="grid md:grid-cols-3 gap-5 max-w-5xl mx-auto items-stretch">
@@ -333,11 +372,11 @@ const LPPediatria: React.FC = () => {
                   <div className="mb-3">
                     <div className="flex items-baseline gap-1">
                       <span className="text-xs font-semibold text-foreground">R$</span>
-                      <span className="text-3xl font-black text-sky-700">299</span>
+                      <span className="text-3xl font-black text-sky-700">{isAnnual ? 254 : 299}</span>
                       <span className="text-xs text-muted-foreground">/mês</span>
                     </div>
                     <p className="text-xs text-emerald-700 font-semibold mt-0.5">
-                      15% de desconto no plano anual (R$ 254/mês)
+                      {isAnnual ? "15% de desconto aplicado no plano anual" : "15% de desconto no plano anual (R$ 254/mês)"}
                     </p>
                   </div>
                   <ul className="space-y-2 text-xs text-muted-foreground mb-5 pt-2 border-t border-border/40">
@@ -363,7 +402,7 @@ const LPPediatria: React.FC = () => {
                   <div className="mb-3">
                     <div className="flex items-baseline gap-1">
                       <span className="text-xs font-semibold">R$</span>
-                      <span className="text-3xl font-black text-white">284</span>
+                      <span className="text-3xl font-black text-white">{isAnnual ? 241 : 284}</span>
                       <span className="text-xs text-primary-foreground/80">/mês por médico</span>
                     </div>
                     <p className="text-xs font-semibold text-cyan-200 mt-0.5">5% mais econômico</p>
@@ -388,7 +427,7 @@ const LPPediatria: React.FC = () => {
                   <div className="mb-3">
                     <div className="flex items-baseline gap-1">
                       <span className="text-xs font-semibold text-foreground">R$</span>
-                      <span className="text-3xl font-black text-sky-700">268</span>
+                      <span className="text-3xl font-black text-sky-700">{isAnnual ? 228 : 268}</span>
                       <span className="text-xs text-muted-foreground">/mês por médico</span>
                     </div>
                     <p className="text-xs text-purple-600 font-semibold mt-0.5">10% mais econômico</p>

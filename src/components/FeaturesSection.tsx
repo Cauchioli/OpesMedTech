@@ -593,7 +593,7 @@ const FeaturesSection = () => {
             />
 
             {/* Bottom Block: Integrated Pricing for Pediatria */}
-            <div className="pt-8 border-t border-sky-100">
+            <div id="precos" className="pt-8 border-t border-sky-100 scroll-mt-24">
               <div className="text-center max-w-xl mx-auto mb-6">
                 <span className="text-xs font-bold uppercase tracking-wider text-sky-600 block mb-1">
                   PLANOS OFICIAIS DE PEDIATRIA
@@ -976,7 +976,7 @@ const FeaturesSection = () => {
             )}
 
             {/* Bottom Block: Integrated Pricing for Especialidades */}
-            <div className="pt-8 border-t border-purple-100">
+            <div id="precos" className="pt-8 border-t border-purple-100 scroll-mt-24">
               <div className="text-center max-w-xl mx-auto mb-6">
                 <span className="text-xs font-bold uppercase tracking-wider text-purple-600 block mb-1">
                   PLANOS OFICIAIS DE ESPECIALIDADES
