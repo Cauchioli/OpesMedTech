@@ -20,6 +20,7 @@ import {
   BookOpen,
   Users,
   Heart,
+  ChevronDown,
 } from "lucide-react";
 import heroMedicaOficial from "@/assets/hero-medica-menino-oficial.png";
 import mascoteRobo from "@/assets/mascote-robo-opes.png";
@@ -119,6 +120,19 @@ const LPPediatria: React.FC = () => {
                     Falar com a Consultora
                   </a>
                 </Button>
+
+                <a
+                  href="#precos"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const el = document.getElementById("precos");
+                    if (el) el.scrollIntoView({ behavior: "smooth" });
+                  }}
+                  className="inline-flex items-center justify-center gap-1.5 text-xs sm:text-sm font-bold text-sky-700 hover:text-sky-900 transition-colors px-4 py-2.5 rounded-full hover:bg-sky-50/80 cursor-pointer"
+                >
+                  <span>Ver Planos</span>
+                  <ChevronDown size={14} />
+                </a>
               </div>
 
               {/* Trio de Selos de Apoio da Referência */}

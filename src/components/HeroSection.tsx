@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowRight, MessageSquare, Sparkles } from "lucide-react";
+import { ArrowRight, MessageSquare, Sparkles, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImageOficial from "@/assets/hero-medica-menino-oficial.png";
 
@@ -71,6 +71,19 @@ const HeroSection: React.FC = () => {
                 Falar com a Consultora
               </a>
             </Button>
+
+            <a
+              href="#precos"
+              onClick={(e) => {
+                e.preventDefault();
+                const el = document.getElementById("precos");
+                if (el) el.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="inline-flex items-center justify-center gap-1.5 text-xs sm:text-sm font-bold text-sky-700 hover:text-sky-900 transition-colors px-4 py-2.5 rounded-full hover:bg-sky-50/80 cursor-pointer"
+            >
+              <span>Ver Planos</span>
+              <ChevronDown size={14} />
+            </a>
           </div>
 
           <div className="pt-1 flex flex-wrap items-center gap-3 text-xs text-muted-foreground">

@@ -14,6 +14,7 @@ import {
   MessageSquare,
   CheckCircle,
   Check,
+  ChevronDown,
 } from "lucide-react";
 import logoOpesEspecialidades from "@/assets/logo-opes-especialidades.jpg";
 import heroEnfermagemOficial from "@/assets/hero-enfermagem-oficial.jpeg";
@@ -98,6 +99,19 @@ const LPEnfermagem: React.FC = () => {
                     Falar com a Consultora
                   </a>
                 </Button>
+
+                <a
+                  href="#precos"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const el = document.getElementById("precos");
+                    if (el) el.scrollIntoView({ behavior: "smooth" });
+                  }}
+                  className="inline-flex items-center justify-center gap-1.5 text-xs sm:text-sm font-bold text-cyan-700 hover:text-cyan-900 transition-colors px-4 py-2.5 rounded-full hover:bg-cyan-50/80 cursor-pointer"
+                >
+                  <span>Ver Planos</span>
+                  <ChevronDown size={14} />
+                </a>
               </div>
 
               {/* Pill e Tags Clínicas da Referência */}

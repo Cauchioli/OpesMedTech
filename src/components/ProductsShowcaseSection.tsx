@@ -54,7 +54,7 @@ const ProductsShowcaseSection: React.FC = () => {
             </div>
 
             {/* Pill Action Button */}
-            <div className="pt-2">
+            <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5">
               <Button
                 asChild
                 className="w-full sm:w-auto rounded-full bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white font-bold text-xs sm:text-sm px-8 h-12 shadow-md transition-all hover:scale-102"
@@ -64,6 +64,17 @@ const ProductsShowcaseSection: React.FC = () => {
                   <ArrowRight size={16} className="ml-2" />
                 </Link>
               </Button>
+              <a
+                href="#precos"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const el = document.getElementById("precos");
+                  if (el) el.scrollIntoView({ behavior: "smooth" });
+                }}
+                className="text-xs font-bold text-sky-700 hover:text-sky-900 hover:underline px-3 py-2 text-center cursor-pointer"
+              >
+                Ver planos (a partir de R$ 254/mês)
+              </a>
             </div>
           </div>
 
@@ -94,7 +105,7 @@ const ProductsShowcaseSection: React.FC = () => {
             </div>
 
             {/* Pill Action Button */}
-            <div className="pt-2">
+            <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5">
               <Button
                 asChild
                 className="w-full sm:w-auto rounded-full bg-gradient-to-r from-purple-600 to-violet-700 hover:from-purple-700 hover:to-violet-800 text-white font-bold text-xs sm:text-sm px-8 h-12 shadow-md transition-all hover:scale-102"
@@ -104,6 +115,17 @@ const ProductsShowcaseSection: React.FC = () => {
                   <ArrowRight size={16} className="ml-2" />
                 </Link>
               </Button>
+              <a
+                href="#precos"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const el = document.getElementById("precos");
+                  if (el) el.scrollIntoView({ behavior: "smooth" });
+                }}
+                className="text-xs font-bold text-purple-700 hover:text-purple-900 hover:underline px-3 py-2 text-center cursor-pointer"
+              >
+                Ver planos (a partir de R$ 179/mês)
+              </a>
             </div>
           </div>
         </div>

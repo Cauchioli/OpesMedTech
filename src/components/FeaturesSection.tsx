@@ -20,6 +20,7 @@ import {
   FileCheck,
   ZoomIn,
   X,
+  ChevronDown,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -433,7 +434,7 @@ const FeaturesSection = () => {
         </div>
 
         {/* Master Product Switcher */}
-        <div className="flex justify-center mb-10">
+        <div className="flex justify-center mb-6">
           <div className="inline-flex p-1.5 rounded-full bg-muted border border-border max-w-md w-full shadow-inner">
             <button
               onClick={() => setActiveProduct("pediatria")}
@@ -459,6 +460,22 @@ const FeaturesSection = () => {
               <span>Opes Especialidades</span>
             </button>
           </div>
+        </div>
+
+        {/* Quick jump to pricing */}
+        <div className="flex justify-center -mt-2 mb-8">
+          <a
+            href="#precos"
+            onClick={(e) => {
+              e.preventDefault();
+              const el = document.getElementById("precos");
+              if (el) el.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-white border border-border shadow-2xs text-xs font-semibold text-muted-foreground hover:text-foreground hover:border-primary/40 transition-all cursor-pointer"
+          >
+            <span>Ir direto para os planos e valores</span>
+            <ChevronDown size={13} className="text-primary" />
+          </a>
         </div>
 
         {/* Dynamic Interactive Panel */}
