@@ -15,6 +15,7 @@ const Footer = () => {
       { label: "Enfermagem Pediátrica (COREN)", href: "/enfermagem" },
       { label: "Funcionalidades da Plataforma", href: "/#funcionalidades" },
       { label: "Planos e Preços", href: "/#precos" },
+      { label: "Blog & Artigos Clínicos", href: "/blog" },
       { label: "Perguntas Frequentes (FAQ)", href: "/#faq" },
     ],
     legal: [

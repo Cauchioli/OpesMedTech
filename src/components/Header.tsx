@@ -99,6 +99,12 @@ const Header: React.FC<HeaderProps> = ({ specialtyTitle }) => {
             >
               Contato
             </a>
+            <Link
+              to="/blog"
+              className="text-muted-foreground hover:text-primary transition-colors font-medium"
+            >
+              Blog
+            </Link>
 
             {/* Specialties Dropdown */}
             <DropdownMenu>
@@ -212,6 +218,13 @@ const Header: React.FC<HeaderProps> = ({ specialtyTitle }) => {
               >
                 Contato
               </a>
+              <Link
+                to="/blog"
+                className="px-3 py-2 rounded-md text-sm font-medium text-foreground hover:bg-muted"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Blog
+              </Link>
 
               <div className="pt-2 border-t border-border/40">
                 <span className="text-[11px] font-bold text-muted-foreground uppercase tracking-wider px-3 block mb-1">
